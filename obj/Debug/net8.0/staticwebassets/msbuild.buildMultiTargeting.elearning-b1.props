@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\elearning-b1.props" />
+</Project>
