@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("elearning-b1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4aae8fa56e6ca129d67f0a7f1bb16e31cc4db66b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+015a2eb364a58e7d6a6949b9d51e4ab94b2dbafb")]
 [assembly: System.Reflection.AssemblyProductAttribute("elearning-b1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("elearning-b1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
