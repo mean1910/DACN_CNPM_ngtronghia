@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\elearning-b1\\elearning-b1.csproj": {}
+    "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\elearning-b1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\elearning-b1\\elearning-b1.csproj": {
+    "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\elearning-b1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\elearning-b1\\elearning-b1.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\elearning-b1.csproj",
         "projectName": "elearning-b1",
-        "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\elearning-b1\\elearning-b1.csproj",
+        "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\elearning-b1.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\elearning-b1\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

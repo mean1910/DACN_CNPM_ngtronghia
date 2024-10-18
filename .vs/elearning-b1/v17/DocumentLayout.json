@@ -1,38 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\",
+  "WorkspaceRootPath": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\elearning-b1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\elearning-b1\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\elearning-b1\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\elearning-b1\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\elearning-b1\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\elearning-b1\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\elearning-b1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\elearning-b1\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,39 +58,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-17T10:15:12.769Z",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-18T08:11:23.464Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T10:14:07.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACICAAAAAAAAAAAAAC8CAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-17T10:04:33.088Z",
               "EditorCaption": ""
@@ -94,23 +85,49 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "ScaffoldingReadMe.txt",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "ScaffoldingReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-10-17T09:52:29.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwBkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T09:52:58.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeToolTip": "Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAAAMAAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAC0CAAAAAAAAAAAAACMCAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-17T09:53:38.441Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\_ViewStart.cshtml",
               "RelativeToolTip": "Areas\\Admin\\Views\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -120,40 +137,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-17T09:53:32.572Z",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T10:14:07.57Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAwwBkAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T09:52:58.268Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-17T10:15:12.769Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ScaffoldingReadMe.txt",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\ScaffoldingReadMe.txt",
-              "RelativeDocumentMoniker": "ScaffoldingReadMe.txt",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\elearning-b1\\ScaffoldingReadMe.txt",
-              "RelativeToolTip": "ScaffoldingReadMe.txt",
+              "DocumentIndex": 8,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-10-17T09:52:29.571Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-17T09:53:32.572Z",
               "EditorCaption": ""
             }
           ]
