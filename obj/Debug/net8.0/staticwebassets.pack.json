@@ -2569,10 +2569,6 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\css\\style.css",
-      "PackagePath": "staticwebassets\\css\\style.css"
-    },
-    {
       "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
