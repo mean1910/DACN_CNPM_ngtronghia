@@ -1,8 +1,14 @@
 using elearning_b1.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var googleAuth = builder.Configuration.GetSection("Authentication:Google");
+var facebookOptions = builder.Configuration.GetSection("Authentication:Facebook");
+
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -11,6 +17,21 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders()
     .AddDefaultUI();
+
+builder.Services.AddAuthentication()
+.AddGoogle(options =>
+{
+    options.ClientId = googleAuth["ClientId"];
+    options.ClientSecret = googleAuth["ClientSecret"];
+    options.CallbackPath = "/signin-google";
+})
+.AddFacebook(options =>
+{
+    options.AppId = facebookOptions["AppId"];
+    options.AppSecret = facebookOptions["AppSecret"];
+    options.CallbackPath = "/signin-facebook";
+});
+
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
