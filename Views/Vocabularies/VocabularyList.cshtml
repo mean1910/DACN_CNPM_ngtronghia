@@ -1,0 +1,121 @@
+﻿@model IEnumerable<elearning_b1.Models.Vocabulary>
+
+@{
+    ViewData["Title"] = "Vocabulary Flashcards";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var vocabList = Model.ToList();
+}
+<link rel="stylesheet" href="~/css/flashcard.css" />
+
+<div class="flashcard-container">
+    <div class="flashcard" onclick="toggleFlip()">
+        <div class="flashcard-inner" id="flashcard">
+            <!-- Mặt trước của Flashcard -->
+            <!-- Mặt trước của Flashcard -->
+            <div class="flashcard-front">
+                <div class="flashcard-content">
+                    <strong id="word"></strong> <!-- Hiển thị từ vựng -->
+                    <br />
+                    <em id="partOfSpeech" style="font-size: 18px;"></em> <!-- Hiển thị từ loại -->
+                    <audio controls id="audio" style="margin-top: 10px;">
+                        <!-- Hiển thị audio nếu có -->
+                        <source id="audioSource" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+            <!-- Mặt sau của Flashcard -->
+            <!-- Mặt sau của Flashcard -->
+            <div class="flashcard-back">
+                <div class="flashcard-content">
+                    <p id="meaning" style="font-size: 20px; text-align: center;"></p> <!-- Hiển thị nghĩa -->
+                    <p><small><em id="exampleSentence" style="font-size: 16px;"></em></small></p> <!-- Hiển thị câu ví dụ -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation-buttons">
+        <button id="prevBtn" onclick="showPrevious()">Quay lại</button>
+        <button id="nextBtn" onclick="showNext()">Tiếp theo</button>
+    </div>
+</div>
+
+<script>
+    const vocabList = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(vocabList));
+    let currentIndex = 0;
+
+    function getPartOfSpeechString(partOfSpeechNumber) {
+        switch (partOfSpeechNumber) {
+            case 0: return "Noun";
+            case 1: return "Verb";
+            case 2: return "Adjective";
+            case 3: return "Adverb";
+            case 4: return "Pronoun";
+            case 5: return "Preposition";
+            case 6: return "Conjunction";
+            case 7: return "Interjection";
+            case 8: return "Determiner";
+            default: return "";
+        }
+    }
+
+
+    function updateFlashcard() {
+        const vocabulary = vocabList[currentIndex];
+        document.getElementById("word").textContent = vocabulary.Word;
+        document.getElementById("partOfSpeech").textContent = getPartOfSpeechString(vocabulary.PartOfSpeech);
+        document.getElementById("meaning").textContent = vocabulary.Meaning;
+        document.getElementById("exampleSentence").textContent = vocabulary.ExampleSentence;
+
+        const audioElement = document.getElementById("audio");
+        const audioSource = document.getElementById("audioSource");
+
+        if (vocabulary.AudioFile) {
+            // Cập nhật lại đường dẫn của audio
+            audioSource.src = `/audio/${vocabulary.AudioFile}`;
+
+            // Gọi load lại thẻ audio để đảm bảo tệp âm thanh được tải lại
+            audioElement.load();
+
+            // Tự động phát âm thanh sau khi tải lại
+            audioElement.play();
+
+            // Hiển thị thẻ audio nếu có tệp âm thanh
+            audioElement.style.display = "block";
+        } else {
+            // Nếu không có tệp âm thanh, xóa nguồn và ẩn thẻ audio
+            audioSource.src = "";
+            audioElement.style.display = "none";
+        }
+
+        document.getElementById("flashcard").classList.remove("flipped");
+        updateButtons();
+    }
+
+    function updateButtons() {
+        document.getElementById("prevBtn").disabled = currentIndex === 0;
+        document.getElementById("nextBtn").disabled = currentIndex === vocabList.length - 1;
+    }
+
+    function showNext() {
+        if (currentIndex < vocabList.length - 1) {
+            currentIndex++;
+            updateFlashcard();
+        }
+    }
+
+    function showPrevious() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateFlashcard();
+        }
+    }
+
+    function toggleFlip() {
+        document.getElementById("flashcard").classList.toggle("flipped");
+    }
+
+    // Khởi tạo flashcard đầu tiên
+    updateFlashcard();
+</script>
