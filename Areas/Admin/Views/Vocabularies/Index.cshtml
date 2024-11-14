@@ -1,0 +1,72 @@
+﻿@model IEnumerable<elearning_b1.Models.Vocabulary>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Word)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Meaning)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pronunciation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExampleSentence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AudioFile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PartOfSpeech)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Topic)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Word)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Meaning)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pronunciation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExampleSentence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AudioFile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartOfSpeech)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Topic.TopicID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VocabularyID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.VocabularyID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.VocabularyID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

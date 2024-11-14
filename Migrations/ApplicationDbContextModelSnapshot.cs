@@ -229,6 +229,67 @@ namespace elearning_b1.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("elearning_b1.Models.Topic", b =>
+                {
+                    b.Property<int>("TopicID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TopicID"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TopicName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("TopicID");
+
+                    b.ToTable("Topics");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.Vocabulary", b =>
+                {
+                    b.Property<int>("VocabularyID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VocabularyID"));
+
+                    b.Property<string>("AudioFile")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ExampleSentence")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Meaning")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("PartOfSpeech")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Pronunciation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TopicID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Word")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("VocabularyID");
+
+                    b.HasIndex("TopicID");
+
+                    b.ToTable("Vocabularies");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -278,6 +339,22 @@ namespace elearning_b1.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.Vocabulary", b =>
+                {
+                    b.HasOne("elearning_b1.Models.Topic", "Topic")
+                        .WithMany("Vocabularies")
+                        .HasForeignKey("TopicID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Topic");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.Topic", b =>
+                {
+                    b.Navigation("Vocabularies");
                 });
 #pragma warning restore 612, 618
         }

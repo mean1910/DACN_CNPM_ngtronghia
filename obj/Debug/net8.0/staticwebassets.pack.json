@@ -2565,6 +2565,14 @@
       "PackagePath": "staticwebassets\\admin\\scss\\variables\\_variables.scss"
     },
     {
+      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\audio\\wakeup.mp3",
+      "PackagePath": "staticwebassets\\audio\\wakeup.mp3"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\css\\flashcard.css",
+      "PackagePath": "staticwebassets\\css\\flashcard.css"
+    },
+    {
       "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -3059,6 +3067,10 @@
     {
       "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\home\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
       "PackagePath": "staticwebassets\\home\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\js\\flashcard.js",
+      "PackagePath": "staticwebassets\\js\\flashcard.js"
     },
     {
       "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\js\\site.js",

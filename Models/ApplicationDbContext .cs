@@ -9,6 +9,7 @@ namespace elearning_b1.Models
             : base(options)
         {
         }
-
+        public DbSet<Topic> Topics { get; set; }
+        public DbSet<Vocabulary> Vocabularies { get; set; }
     }
 }

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<elearning_b1.Models.Topic>
+
+@{
+    ViewData["Title"] = "Topics";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Topics</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Topic Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.TopicName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.TopicID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.TopicID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.TopicID">Delete</a> |
+                    <a asp-action="ByTopic" asp-controller="AdVocabularies" asp-route-topicId="@item.TopicID" area="Admin">Xem từ vựng</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
