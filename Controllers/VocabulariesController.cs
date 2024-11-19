@@ -19,7 +19,7 @@ namespace elearning_b1.Controllers
             var topics = _context.Topics.ToList();
             return View(topics); // Gửi danh sách topics về View
         }
-        public IActionResult VocabularyList(int topicId)
+        public IActionResult Flashcards(int topicId)
         {
 
             // Lấy danh sách từ vựng theo topicId
@@ -39,10 +39,80 @@ namespace elearning_b1.Controllers
             // Gửi danh sách từ vựng về View
             return View(vocabularies);
         }
-        public IActionResult Flashcards()
+
+        public async Task<IActionResult> VocabularyList(int topicId)
         {
-            var vocabList = _context.Vocabularies.Include(v => v.Topic).ToList();
-            return View(vocabList);  // Đảm bảo rằng bạn đang trả về một danh sách đầy đủ
+            // Lấy danh sách từ vựng cho chủ đề với topicId
+            var vocabList = await _context.Vocabularies
+                .Where(v => v.TopicID == topicId)
+                .ToListAsync();
+
+            if (vocabList == null || vocabList.Count == 0)
+            {
+                return NotFound(); // Nếu không tìm thấy từ vựng
+            }
+
+            return View(vocabList); // Trả về view chứa danh sách từ vựng
+        }
+
+        // Action để hiển thị bài tập từ VocabExercise
+        public async Task<IActionResult> Exercise(int id)
+        {
+            // Tìm bài tập theo ID
+            var exercise = await _context.Exercises
+                .Include(e => e.Topic)
+                .Include(e => e.Questions)
+                    .ThenInclude(q => q.Options)
+                .FirstOrDefaultAsync(e => e.Id == id);
+
+            if (exercise == null)
+            {
+                return NotFound(); // Trả về lỗi 404 nếu không tìm thấy bài tập
+            }
+
+            // Trả về View chứa bài tập và câu hỏi
+            return View(exercise);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Submit(int id, Dictionary<int, int> answers)
+        {
+            // Tìm bài tập theo ID
+            var exercise = await _context.Exercises
+                .Include(e => e.Questions)
+                    .ThenInclude(q => q.Options)
+                .FirstOrDefaultAsync(e => e.Id == id);
+
+            if (exercise == null)
+            {
+                return NotFound(); // Trả về lỗi 404 nếu không tìm thấy bài tập
+            }
+
+            // Tạo danh sách kết quả
+            foreach (var question in exercise.Questions)
+            {
+                // Đánh dấu lựa chọn của người dùng và xác định đáp án đúng
+                foreach (var option in question.Options)
+                {
+                    option.IsUserChoice = answers.TryGetValue(question.Id, out int userAnswerId) && userAnswerId == option.Id;
+                    option.IsCorrect = option.IsCorrect;
+                }
+            }
+
+            // Tính số câu trả lời đúng
+            int correctCount = exercise.Questions.Count(q =>
+                answers.TryGetValue(q.Id, out int userAnswerId) &&
+                q.Options.Any(o => o.Id == userAnswerId && o.IsCorrect));
+
+            // Tính điểm
+            int totalQuestions = exercise.Questions.Count;
+            double score = (double)correctCount / totalQuestions * 100;
+
+            // Truyền dữ liệu vào View
+            ViewData["Score"] = score;
+            ViewData["CorrectCount"] = correctCount;
+            ViewData["TotalQuestions"] = totalQuestions;
+            return View("Result", exercise);
         }
 
     }

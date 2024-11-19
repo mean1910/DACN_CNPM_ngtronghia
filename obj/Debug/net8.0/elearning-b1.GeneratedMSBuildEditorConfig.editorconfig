@@ -102,6 +102,66 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVG9waWNzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabExercises/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJFeGVyY2lzZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabExercises/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJFeGVyY2lzZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabExercises/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJFeGVyY2lzZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabExercises/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJFeGVyY2lzZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabExercises/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJFeGVyY2lzZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabOptions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJPcHRpb25zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabOptions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJPcHRpb25zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabOptions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJPcHRpb25zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabOptions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJPcHRpb25zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabOptions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJPcHRpb25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabQuestions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJRdWVzdGlvbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabQuestions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJRdWVzdGlvbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabQuestions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJRdWVzdGlvbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabQuestions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJRdWVzdGlvbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabQuestions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJRdWVzdGlvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/Vocabularies/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJ1bGFyaWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -310,12 +370,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Views/Vocabularies/Flashcards.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9jYWJ1bGFyaWVzXEZsYXNoY2FyZHMuY3NodG1s
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Views/Vocabularies/Exercise.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9jYWJ1bGFyaWVzXEV4ZXJjaXNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Views/Vocabularies/FlashCards.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9jYWJ1bGFyaWVzXEZsYXNoQ2FyZHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Views/Vocabularies/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9jYWJ1bGFyaWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Views/Vocabularies/Result.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9jYWJ1bGFyaWVzXFJlc3VsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Views/Vocabularies/VocabularyList.cshtml]

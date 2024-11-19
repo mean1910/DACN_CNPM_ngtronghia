@@ -11,5 +11,9 @@ namespace elearning_b1.Models
         }
         public DbSet<Topic> Topics { get; set; }
         public DbSet<Vocabulary> Vocabularies { get; set; }
+        public DbSet<VocabExercise> Exercises { get; set; }
+        public DbSet<VocabQuestion> Questions { get; set; }
+        public DbSet<VocabOption> Options { get; set; }
+        public DbSet<GrammarLesson> GrammarLessons { get; set; }
     }
 }
