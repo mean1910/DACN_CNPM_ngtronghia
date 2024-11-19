@@ -1,121 +1,107 @@
 ﻿@model IEnumerable<elearning_b1.Models.Vocabulary>
 
 @{
-    ViewData["Title"] = "Vocabulary Flashcards";
+    ViewData["Title"] = "Danh sách từ vựng";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var vocabList = Model.ToList();
 }
-<link rel="stylesheet" href="~/css/flashcard.css" />
 
-<div class="flashcard-container">
-    <div class="flashcard" onclick="toggleFlip()">
-        <div class="flashcard-inner" id="flashcard">
-            <!-- Mặt trước của Flashcard -->
-            <!-- Mặt trước của Flashcard -->
-            <div class="flashcard-front">
-                <div class="flashcard-content">
-                    <strong id="word"></strong> <!-- Hiển thị từ vựng -->
-                    <br />
-                    <em id="partOfSpeech" style="font-size: 18px;"></em> <!-- Hiển thị từ loại -->
-                    <audio controls id="audio" style="margin-top: 10px;">
-                        <!-- Hiển thị audio nếu có -->
-                        <source id="audioSource" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-            </div>
-            <!-- Mặt sau của Flashcard -->
-            <!-- Mặt sau của Flashcard -->
-            <div class="flashcard-back">
-                <div class="flashcard-content">
-                    <p id="meaning" style="font-size: 20px; text-align: center;"></p> <!-- Hiển thị nghĩa -->
-                    <p><small><em id="exampleSentence" style="font-size: 16px;"></em></small></p> <!-- Hiển thị câu ví dụ -->
-                </div>
-            </div>
-        </div>
+<style>
+    .card {
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .text-muted {
+        font-size: 0.9rem;
+    }
+
+    .badge {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    audio {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+</style>
+
+<div class="container mt-4">
+    <!-- Tiêu đề -->
+    <h1 class="text-center mb-4">Từ điển từ vựng</h1>
+
+    <!-- Nút điều hướng -->
+    <div class="d-flex justify-content-center mb-4">
+        <a href="@Url.Action("Flashcards", "Vocabularies", new { topicId = Model.FirstOrDefault()?.TopicID })" class="btn btn-primary mx-2">
+            Học bằng thẻ ghi nhớ
+        </a>
+        <a href="@Url.Action("Exercise", "Vocabularies", new { id = Model.FirstOrDefault()?.TopicID })" class="btn btn-secondary mx-2">
+            Kiểm tra từ vựng
+        </a>
     </div>
 
-    <div class="navigation-buttons">
-        <button id="prevBtn" onclick="showPrevious()">Quay lại</button>
-        <button id="nextBtn" onclick="showNext()">Tiếp theo</button>
+    <!-- Danh sách từ vựng -->
+    <div class="row">
+        @foreach (var vocab in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <!-- Từ vựng -->
+                        <h4 class="card-title text-primary">@vocab.Word</h4>
+
+                        <!-- Phát âm -->
+                        <p class="text-muted">
+                            <i class="fas fa-volume-up"></i> @vocab.Pronunciation
+                        </p>
+
+                        <!-- Loại từ -->
+                        <span class="badge bg-info text-dark">
+                            @vocab.PartOfSpeech
+                        </span>
+
+                        <!-- Nghĩa -->
+                        <p class="mt-2"><strong>Nghĩa:</strong> @vocab.Meaning</p>
+
+                        <!-- Câu ví dụ -->
+                        <p class="text-muted"><em>"@vocab.ExampleSentence"</em></p>
+
+                        <!-- Âm thanh -->
+                        @if (!string.IsNullOrEmpty(vocab.AudioFile))
+                        {
+                            <audio controls>
+                                <source src="@vocab.AudioFile" type="audio/mpeg" />
+                                Trình duyệt không hỗ trợ audio.
+                            </audio>
+                        }
+                        else
+                        {
+                            <p class="text-danger">Không có âm thanh</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
     </div>
 </div>
 
-<script>
-    const vocabList = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(vocabList));
-    let currentIndex = 0;
 
-    function getPartOfSpeechString(partOfSpeechNumber) {
-        switch (partOfSpeechNumber) {
-            case 0: return "Noun";
-            case 1: return "Verb";
-            case 2: return "Adjective";
-            case 3: return "Adverb";
-            case 4: return "Pronoun";
-            case 5: return "Preposition";
-            case 6: return "Conjunction";
-            case 7: return "Interjection";
-            case 8: return "Determiner";
-            default: return "";
-        }
-    }
-
-
-    function updateFlashcard() {
-        const vocabulary = vocabList[currentIndex];
-        document.getElementById("word").textContent = vocabulary.Word;
-        document.getElementById("partOfSpeech").textContent = getPartOfSpeechString(vocabulary.PartOfSpeech);
-        document.getElementById("meaning").textContent = vocabulary.Meaning;
-        document.getElementById("exampleSentence").textContent = vocabulary.ExampleSentence;
-
-        const audioElement = document.getElementById("audio");
-        const audioSource = document.getElementById("audioSource");
-
-        if (vocabulary.AudioFile) {
-            // Cập nhật lại đường dẫn của audio
-            audioSource.src = `/audio/${vocabulary.AudioFile}`;
-
-            // Gọi load lại thẻ audio để đảm bảo tệp âm thanh được tải lại
-            audioElement.load();
-
-            // Tự động phát âm thanh sau khi tải lại
-            audioElement.play();
-
-            // Hiển thị thẻ audio nếu có tệp âm thanh
-            audioElement.style.display = "block";
-        } else {
-            // Nếu không có tệp âm thanh, xóa nguồn và ẩn thẻ audio
-            audioSource.src = "";
-            audioElement.style.display = "none";
-        }
-
-        document.getElementById("flashcard").classList.remove("flipped");
-        updateButtons();
-    }
-
-    function updateButtons() {
-        document.getElementById("prevBtn").disabled = currentIndex === 0;
-        document.getElementById("nextBtn").disabled = currentIndex === vocabList.length - 1;
-    }
-
-    function showNext() {
-        if (currentIndex < vocabList.length - 1) {
-            currentIndex++;
-            updateFlashcard();
-        }
-    }
-
-    function showPrevious() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateFlashcard();
-        }
-    }
-
-    function toggleFlip() {
-        document.getElementById("flashcard").classList.toggle("flipped");
-    }
-
-    // Khởi tạo flashcard đầu tiên
-    updateFlashcard();
-</script>
