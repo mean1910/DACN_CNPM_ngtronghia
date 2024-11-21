@@ -55,65 +55,66 @@ namespace elearning_b1.Controllers
             return View(vocabList); // Trả về view chứa danh sách từ vựng
         }
 
-        // Action để hiển thị bài tập từ VocabExercise
+        // Action để hiển thị bài tập từ Topic
         public async Task<IActionResult> Exercise(int id)
         {
-            // Tìm bài tập theo ID
-            var exercise = await _context.Exercises
-                .Include(e => e.Topic)
-                .Include(e => e.Questions)
+            // Tìm chủ đề và các câu hỏi của chủ đề đó
+            var topic = await _context.Topics
+                .Include(t => t.Questions)
                     .ThenInclude(q => q.Options)
-                .FirstOrDefaultAsync(e => e.Id == id);
+                .FirstOrDefaultAsync(t => t.TopicID == id);
 
-            if (exercise == null)
+            if (topic == null)
             {
-                return NotFound(); // Trả về lỗi 404 nếu không tìm thấy bài tập
+                return NotFound(); // Trả về lỗi 404 nếu không tìm thấy chủ đề
             }
 
             // Trả về View chứa bài tập và câu hỏi
-            return View(exercise);
+            return View(topic); // Truyền chủ đề và các câu hỏi vào view
         }
 
         [HttpPost]
         public async Task<IActionResult> Submit(int id, Dictionary<int, int> answers)
         {
-            // Tìm bài tập theo ID
-            var exercise = await _context.Exercises
-                .Include(e => e.Questions)
+            // Tìm chủ đề và các câu hỏi
+            var topic = await _context.Topics
+                .Include(t => t.Questions)
                     .ThenInclude(q => q.Options)
-                .FirstOrDefaultAsync(e => e.Id == id);
+                .FirstOrDefaultAsync(t => t.TopicID == id);
 
-            if (exercise == null)
+            if (topic == null)
             {
-                return NotFound(); // Trả về lỗi 404 nếu không tìm thấy bài tập
+                return NotFound(); // Trả về lỗi 404 nếu không tìm thấy chủ đề
             }
 
-            // Tạo danh sách kết quả
-            foreach (var question in exercise.Questions)
+            // Tạo danh sách kết quả cho các câu hỏi
+            foreach (var question in topic.Questions)
             {
                 // Đánh dấu lựa chọn của người dùng và xác định đáp án đúng
                 foreach (var option in question.Options)
                 {
                     option.IsUserChoice = answers.TryGetValue(question.Id, out int userAnswerId) && userAnswerId == option.Id;
-                    option.IsCorrect = option.IsCorrect;
+                    // Không cần phải set lại option.IsCorrect ở đây vì dữ liệu này đã được xác định trong cơ sở dữ liệu
                 }
             }
 
             // Tính số câu trả lời đúng
-            int correctCount = exercise.Questions.Count(q =>
+            int correctCount = topic.Questions.Count(q =>
                 answers.TryGetValue(q.Id, out int userAnswerId) &&
                 q.Options.Any(o => o.Id == userAnswerId && o.IsCorrect));
 
             // Tính điểm
-            int totalQuestions = exercise.Questions.Count;
+            int totalQuestions = topic.Questions.Count;
             double score = (double)correctCount / totalQuestions * 100;
 
-            // Truyền dữ liệu vào View
+            // Truyền dữ liệu vào View để hiển thị kết quả
             ViewData["Score"] = score;
             ViewData["CorrectCount"] = correctCount;
             ViewData["TotalQuestions"] = totalQuestions;
-            return View("Result", exercise);
+
+            return View("Result", topic); // Trả về kết quả
         }
+
 
     }
 }

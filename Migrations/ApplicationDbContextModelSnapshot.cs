@@ -229,7 +229,7 @@ namespace elearning_b1.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("elearning_b1.Models.GrammarLesson", b =>
+            modelBuilder.Entity("elearning_b1.Models.Grammar", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -237,15 +237,7 @@ namespace elearning_b1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DocFilePath")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PdfFilePath")
+                    b.Property<string>("Content")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -255,7 +247,54 @@ namespace elearning_b1.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("GrammarLessons");
+                    b.ToTable("Grammars");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.GrammarOption", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("GrammarQuestionId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsCorrect")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GrammarQuestionId");
+
+                    b.ToTable("GrammarOptions");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.GrammarQuestion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("GrammarId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GrammarId");
+
+                    b.ToTable("GrammarQuestions");
                 });
 
             modelBuilder.Entity("elearning_b1.Models.Topic", b =>
@@ -277,28 +316,6 @@ namespace elearning_b1.Migrations
                     b.HasKey("TopicID");
 
                     b.ToTable("Topics");
-                });
-
-            modelBuilder.Entity("elearning_b1.Models.VocabExercise", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("TopicId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("TopicId");
-
-                    b.ToTable("Exercises");
                 });
 
             modelBuilder.Entity("elearning_b1.Models.VocabOption", b =>
@@ -334,16 +351,16 @@ namespace elearning_b1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ExerciseId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Text")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("TopicId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("ExerciseId");
+                    b.HasIndex("TopicId");
 
                     b.ToTable("Questions");
                 });
@@ -439,15 +456,26 @@ namespace elearning_b1.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("elearning_b1.Models.VocabExercise", b =>
+            modelBuilder.Entity("elearning_b1.Models.GrammarOption", b =>
                 {
-                    b.HasOne("elearning_b1.Models.Topic", "Topic")
-                        .WithMany()
-                        .HasForeignKey("TopicId")
+                    b.HasOne("elearning_b1.Models.GrammarQuestion", "Question")
+                        .WithMany("Options")
+                        .HasForeignKey("GrammarQuestionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Topic");
+                    b.Navigation("Question");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.GrammarQuestion", b =>
+                {
+                    b.HasOne("elearning_b1.Models.Grammar", "Grammar")
+                        .WithMany("Questions")
+                        .HasForeignKey("GrammarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Grammar");
                 });
 
             modelBuilder.Entity("elearning_b1.Models.VocabOption", b =>
@@ -463,13 +491,13 @@ namespace elearning_b1.Migrations
 
             modelBuilder.Entity("elearning_b1.Models.VocabQuestion", b =>
                 {
-                    b.HasOne("elearning_b1.Models.VocabExercise", "Exercise")
+                    b.HasOne("elearning_b1.Models.Topic", "Topic")
                         .WithMany("Questions")
-                        .HasForeignKey("ExerciseId")
+                        .HasForeignKey("TopicId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Exercise");
+                    b.Navigation("Topic");
                 });
 
             modelBuilder.Entity("elearning_b1.Models.Vocabulary", b =>
@@ -483,14 +511,21 @@ namespace elearning_b1.Migrations
                     b.Navigation("Topic");
                 });
 
-            modelBuilder.Entity("elearning_b1.Models.Topic", b =>
-                {
-                    b.Navigation("Vocabularies");
-                });
-
-            modelBuilder.Entity("elearning_b1.Models.VocabExercise", b =>
+            modelBuilder.Entity("elearning_b1.Models.Grammar", b =>
                 {
                     b.Navigation("Questions");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.GrammarQuestion", b =>
+                {
+                    b.Navigation("Options");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.Topic", b =>
+                {
+                    b.Navigation("Questions");
+
+                    b.Navigation("Vocabularies");
                 });
 
             modelBuilder.Entity("elearning_b1.Models.VocabQuestion", b =>

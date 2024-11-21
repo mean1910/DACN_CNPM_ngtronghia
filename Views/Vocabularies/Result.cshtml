@@ -1,7 +1,7 @@
-﻿@model elearning_b1.Models.VocabExercise
+﻿@model elearning_b1.Models.Topic
 
 @{
-    ViewData["Title"] = "Exercise Result: " + Model.Title;
+    ViewData["Title"] = "Exercise Result: " + Model.TopicName;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -45,4 +45,11 @@
             </div>
         </div>
     }
+
+    <!-- Nút thử lại bài -->
+    <div class="text-center mt-4">
+        <a href="@Url.Action("Exercise", new { id = Model.TopicID })" class="btn btn-secondary btn-lg">
+            Try Again
+        </a>
+    </div>
 </div>

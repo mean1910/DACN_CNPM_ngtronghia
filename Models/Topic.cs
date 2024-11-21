@@ -6,9 +6,7 @@ namespace elearning_b1.Models
 {
     public class Topic
     {
-        
-
-        [Key] 
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TopicID { get; set; }
 
@@ -16,6 +14,9 @@ namespace elearning_b1.Models
         public string Description { get; set; }
 
         // Danh sách từ vựng của chủ đề này
-        public List<Vocabulary>? Vocabularies { get; set; } 
+        public List<Vocabulary>? Vocabularies { get; set; }
+
+        // Danh sách câu hỏi ngữ pháp trong chủ đề này (VocabQuestions)
+        public virtual ICollection<VocabQuestion>? Questions { get; set; }
     }
 }
