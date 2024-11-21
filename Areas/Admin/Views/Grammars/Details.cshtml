@@ -1,0 +1,53 @@
+﻿@model elearning_b1.Models.Grammar
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Details</h1>
+<style>
+    .lesson-details {
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+
+        .lesson-details h1 {
+            font-size: 2rem;
+            color: #0056b3;
+        }
+
+    .lesson-content {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+
+        .lesson-content ul {
+            padding-left: 20px;
+        }
+
+        .lesson-content li {
+            margin-bottom: 10px;
+        }
+
+        .lesson-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+</style>
+<div>
+    <h4>Grammar</h4>
+    <hr />
+    <div class="lesson-details">
+        <h1>@Model.Title</h1>
+        <div class="lesson-content">
+            @Html.Raw(Model.Content)
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

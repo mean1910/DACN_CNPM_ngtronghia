@@ -1,17 +1,16 @@
-﻿@model elearning_b1.Models.VocabExercise
+﻿@model elearning_b1.Models.Topic
 
 @{
-    ViewData["Title"] = "Vocab Exercise: " + Model.Title;
+    ViewData["Title"] = "Exercise: " + Model.TopicName;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container my-4">
-    <!-- Tiêu đề bài tập -->
-    <h1 class="text-primary mb-3 text-center">@Model.Title</h1>
+    <h1 class="text-primary mb-3 text-center">Exercise: @Model.TopicName</h1>
     <hr />
 
     <!-- Form bài tập -->
-    <form method="post" action="@Url.Action("Submit", "Vocabularies", new { id = Model.Id })">
+    <form method="post" action="@Url.Action("Submit", "Vocabularies", new { id = Model.TopicID })">
         @foreach (var question in Model.Questions)
         {
             <div class="card mb-4 shadow-sm">

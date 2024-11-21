@@ -1,0 +1,28 @@
+﻿@model elearning_b1.Models.Grammar
+
+@{
+    ViewData["Title"] = Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white text-center">
+            <h1>@Model.Title</h1>
+        </div>
+        <div class="card-body">
+            <div>
+                @Html.Raw(Model.Content) <!-- Hiển thị nội dung bài học -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Nút bài tập -->
+    <div class="mt-3 text-center">
+        <a asp-action="Exercise" asp-route-id="@Model.Id" class="btn btn-success">Start Exercise</a>
+    </div>
+
+    <div class="mt-3 text-center">
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
