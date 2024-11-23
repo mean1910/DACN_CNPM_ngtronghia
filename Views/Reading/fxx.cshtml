@@ -1,0 +1,130 @@
+﻿@* @* @model elearning_b1.Models.ReadingSkill
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4">@Model.Title</h1>
+    <div id="reading-content" class="border rounded p-4" style="background-color: #f9f9f9; line-height: 1.8;">
+        @Html.Raw(Model.Content)
+    </div>
+</div>
+
+<div id="dictionary-popup"
+     class="card shadow-sm p-3"
+     style="display: none; position: fixed; background: white; border: none; z-index: 1000;">
+    <h5 class="card-title text-primary" id="dictionary-word"></h5>
+    <p id="dictionary-definition" class="text-muted"></p>
+    <button class="btn btn-secondary btn-sm" onclick="closePopup()">Đóng</button>
+</div>
+
+<style>
+    #dictionary-popup {
+        max-width: 300px;
+        border-radius: 10px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    #reading-content {
+        white-space: pre-wrap;
+        cursor: text;
+    }
+</style>
+
+@section Scripts {
+    <script>
+        document.addEventListener('mouseup', async function () {
+            const selection = window.getSelection();
+            const selectedText = selection.toString().trim();
+
+            if (selectedText) {
+                const rect = selection.getRangeAt(0).getBoundingClientRect();
+                const popup = document.getElementById('dictionary-popup');
+
+                // Hiển thị popup
+                popup.style.top = `${rect.bottom + window.scrollY + 10}px`;
+                popup.style.left = `${Math.min(rect.left + window.scrollX, window.innerWidth - popup.offsetWidth - 20)}px`;
+                popup.style.display = 'block';
+
+                try {
+                    // Gửi yêu cầu đến MyMemory API để dịch từ
+                    const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(selectedText)}&langpair=en|vi`, {
+                        method: "GET"
+                    });
+
+                    const data = await res.json();
+
+                    // Kiểm tra xem có trả về dữ liệu hay không
+                    if (data.responseData && data.responseData.translatedText) {
+                        document.getElementById('dictionary-definition').textContent = data.responseData.translatedText;
+                    } else {
+                        document.getElementById('dictionary-definition').textContent = "Không tìm thấy nghĩa của từ này.";
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    document.getElementById('dictionary-definition').textContent = "Đã xảy ra lỗi khi kết nối đến dịch vụ dịch.";
+                }
+            }
+        });
+
+        // Đóng popup khi nhấp ra ngoài
+        document.addEventListener('click', function (event) {
+            const popup = document.getElementById('dictionary-popup');
+            if (!popup.contains(event.target) && event.target !== document.getElementById('reading-content')) {
+                closePopup();
+            }
+        });
+
+        function closePopup() {
+            document.getElementById('dictionary-popup').style.display = 'none';
+        }
+    </script>
+}
+
+
+@*
+@section Scripts {
+    <script>
+        document.addEventListener('mouseup', function () {
+            const selection = window.getSelection();
+            const selectedText = selection.toString().trim();
+
+            if (selectedText) {
+                const rect = selection.getRangeAt(0).getBoundingClientRect();
+                const popup = document.getElementById('dictionary-popup');
+
+                // Hiển thị popup
+                popup.style.top = `${rect.bottom + window.scrollY + 10}px`;
+                popup.style.left = `${Math.min(rect.left + window.scrollX, window.innerWidth - popup.offsetWidth - 20)}px`;
+                popup.style.display = 'block';
+
+                // Xử lý fetch dữ liệu từ API
+                fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(selectedText)}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Không thể lấy dữ liệu từ API');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (data.length > 0 && data[0].meanings.length > 0) {
+                            const definition = data[0].meanings[0].definitions[0].definition;
+                            document.getElementById('dictionary-definition').textContent = definition;
+                        } else {
+                            document.getElementById('dictionary-definition').textContent = "Không tìm thấy nghĩa của từ này.";
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        document.getElementById('dictionary-definition').textContent = "Đã xảy ra lỗi.";
+                    });
+
+            }
+        });
+
+        function closePopup() {
+            document.getElementById('dictionary-popup').style.display = 'none';
+        }
+    </script>
+} *@

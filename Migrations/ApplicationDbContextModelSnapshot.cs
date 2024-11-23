@@ -297,6 +297,74 @@ namespace elearning_b1.Migrations
                     b.ToTable("GrammarQuestions");
                 });
 
+            modelBuilder.Entity("elearning_b1.Models.ReadingOption", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsCorrect")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ReadingQuestionId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReadingQuestionId");
+
+                    b.ToTable("ReadingOptions");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.ReadingQuestion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ReadingSkillId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReadingSkillId");
+
+                    b.ToTable("ReadingQuestions");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.ReadingSkill", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ReadingSkills");
+                });
+
             modelBuilder.Entity("elearning_b1.Models.Topic", b =>
                 {
                     b.Property<int>("TopicID")
@@ -478,6 +546,28 @@ namespace elearning_b1.Migrations
                     b.Navigation("Grammar");
                 });
 
+            modelBuilder.Entity("elearning_b1.Models.ReadingOption", b =>
+                {
+                    b.HasOne("elearning_b1.Models.ReadingQuestion", "Question")
+                        .WithMany("Options")
+                        .HasForeignKey("ReadingQuestionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Question");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.ReadingQuestion", b =>
+                {
+                    b.HasOne("elearning_b1.Models.ReadingSkill", "ReadingSkill")
+                        .WithMany("Questions")
+                        .HasForeignKey("ReadingSkillId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ReadingSkill");
+                });
+
             modelBuilder.Entity("elearning_b1.Models.VocabOption", b =>
                 {
                     b.HasOne("elearning_b1.Models.VocabQuestion", "Question")
@@ -519,6 +609,16 @@ namespace elearning_b1.Migrations
             modelBuilder.Entity("elearning_b1.Models.GrammarQuestion", b =>
                 {
                     b.Navigation("Options");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.ReadingQuestion", b =>
+                {
+                    b.Navigation("Options");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.ReadingSkill", b =>
+                {
+                    b.Navigation("Questions");
                 });
 
             modelBuilder.Entity("elearning_b1.Models.Topic", b =>
