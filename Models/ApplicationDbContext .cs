@@ -17,6 +17,8 @@ namespace elearning_b1.Models
         public DbSet<Grammar> Grammars { get; set; }
         public DbSet<GrammarQuestion> GrammarQuestions { get; set; }
         public DbSet<GrammarOption> GrammarOptions { get; set; }
-
+        public DbSet<ReadingSkill> ReadingSkills { get; set; }
+        public DbSet<ReadingQuestion> ReadingQuestions { get; set; }
+        public DbSet<ReadingOption> ReadingOptions { get; set; }
     }
 }

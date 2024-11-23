@@ -48,6 +48,8 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.AccessDeniedPath = "/Identity/Account/AccessDenied";
 });
 
+builder.Services.AddHttpClient();
+
 builder.Services.AddRazorPages();
 
 // Add services to the container.

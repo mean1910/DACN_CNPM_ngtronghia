@@ -1,0 +1,56 @@
+﻿
+@model IEnumerable<elearning_b1.Models.ReadingSkill>
+
+@{
+    ViewData["Title"] = "Danh sách bài đọc";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container mt-4">
+    <form method="get" class="mb-4">
+        <div class="input-group">
+            <input type="text" name="searchQuery" class="form-control" placeholder="Tìm kiếm bài đọc..." value="@ViewContext.HttpContext.Request.Query["searchQuery"]"/>
+            <button type="submit" class="btn btn-primary">Tìm</button>
+        </div>
+    </form>
+    <!-- Danh sách bài đọc -->
+    <div class="row">
+        <div class="container mt-4">
+            <h1 class="text-center mb-4">Danh sách bài đọc</h1>
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">@item.Title</h5>
+                                <p class="card-text text-truncate" style="max-height: 60px; overflow: hidden;">
+                                    @Html.Raw(item.Content)
+                                </p>
+                                <a href="@Url.Action("Exercise", "Reading", new { id = item.Id })" class="btn btn-primary btn-sm">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card-title {
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        transition: 0.3s ease-in-out;
+    }
+
+    .text-truncate {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+</style>
