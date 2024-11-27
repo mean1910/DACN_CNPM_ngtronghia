@@ -20,5 +20,9 @@ namespace elearning_b1.Models
         public DbSet<ReadingSkill> ReadingSkills { get; set; }
         public DbSet<ReadingQuestion> ReadingQuestions { get; set; }
         public DbSet<ReadingOption> ReadingOptions { get; set; }
+        public DbSet<Listening> Listenings { get; set; }
+        public DbSet<ListeningQuestion> ListeningsQuestions { get; set; }
+        public DbSet<ListeningOption> ListeningsOptions { get; set; }
+        
     }
 }

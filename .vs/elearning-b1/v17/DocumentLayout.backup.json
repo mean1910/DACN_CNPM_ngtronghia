@@ -3,6 +3,110 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\controllers\\listeningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:controllers\\listeningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\listening\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\listening\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\listening\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\listening\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\viewmodels\\listeninguserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:viewmodels\\listeninguserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\elearning-b1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:elearning-b1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\controllers\\listeningscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\controllers\\listeningscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\grammars\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\grammars\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\listenings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\listenings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\listenings\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\listenings\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\listenings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\listenings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\services\\assemblyaiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:services\\assemblyaiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\models\\applicationdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:models\\applicationdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\models\\translationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:models\\translationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\service_account_key.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:service_account_key.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\grammars\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\grammars\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\controllers\\readingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:controllers\\readingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\controllers\\grammarscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:controllers\\grammarscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\controllers\\listeningoptionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\controllers\\listeningoptionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\controllers\\listeningquestionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\controllers\\listeningquestionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\migrations\\20241124080542_chucnangnghe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:migrations\\20241124080542_chucnangnghe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\models\\grammarquestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:models\\grammarquestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\models\\grammaroption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:models\\grammaroption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\models\\grammar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:models\\grammar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\reading\\exercise.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\reading\\exercise.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -17,18 +121,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\grammars\\result.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\grammars\\result.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\controllers\\readingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:controllers\\readingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\controllers\\grammarscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:controllers\\grammarscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\reading\\fxx.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -51,20 +143,8 @@
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:models\\readingquestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\grammars\\exercise.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\grammars\\exercise.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\models\\applicationdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:models\\applicationdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\controllers\\readingskillscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,10 +155,6 @@
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\controllers\\readingoptionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\models\\translationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:models\\translationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\controllers\\readingquestionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\controllers\\readingquestionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -87,32 +163,12 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241122083044_chucNangDoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\models\\grammaroption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:models\\grammaroption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\models\\grammarquestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:models\\grammarquestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\models\\grammar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:models\\grammar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\vocabularies\\result.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\vocabularies\\result.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\vocabularies\\exercise.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\vocabularies\\exercise.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\vocabularies\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\vocabularies\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\vocabularies\\vocabularylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\vocabularies\\vocabularylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\controllers\\vocabulariescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -151,16 +207,8 @@
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:models\\vocabulary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\grammars\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\grammars\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\controllers\\grammarscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\controllers\\grammarscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\grammars\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\grammars\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\grammars\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -213,10 +261,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\advocabularies\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\advocabularies\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\adtopics\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -326,20 +370,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 25,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAAAMYAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAIBZwDgAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-17T10:04:33.088Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 6,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Grammars\\Edit.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Grammars\\Edit.cshtml",
@@ -348,7 +392,21 @@
               "ViewState": "AgIAAA8AAAAAAAAAAAAIwBYAAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-20T08:41:41.398Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ListeningUserViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\ViewModels\\ListeningUserViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ListeningUserViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\ViewModels\\ListeningUserViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ListeningUserViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T14:37:00.781Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -359,141 +417,134 @@
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ListeningController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Controllers\\ListeningController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ListeningController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Controllers\\ListeningController.cs",
+              "RelativeToolTip": "Controllers\\ListeningController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T08:54:20.956Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Exercise.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\Exercise.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reading\\Exercise.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\Exercise.cshtml",
-              "RelativeToolTip": "Views\\Reading\\Exercise.cshtml",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAUwKQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Listening\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Listening\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Listening\\Details.cshtml",
+              "RelativeToolTip": "Views\\Listening\\Details.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAABoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-23T10:33:54.569Z",
+              "WhenOpened": "2024-11-26T08:44:50.205Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reading\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\Index.cshtml",
-              "RelativeToolTip": "Views\\Reading\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAeAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Listening\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Listening\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Listening\\Index.cshtml",
+              "RelativeToolTip": "Views\\Listening\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-22T09:38:37.544Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Result.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Grammars\\Result.cshtml",
-              "RelativeDocumentMoniker": "Views\\Grammars\\Result.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Grammars\\Result.cshtml",
-              "RelativeToolTip": "Views\\Grammars\\Result.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAUwDcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T07:55:08.311Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Result.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\Result.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reading\\Result.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\Result.cshtml",
-              "RelativeToolTip": "Views\\Reading\\Result.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-23T10:34:42.168Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ReadingController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Controllers\\ReadingController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReadingController.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Controllers\\ReadingController.cs",
-              "RelativeToolTip": "Controllers\\ReadingController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAswD8AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T09:37:58.711Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "fxx.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\fxx.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reading\\fxx.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\fxx.cshtml",
-              "RelativeToolTip": "Views\\Reading\\fxx.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-23T10:14:12.433Z"
+              "WhenOpened": "2024-11-24T09:42:29.806Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "GrammarsController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Controllers\\GrammarsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\GrammarsController.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Controllers\\GrammarsController.cs",
-              "RelativeToolTip": "Controllers\\GrammarsController.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAAG8AAAAJAAAAAAAAAA==",
+              "Title": "ListeningsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ListeningsController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ListeningsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ListeningsController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\ListeningsController.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAAAJAAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T08:56:56.67Z"
+              "WhenOpened": "2024-11-26T07:59:20.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Listenings\\Create.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Listenings\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Listenings\\Create.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Listenings\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T08:05:18.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "elearning-b1.csproj",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\elearning-b1.csproj",
+              "RelativeDocumentMoniker": "elearning-b1.csproj",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\elearning-b1.csproj",
+              "RelativeToolTip": "elearning-b1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-24T07:36:25.34Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "View.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Grammars\\View.cshtml",
-              "RelativeDocumentMoniker": "Views\\Grammars\\View.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Grammars\\View.cshtml",
-              "RelativeToolTip": "Views\\Grammars\\View.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAIwBwAAAAAAAAAAAAAAA==",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Listenings\\Details.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Listenings\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Listenings\\Details.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Listenings\\Details.cshtml",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T06:41:35.993Z"
+              "WhenOpened": "2024-11-27T14:17:20.935Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "ReadingSkill.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ReadingSkill.cs",
-              "RelativeDocumentMoniker": "Models\\ReadingSkill.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ReadingSkill.cs",
-              "RelativeToolTip": "Models\\ReadingSkill.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T08:27:50.601Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Listenings\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Listenings\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Listenings\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Listenings\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAswB0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-27T14:14:51.905Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "ReadingOption.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ReadingOption.cs",
-              "RelativeDocumentMoniker": "Models\\ReadingOption.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ReadingOption.cs",
-              "RelativeToolTip": "Models\\ReadingOption.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Title": "AssemblyAIService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Services\\AssemblyAIService.cs",
+              "RelativeDocumentMoniker": "Services\\AssemblyAIService.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Services\\AssemblyAIService.cs",
+              "RelativeToolTip": "Services\\AssemblyAIService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T08:29:19.233Z"
+              "WhenOpened": "2024-11-24T07:37:01.683Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "ReadingQuestion.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ReadingQuestion.cs",
-              "RelativeDocumentMoniker": "Models\\ReadingQuestion.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ReadingQuestion.cs",
-              "RelativeToolTip": "Models\\ReadingQuestion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Title": "ApplicationDbContext .cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ApplicationDbContext .cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationDbContext .cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ApplicationDbContext .cs",
+              "RelativeToolTip": "Models\\ApplicationDbContext .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T08:28:21.543Z"
+              "WhenOpened": "2024-11-26T14:42:42.882Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -503,73 +554,25 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAADIAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAtwCEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T09:52:58.268Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "ScaffoldingReadMe.txt",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\ScaffoldingReadMe.txt",
-              "RelativeDocumentMoniker": "ScaffoldingReadMe.txt",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\ScaffoldingReadMe.txt",
-              "RelativeToolTip": "ScaffoldingReadMe.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-10-17T09:52:29.571Z"
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-18T08:11:23.464Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "Exercise.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Grammars\\Exercise.cshtml",
-              "RelativeDocumentMoniker": "Views\\Grammars\\Exercise.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Grammars\\Exercise.cshtml",
-              "RelativeToolTip": "Views\\Grammars\\Exercise.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T07:54:32.614Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ApplicationDbContext .cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ApplicationDbContext .cs",
-              "RelativeDocumentMoniker": "Models\\ApplicationDbContext .cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ApplicationDbContext .cs",
-              "RelativeToolTip": "Models\\ApplicationDbContext .cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBUAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T13:14:02.037Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ReadingSkillsController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ReadingSkillsController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ReadingSkillsController.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ReadingSkillsController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\ReadingSkillsController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T08:34:30.058Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ReadingOptionsController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ReadingOptionsController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ReadingOptionsController.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ReadingOptionsController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\ReadingOptionsController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T08:36:17.682Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "TranslationRequest.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\TranslationRequest.cs",
               "RelativeDocumentMoniker": "Models\\TranslationRequest.cs",
@@ -581,73 +584,121 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ReadingQuestionsController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ReadingQuestionsController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ReadingQuestionsController.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ReadingQuestionsController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\ReadingQuestionsController.cs",
+              "DocumentIndex": 15,
+              "Title": "service_account_key.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\service_account_key.json",
+              "RelativeDocumentMoniker": "service_account_key.json",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\service_account_key.json",
+              "RelativeToolTip": "service_account_key.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T08:35:31.926Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-25T08:16:12.835Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
-              "Title": "20241122083308_chucNangDoc.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241122083308_chucNangDoc.cs",
-              "RelativeDocumentMoniker": "Migrations\\20241122083308_chucNangDoc.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241122083308_chucNangDoc.cs",
-              "RelativeToolTip": "Migrations\\20241122083308_chucNangDoc.cs",
+              "DocumentIndex": 17,
+              "Title": "ReadingController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Controllers\\ReadingController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReadingController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Controllers\\ReadingController.cs",
+              "RelativeToolTip": "Controllers\\ReadingController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T09:37:58.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Grammars\\Create.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Grammars\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Grammars\\Create.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Grammars\\Create.cshtml",
+              "ViewState": "AgIAABwAAAAAAAAAAAAIwCkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T13:03:07.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GrammarsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Controllers\\GrammarsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GrammarsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Controllers\\GrammarsController.cs",
+              "RelativeToolTip": "Controllers\\GrammarsController.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAIBZwG8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T08:56:56.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ListeningOptionsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ListeningOptionsController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ListeningOptionsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ListeningOptionsController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\ListeningOptionsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T08:33:08.752Z"
+              "WhenOpened": "2024-11-24T08:14:28.899Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "20241122083044_chucNangDoc.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241122083044_chucNangDoc.cs",
-              "RelativeDocumentMoniker": "Migrations\\20241122083044_chucNangDoc.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241122083044_chucNangDoc.cs",
-              "RelativeToolTip": "Migrations\\20241122083044_chucNangDoc.cs",
+              "Title": "ListeningQuestionsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ListeningQuestionsController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ListeningQuestionsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ListeningQuestionsController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\ListeningQuestionsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T08:30:44.574Z"
+              "WhenOpened": "2024-11-24T08:12:44.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20241124080542_chucNangNghe.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241124080542_chucNangNghe.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241124080542_chucNangNghe.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241124080542_chucNangNghe.cs",
+              "RelativeToolTip": "Migrations\\20241124080542_chucNangNghe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T08:05:43.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Exercise.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\Exercise.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reading\\Exercise.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\Exercise.cshtml",
+              "RelativeToolTip": "Views\\Reading\\Exercise.cshtml",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAUwKQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-23T10:33:54.569Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
-              "Title": "Result.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Vocabularies\\Result.cshtml",
-              "RelativeDocumentMoniker": "Views\\Vocabularies\\Result.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Vocabularies\\Result.cshtml",
-              "RelativeToolTip": "Views\\Vocabularies\\Result.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-17T11:31:37.456Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
               "Title": "Grammar.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\Grammar.cs",
               "RelativeDocumentMoniker": "Models\\Grammar.cs",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\Grammar.cs",
               "RelativeToolTip": "Models\\Grammar.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T10:53:21.106Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "GrammarOption.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\GrammarOption.cs",
               "RelativeDocumentMoniker": "Models\\GrammarOption.cs",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\GrammarOption.cs",
               "RelativeToolTip": "Models\\GrammarOption.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T06:59:11.458Z"
             },
@@ -659,49 +710,204 @@
               "RelativeDocumentMoniker": "Models\\GrammarQuestion.cs",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\GrammarQuestion.cs",
               "RelativeToolTip": "Models\\GrammarQuestion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T06:59:42.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
+              "Title": "Result.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\Result.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reading\\Result.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\Result.cshtml",
+              "RelativeToolTip": "Views\\Reading\\Result.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-23T10:34:42.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Result.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Grammars\\Result.cshtml",
+              "RelativeDocumentMoniker": "Views\\Grammars\\Result.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Grammars\\Result.cshtml",
+              "RelativeToolTip": "Views\\Grammars\\Result.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAUwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T07:55:08.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reading\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\Index.cshtml",
+              "RelativeToolTip": "Views\\Reading\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwB4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-22T09:38:37.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "fxx.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\fxx.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reading\\fxx.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\fxx.cshtml",
+              "RelativeToolTip": "Views\\Reading\\fxx.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-23T10:14:12.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "View.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Grammars\\View.cshtml",
+              "RelativeDocumentMoniker": "Views\\Grammars\\View.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Grammars\\View.cshtml",
+              "RelativeToolTip": "Views\\Grammars\\View.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T06:41:35.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ReadingSkill.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ReadingSkill.cs",
+              "RelativeDocumentMoniker": "Models\\ReadingSkill.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ReadingSkill.cs",
+              "RelativeToolTip": "Models\\ReadingSkill.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T08:27:50.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ReadingOption.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ReadingOption.cs",
+              "RelativeDocumentMoniker": "Models\\ReadingOption.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ReadingOption.cs",
+              "RelativeToolTip": "Models\\ReadingOption.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T08:29:19.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ReadingQuestion.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ReadingQuestion.cs",
+              "RelativeDocumentMoniker": "Models\\ReadingQuestion.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ReadingQuestion.cs",
+              "RelativeToolTip": "Models\\ReadingQuestion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T08:28:21.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Exercise.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Grammars\\Exercise.cshtml",
+              "RelativeDocumentMoniker": "Views\\Grammars\\Exercise.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Grammars\\Exercise.cshtml",
+              "RelativeToolTip": "Views\\Grammars\\Exercise.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T07:54:32.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ReadingSkillsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ReadingSkillsController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ReadingSkillsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ReadingSkillsController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\ReadingSkillsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T08:34:30.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ReadingOptionsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ReadingOptionsController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ReadingOptionsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ReadingOptionsController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\ReadingOptionsController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAACBjwBUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T08:36:17.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ReadingQuestionsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ReadingQuestionsController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ReadingQuestionsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ReadingQuestionsController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\ReadingQuestionsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T08:35:31.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "20241122083308_chucNangDoc.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241122083308_chucNangDoc.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241122083308_chucNangDoc.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241122083308_chucNangDoc.cs",
+              "RelativeToolTip": "Migrations\\20241122083308_chucNangDoc.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T08:33:08.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "20241122083044_chucNangDoc.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241122083044_chucNangDoc.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241122083044_chucNangDoc.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241122083044_chucNangDoc.cs",
+              "RelativeToolTip": "Migrations\\20241122083044_chucNangDoc.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T08:30:44.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Result.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Vocabularies\\Result.cshtml",
+              "RelativeDocumentMoniker": "Views\\Vocabularies\\Result.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Vocabularies\\Result.cshtml",
+              "RelativeToolTip": "Views\\Vocabularies\\Result.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-17T11:31:37.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
               "Title": "Exercise.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Vocabularies\\Exercise.cshtml",
               "RelativeDocumentMoniker": "Views\\Vocabularies\\Exercise.cshtml",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Vocabularies\\Exercise.cshtml",
               "RelativeToolTip": "Views\\Vocabularies\\Exercise.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAACBjwAsAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-17T11:30:02.679Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "VocabularyList.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Vocabularies\\VocabularyList.cshtml",
-              "RelativeDocumentMoniker": "Views\\Vocabularies\\VocabularyList.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Vocabularies\\VocabularyList.cshtml",
-              "RelativeToolTip": "Views\\Vocabularies\\VocabularyList.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-17T11:39:03.335Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Vocabularies\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Vocabularies\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Vocabularies\\Index.cshtml",
-              "RelativeToolTip": "Views\\Vocabularies\\Index.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAC4AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-12T11:45:59.64Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 42,
               "Title": "VocabulariesController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Controllers\\VocabulariesController.cs",
               "RelativeDocumentMoniker": "Controllers\\VocabulariesController.cs",
@@ -713,7 +919,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 43,
               "Title": "Topic.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\Topic.cs",
               "RelativeDocumentMoniker": "Models\\Topic.cs",
@@ -725,7 +931,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 44,
               "Title": "VocabOption.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\VocabOption.cs",
               "RelativeDocumentMoniker": "Models\\VocabOption.cs",
@@ -737,19 +943,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 45,
               "Title": "VocabQuestion.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\VocabQuestion.cs",
               "RelativeDocumentMoniker": "Models\\VocabQuestion.cs",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\VocabQuestion.cs",
               "RelativeToolTip": "Models\\VocabQuestion.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T11:04:53.424Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 46,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Grammars\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Grammars\\Index.cshtml",
@@ -761,7 +967,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 47,
               "Title": "GrammarOptionsController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\GrammarOptionsController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\GrammarOptionsController.cs",
@@ -773,7 +979,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 48,
               "Title": "GrammarQuestionsController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\GrammarQuestionsController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\GrammarQuestionsController.cs",
@@ -785,7 +991,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 49,
               "Title": "SD.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\SD.cs",
               "RelativeDocumentMoniker": "Models\\SD.cs",
@@ -797,7 +1003,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 50,
               "Title": "Vocabulary.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\Vocabulary.cs",
               "RelativeDocumentMoniker": "Models\\Vocabulary.cs",
@@ -809,7 +1015,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 52,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Grammars\\Details.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Grammars\\Details.cshtml",
@@ -821,19 +1027,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Grammars\\Create.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Grammars\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Grammars\\Create.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Grammars\\Create.cshtml",
-              "ViewState": "AgIAABwAAAAAAAAAAAAIwDQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T13:03:07.88Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 51,
               "Title": "GrammarsController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\GrammarsController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\GrammarsController.cs",
@@ -845,19 +1039,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 53,
               "Title": "_AdminLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeToolTip": "Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAAAKQAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAIwAAAAAAAAAACBjwKQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-17T09:53:38.441Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 85,
               "Title": "20241119105547_taoLaiGrammar.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241119105547_taoLaiGrammar.cs",
               "RelativeDocumentMoniker": "Migrations\\20241119105547_taoLaiGrammar.cs",
@@ -869,7 +1063,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 86,
               "Title": "20241119102255_capnhatGrammar3.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241119102255_capnhatGrammar3.cs",
               "RelativeDocumentMoniker": "Migrations\\20241119102255_capnhatGrammar3.cs",
@@ -881,7 +1075,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 87,
               "Title": "20241119101244_capnhatGrammar2.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241119101244_capnhatGrammar2.cs",
               "RelativeDocumentMoniker": "Migrations\\20241119101244_capnhatGrammar2.cs",
@@ -893,7 +1087,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 54,
               "Title": "VocabulariesController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\VocabulariesController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\VocabulariesController.cs",
@@ -905,19 +1099,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 55,
               "Title": "FlashCards.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Vocabularies\\FlashCards.cshtml",
               "RelativeDocumentMoniker": "Views\\Vocabularies\\FlashCards.cshtml",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Vocabularies\\FlashCards.cshtml",
               "RelativeToolTip": "Views\\Vocabularies\\FlashCards.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAACBjwFUAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBpwFUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-12T11:48:39.81Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 56,
               "Title": "flashcard.js",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\js\\flashcard.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\flashcard.js",
@@ -929,7 +1123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 57,
               "Title": "flashcard.css",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\css\\flashcard.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\flashcard.css",
@@ -941,7 +1135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 59,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Vocabularies\\Edit.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Vocabularies\\Edit.cshtml",
@@ -953,7 +1147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 58,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Vocabularies\\Create.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Vocabularies\\Create.cshtml",
@@ -965,19 +1159,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 61,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\AdVocabularies\\Create.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdVocabularies\\Create.cshtml",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\AdVocabularies\\Create.cshtml",
               "RelativeToolTip": "Areas\\Admin\\Views\\AdVocabularies\\Create.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAIBpwCsAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAFB2wCsAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-11T03:00:52.903Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 60,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\AdVocabularies\\Edit.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdVocabularies\\Edit.cshtml",
@@ -989,7 +1183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 62,
               "Title": "TopicsController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\TopicsController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\TopicsController.cs",
@@ -1001,7 +1195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 63,
               "Title": "ByTopic.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\AdVocabularies\\ByTopic.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdVocabularies\\ByTopic.cshtml",
@@ -1013,7 +1207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 64,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\AdVocabularies\\Details.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdVocabularies\\Details.cshtml",
@@ -1025,19 +1219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-18T08:11:23.464Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 65,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\AdTopics\\Details.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdTopics\\Details.cshtml",
@@ -1049,31 +1231,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 66,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\AdTopics\\Create.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdTopics\\Create.cshtml",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\AdTopics\\Create.cshtml",
               "RelativeToolTip": "Areas\\Admin\\Views\\AdTopics\\Create.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAIBpwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAFB2wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-11T03:49:28.38Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 67,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\AdTopics\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdTopics\\Index.cshtml",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\AdTopics\\Index.cshtml",
               "RelativeToolTip": "Areas\\Admin\\Views\\AdTopics\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAIBpwB8AAABtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAOBvwB8AAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-09T06:39:48.82Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 68,
               "Title": "AdTopicsController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\AdTopicsController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AdTopicsController.cs",
@@ -1085,7 +1267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 69,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
@@ -1097,7 +1279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 70,
               "Title": "ApplicationDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Migrations\\ApplicationDbContextModelSnapshot.cs",
@@ -1109,7 +1291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 74,
               "Title": "AccessDenied.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
@@ -1121,7 +1303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 72,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Home\\Index.cshtml",
@@ -1133,7 +1315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 71,
               "Title": "20241104090942_capNhatFullName.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241104090942_capNhatFullName.cs",
               "RelativeDocumentMoniker": "Migrations\\20241104090942_capNhatFullName.cs",
@@ -1145,7 +1327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 73,
               "Title": "Login.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
@@ -1157,19 +1339,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 76,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAOBvwCMAAAClAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAFB2wCMAAAClAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-18T13:53:50.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 75,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
@@ -1181,7 +1363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 77,
               "Title": "Register.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
@@ -1193,7 +1375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 78,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\_LoginPartial.cshtml",
@@ -1205,7 +1387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 84,
               "Title": "20241018133231_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241018133231_InitialCreate.cs",
               "RelativeDocumentMoniker": "Migrations\\20241018133231_InitialCreate.cs",
@@ -1217,7 +1399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 80,
               "Title": "20241018132520_Added Custom Properties.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241018132520_Added Custom Properties.cs",
               "RelativeDocumentMoniker": "Migrations\\20241018132520_Added Custom Properties.cs",
@@ -1228,7 +1410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 79,
               "Title": "20241018132901_Added Custom Properties.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Migrations\\20241018132901_Added Custom Properties.cs",
               "RelativeDocumentMoniker": "Migrations\\20241018132901_Added Custom Properties.cs",
@@ -1239,7 +1421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 81,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -1251,7 +1433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 82,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\_ViewStart.cshtml",
@@ -1263,7 +1445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 83,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\_ViewImports.cshtml",

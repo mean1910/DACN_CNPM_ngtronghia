@@ -297,6 +297,76 @@ namespace elearning_b1.Migrations
                     b.ToTable("GrammarQuestions");
                 });
 
+            modelBuilder.Entity("elearning_b1.Models.Listening", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AudioUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Transcript")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Listenings");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.ListeningOption", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsCorrect")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ListeningQuestionId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ListeningQuestionId");
+
+                    b.ToTable("ListeningsOptions");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.ListeningQuestion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ListeningId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ListeningId");
+
+                    b.ToTable("ListeningsQuestions");
+                });
+
             modelBuilder.Entity("elearning_b1.Models.ReadingOption", b =>
                 {
                     b.Property<int>("Id")
@@ -363,6 +433,34 @@ namespace elearning_b1.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ReadingSkills");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.Timestamp", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double>("End")
+                        .HasColumnType("float");
+
+                    b.Property<int>("ListeningId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Start")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Word")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ListeningId");
+
+                    b.ToTable("WordTimestamps");
                 });
 
             modelBuilder.Entity("elearning_b1.Models.Topic", b =>
@@ -546,6 +644,28 @@ namespace elearning_b1.Migrations
                     b.Navigation("Grammar");
                 });
 
+            modelBuilder.Entity("elearning_b1.Models.ListeningOption", b =>
+                {
+                    b.HasOne("elearning_b1.Models.ListeningQuestion", "Question")
+                        .WithMany("Options")
+                        .HasForeignKey("ListeningQuestionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Question");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.ListeningQuestion", b =>
+                {
+                    b.HasOne("elearning_b1.Models.Listening", "Listening")
+                        .WithMany("Questions")
+                        .HasForeignKey("ListeningId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Listening");
+                });
+
             modelBuilder.Entity("elearning_b1.Models.ReadingOption", b =>
                 {
                     b.HasOne("elearning_b1.Models.ReadingQuestion", "Question")
@@ -566,6 +686,17 @@ namespace elearning_b1.Migrations
                         .IsRequired();
 
                     b.Navigation("ReadingSkill");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.Timestamp", b =>
+                {
+                    b.HasOne("elearning_b1.Models.Listening", "Listening")
+                        .WithMany("Timestamps")
+                        .HasForeignKey("ListeningId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Listening");
                 });
 
             modelBuilder.Entity("elearning_b1.Models.VocabOption", b =>
@@ -607,6 +738,18 @@ namespace elearning_b1.Migrations
                 });
 
             modelBuilder.Entity("elearning_b1.Models.GrammarQuestion", b =>
+                {
+                    b.Navigation("Options");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.Listening", b =>
+                {
+                    b.Navigation("Questions");
+
+                    b.Navigation("Timestamps");
+                });
+
+            modelBuilder.Entity("elearning_b1.Models.ListeningQuestion", b =>
                 {
                     b.Navigation("Options");
                 });
