@@ -9,6 +9,8 @@
 
   <ItemGroup>
     <PackageReference Include="Aspose.Words" Version="24.11.1" />
+    <PackageReference Include="AssemblyAI" Version="1.2.0" />
+    <PackageReference Include="Google.Apis.Drive.v3" Version="1.68.0.3601" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="8.0.11" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.11" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.11" />

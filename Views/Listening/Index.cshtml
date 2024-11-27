@@ -1,0 +1,21 @@
+﻿@model IEnumerable<elearning_b1.Models.Listening>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Danh sách bài nghe</h2>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Title</h5>
+                        <a href="@Url.Action("Details", "Listening", new { id = item.Id })" class="btn btn-primary">
+                            Xem chi tiết
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

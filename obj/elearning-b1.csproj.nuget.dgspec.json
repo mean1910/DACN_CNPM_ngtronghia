@@ -50,6 +50,14 @@
               "target": "Package",
               "version": "[24.11.1, )"
             },
+            "AssemblyAI": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Google.Apis.Drive.v3": {
+              "target": "Package",
+              "version": "[1.68.0.3601, )"
+            },
             "Microsoft.AspNetCore.Authentication.Facebook": {
               "target": "Package",
               "version": "[8.0.11, )"
