@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\services\\googledriveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:services\\googledriveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\controllers\\listeningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:controllers\\listeningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -61,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\models\\translationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:models\\translationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\service_account_key.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:service_account_key.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\grammars\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -366,7 +366,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -383,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Grammars\\Edit.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Grammars\\Edit.cshtml",
@@ -392,20 +392,19 @@
               "ViewState": "AgIAAA8AAAAAAAAAAAAIwBYAAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-20T08:41:41.398Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ListeningUserViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\ViewModels\\ListeningUserViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ListeningUserViewModel.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\ViewModels\\ListeningUserViewModel.cs",
-              "RelativeToolTip": "ViewModels\\ListeningUserViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "GoogleDriveService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Services\\GoogleDriveService.cs",
+              "RelativeDocumentMoniker": "Services\\GoogleDriveService.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Services\\GoogleDriveService.cs",
+              "RelativeToolTip": "Services\\GoogleDriveService.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwBEAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T14:37:00.781Z",
+              "WhenOpened": "2024-11-27T14:56:10.001Z",
               "EditorCaption": ""
             },
             {
@@ -418,7 +417,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "ListeningUserViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\ViewModels\\ListeningUserViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ListeningUserViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\ViewModels\\ListeningUserViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ListeningUserViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T14:37:00.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ListeningController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Controllers\\ListeningController.cs",
               "RelativeDocumentMoniker": "Controllers\\ListeningController.cs",
@@ -431,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Listening\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Listening\\Details.cshtml",
@@ -439,12 +450,11 @@
               "RelativeToolTip": "Views\\Listening\\Details.cshtml",
               "ViewState": "AgIAACQAAAAAAAAAAAAAABoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T08:44:50.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T08:44:50.205Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Listening\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Listening\\Index.cshtml",
@@ -452,12 +462,11 @@
               "RelativeToolTip": "Views\\Listening\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T09:42:29.806Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T09:42:29.806Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ListeningsController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\ListeningsController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ListeningsController.cs",
@@ -465,12 +474,11 @@
               "RelativeToolTip": "Areas\\Admin\\Controllers\\ListeningsController.cs",
               "ViewState": "AgIAAIAAAAAAAAAAAAAAAJAAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T07:59:20.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T07:59:20.68Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Listenings\\Create.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Listenings\\Create.cshtml",
@@ -478,12 +486,11 @@
               "RelativeToolTip": "Areas\\Admin\\Views\\Listenings\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T08:05:18.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T08:05:18.1Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "elearning-b1.csproj",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\elearning-b1.csproj",
               "RelativeDocumentMoniker": "elearning-b1.csproj",
@@ -491,12 +498,11 @@
               "RelativeToolTip": "elearning-b1.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-24T07:36:25.34Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T07:36:25.34Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Listenings\\Details.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Listenings\\Details.cshtml",
@@ -504,12 +510,11 @@
               "RelativeToolTip": "Areas\\Admin\\Views\\Listenings\\Details.cshtml",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAABcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-27T14:17:20.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T14:17:20.935Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Listenings\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Listenings\\Index.cshtml",
@@ -517,12 +522,11 @@
               "RelativeToolTip": "Areas\\Admin\\Views\\Listenings\\Index.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAAAswB0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-27T14:14:51.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T14:14:51.905Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "AssemblyAIService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Services\\AssemblyAIService.cs",
               "RelativeDocumentMoniker": "Services\\AssemblyAIService.cs",
@@ -530,12 +534,11 @@
               "RelativeToolTip": "Services\\AssemblyAIService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T07:37:01.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T07:37:01.683Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ApplicationDbContext .cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ApplicationDbContext .cs",
               "RelativeDocumentMoniker": "Models\\ApplicationDbContext .cs",
@@ -543,12 +546,11 @@
               "RelativeToolTip": "Models\\ApplicationDbContext .cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:42:42.882Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T14:42:42.882Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -560,7 +562,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -572,7 +574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "TranslationRequest.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\TranslationRequest.cs",
               "RelativeDocumentMoniker": "Models\\TranslationRequest.cs",
@@ -581,18 +583,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T09:06:57.683Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "service_account_key.json",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\service_account_key.json",
-              "RelativeDocumentMoniker": "service_account_key.json",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\service_account_key.json",
-              "RelativeToolTip": "service_account_key.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-25T08:16:12.835Z"
             },
             {
               "$type": "Document",

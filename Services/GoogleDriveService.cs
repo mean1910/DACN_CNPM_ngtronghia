@@ -14,7 +14,7 @@ namespace elearning_b1.Services
         }
         public GoogleDriveService(IConfiguration configuration)
         {
-            var credential = GoogleCredential.FromFile("service_account_key.json") // Đường dẫn tới file JSON
+            var credential = GoogleCredential.FromFile("C:/Users/Admin/OneDrive/Máy tính/DACN/service_account_key.json") // Đường dẫn tới file JSON
                 .CreateScoped(DriveService.ScopeConstants.Drive);
 
             _driveService = new DriveService(new BaseClientService.Initializer()
