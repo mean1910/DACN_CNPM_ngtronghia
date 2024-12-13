@@ -79,9 +79,7 @@
 /*** Navbar ***/
 .navbar .dropdown-toggle::after {
     border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+    
     vertical-align: middle;
     margin-left: 8px;
 }
@@ -99,6 +97,22 @@
 .navbar-light .navbar-nav .nav-link.active {
     color: var(--primary);
 }
+
+.navbar .dropdown-toggle.active {
+    color: var(--primary); /* Thay đổi màu chữ khi dropdown-toggle active */
+}
+
+
+.navbar .dropdown-item.active {
+    background-color: var(--primary); /* Màu nền khi mục active */
+    color: #fff; /* Màu chữ khi active */
+}
+
+.navbar .dropdown-item:hover {
+    background-color: var(--primary); /* Màu nền khi hover */
+    color: #fff; /* Màu chữ khi hover */
+}
+
 
 @media (max-width: 991.98px) {
     .navbar-light .navbar-nav .nav-link  {

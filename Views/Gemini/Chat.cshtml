@@ -1,0 +1,30 @@
+﻿@model string
+
+<div>
+    <h2>Chat with Gemini</h2>
+    <form id="chatForm">
+        <textarea id="userMessage" placeholder="Type your message here..."></textarea>
+        <button type="submit">Send</button>
+    </form>
+
+    <div id="response"></div>
+</div>
+
+<script>
+    document.getElementById('chatForm').addEventListener('submit', async function (event) {
+        event.preventDefault();
+        const userMessage = document.getElementById('userMessage').value;
+
+        const response = await fetch('/Gemini/Chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ userMessage })
+        });
+
+        const result = await response.json();
+        document.getElementById('response').innerText = result.message;
+    });
+
+</script>

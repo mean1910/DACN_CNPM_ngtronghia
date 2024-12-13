@@ -1,0 +1,20 @@
+﻿@model UserWritingSubmission
+
+<h2>Write Your Submission</h2>
+
+@if (Model?.Writing != null)
+{
+    <h3>@Model.Writing.Title</h3>
+    <p>@Model.Writing.Prompt</p>
+}
+else
+{
+    <p>Chủ đề không hợp lệ hoặc không tồn tại.</p>
+}
+
+<form asp-action="Write" method="post">
+    <input type="hidden" asp-for="WritingId" />
+    <textarea asp-for="UserAnswer" rows="10" cols="80"></textarea>
+    <span asp-validation-for="UserAnswer" class="text-danger"></span>
+    <button type="submit">Save</button>
+</form>

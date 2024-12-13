@@ -17,6 +17,10 @@ namespace elearning_b1.Controllers
         {
             return View();
         }
+        public IActionResult Chat()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {

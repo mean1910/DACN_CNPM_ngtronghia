@@ -32,32 +32,50 @@
         border-radius: 5px;
     }
 
-    audio {
-        width: 100%;
-        margin-top: 10px;
-    }
-
     .btn {
         padding: 10px 20px;
         font-size: 1rem;
         border-radius: 5px;
     }
 
+    /* Kiểu cho biểu tượng loa */
+    .volume-icon {
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #007bff; /* Màu sắc của biểu tượng */
+    }
+
+        .volume-icon:hover {
+            color: #0056b3; /* Màu sắc khi hover */
+        }
+
+    /* Căn chỉnh các phần tử */
+    .vocabulary-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pronunciation {
+        font-style: italic;
+        color: #555;
+        margin-bottom: 10px;
+    }
+
+    .word {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .meaning {
+        margin-top: 10px;
+        font-size: 1rem;
+    }
 </style>
 
 <div class="container mt-4">
     <!-- Tiêu đề -->
     <h1 class="text-center mb-4">Từ điển từ vựng</h1>
-
-    <!-- Nút điều hướng -->
-    <div class="d-flex justify-content-center mb-4">
-        <a href="@Url.Action("Flashcards", "Vocabularies", new { topicId = Model.FirstOrDefault()?.TopicID })" class="btn btn-primary mx-2">
-            Học bằng thẻ ghi nhớ
-        </a>
-        <a href="@Url.Action("Exercise", "Vocabularies", new { id = Model.FirstOrDefault()?.TopicID })" class="btn btn-secondary mx-2">
-            Kiểm tra từ vựng
-        </a>
-    </div>
 
     <!-- Danh sách từ vựng -->
     <div class="row">
@@ -66,42 +84,51 @@
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm border-0">
                     <div class="card-body">
-                        <!-- Từ vựng -->
-                        <h4 class="card-title text-primary">@vocab.Word</h4>
+                        <div class="vocabulary-item">
+                            <!-- Từ vựng -->
+                            <h4 class="card-title text-primary word">@vocab.Word</h4>
 
-                        <!-- Phát âm -->
-                        <p class="text-muted">
-                            <i class="fas fa-volume-up"></i> @vocab.Pronunciation
-                        </p>
+                            <!-- Phát âm -->
+                            @if (!string.IsNullOrEmpty(vocab.Word))
+                            {
+                                <p class="pronunciation"><i class="bi bi-volume-up volume-icon" onclick="speakWord('@vocab.Word')"></i> Phát âm: @vocab.Pronunciation</p>
+                            }
+                            else
+                            {
+                                <p class="text-muted">Không có phát âm</p>
+                            }
 
-                        <!-- Loại từ -->
-                        <span class="badge bg-info text-dark">
-                            @vocab.PartOfSpeech
-                        </span>
+                            <!-- Loại từ -->
+                            <span class="badge bg-info text-dark">
+                                @vocab.PartOfSpeech
+                            </span>
 
-                        <!-- Nghĩa -->
-                        <p class="mt-2"><strong>Nghĩa:</strong> @vocab.Meaning</p>
+                            <!-- Nghĩa -->
+                            <p class="mt-2 meaning"><strong>Nghĩa:</strong> @vocab.Meaning</p>
 
-                        <!-- Câu ví dụ -->
-                        <p class="text-muted"><em>"@vocab.ExampleSentence"</em></p>
-
-                        <!-- Âm thanh -->
-                        @if (!string.IsNullOrEmpty(vocab.AudioFile))
-                        {
-                            <audio controls>
-                                <source src="@vocab.AudioFile" type="audio/mpeg" />
-                                Trình duyệt không hỗ trợ audio.
-                            </audio>
-                        }
-                        else
-                        {
-                            <p class="text-danger">Không có âm thanh</p>
-                        }
+                            <!-- Câu ví dụ -->
+                            <p class="text-muted"><em>"@vocab.ExampleSentence"</em></p>
+                        </div>
                     </div>
                 </div>
             </div>
         }
     </div>
+
+    <div class="action-buttons">
+        <a href="@Url.Action("Flashcards", "Vocabularies", new { topicId = Model.FirstOrDefault()?.TopicID })" class="btn btn-primary btn-lg">Flashcards</a>
+        <a href="@Url.Action("Exercise", "Vocabularies", new { id = Model.FirstOrDefault()?.TopicID })" class="btn btn-success btn-lg">Kiểm tra</a>
+    </div>
 </div>
 
+<!-- Thêm link tới ResponsiveVoice API -->
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=KrzuTgDy"></script>
 
+<script>
+    function speakWord(word) {
+        // Kiểm tra nếu từ vựng không rỗng và phát âm chỉ khi người dùng nhấn loa
+        if (word) {
+            responsiveVoice.speak(word, "UK English Male");  // Bạn có thể thay đổi giọng ở đây
+        }
+    }
+</script>

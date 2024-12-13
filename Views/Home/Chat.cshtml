@@ -1,0 +1,34 @@
+﻿<div>
+    <textarea id="userPrompt" placeholder="Enter your prompt"></textarea>
+    <button id="sendButton">Send</button>
+</div>
+<div id="responseOutput"></div>
+
+<script>
+    document.getElementById("sendButton").addEventListener("click", async () => {
+        const prompt = document.getElementById("userPrompt").value;
+
+        try {
+            const response = await fetch('/api/Gemini/generate', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ prompt: prompt })
+            });
+
+            if (!response.ok) {
+                // Xử lý lỗi HTTP
+                const errorText = await response.text();
+                console.error(`HTTP Error: ${response.status} - ${response.statusText}`);
+                document.getElementById("responseOutput").innerText = `Error: ${errorText}`;
+                return;
+            }
+
+            const data = await response.json();
+            document.getElementById("responseOutput").innerText = data.response || "No response received.";
+        } catch (error) {
+            console.error("Error:", error);
+            document.getElementById("responseOutput").innerText = "An error occurred. Please try again.";
+        }
+    });
+
+</script>

@@ -1,51 +1,78 @@
-﻿@model ListeningUserViewModel
-
-@{
+﻿@{
     ViewData["Title"] = Model.Title;
 }
 
-<h2>@Model.Title</h2>
+<div class="container my-5">
+    <h2 class="text-center text-primary mb-4">@Model.Title</h2>
 
-<div class="mb-3">
-    <iframe src="@Model.AudioUrl" width="100%" height="60" allow="autoplay"></iframe>
-</div>
-
-<div class="mb-3">
-    <button id="toggleTranscript" class="btn btn-primary">Toggle Transcript</button>
-</div>
-
-<div id="transcriptContainer" style="display: none;">
-    <h4>Transcript</h4>
-    <ul>
-        @foreach (var sentence in Model.Sentences)
-        {
-            <li>@sentence</li>
-        }
-    </ul>
-</div>
-
-<h4>Questions</h4>
-@foreach (var question in Model.Questions)
-{
-    <div class="mb-4">
-        <p><strong>@question.Text</strong></p>
-        <ul>
-            @foreach (var option in question.Options)
-            {
-                <li>
-                    <input type="radio" name="question-@question.Id" id="option-@option.Id" />
-                    <label for="option-@option.Id">@option.Text</label>
-                </li>
-            }
-        </ul>
+    <!-- Audio Player -->
+    <div class="mb-4 text-center">
+        <iframe src="@Model.AudioUrl" width="100%" height="60" allow="autoplay" class="border rounded shadow-lg"></iframe>
     </div>
-}
+
+    <!-- Toggle Transcript Button -->
+    <div class="text-center mb-3">
+        <button id="toggleTranscript" class="btn btn-outline-primary btn-lg shadow-sm">Toggle Transcript</button>
+    </div>
+
+    <!-- Transcript Container -->
+    <div id="transcriptContainer" style="display: none;">
+        <h4 class="text-center text-secondary mb-4">Transcript</h4>
+        <div class="bg-light p-4 rounded shadow-sm">
+            @foreach (var sentence in Model.Sentences)
+            {
+                <p class="mb-2">@Html.Raw(sentence)</p>
+            }
+        </div>
+    </div>
+
+    <!-- Questions Section -->
+    <form method="post" action="@Url.Action("Submit", "Listening", new { id = Model.Id })">
+        @foreach (var question in Model.Questions)
+        {
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">
+                        <strong>Question @question.Id:</strong> @question.Text
+                    </h5>
+
+                    <div class="mt-3">
+                        @foreach (var option in question.Options)
+                        {
+                            <div class="form-check">
+                                <input class="form-check-input"
+                                       type="radio"
+                                       name="answers[@question.Id]"
+                                       value="@option.Id"
+                                       id="option_@option.Id" />
+                                <label class="form-check-label" for="option_@option.Id">
+                                    @option.Text
+                                </label>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg px-5">
+                Submit
+            </button>
+        </div>
+    </form>
+
+    <!-- Back Button -->
+    <div class="text-center mt-4">
+        <a href="javascript:history.back()" class="btn btn-outline-secondary btn-lg shadow-sm">Back</a>
+    </div>
+</div>
 
 <script>
+    // Toggle transcript visibility
     document.getElementById('toggleTranscript').addEventListener('click', function () {
         var container = document.getElementById('transcriptContainer');
         container.style.display = container.style.display === 'none' ? 'block' : 'none';
     });
 </script>
-
-<a href="javascript:history.back()" class="btn btn-secondary">Back</a>

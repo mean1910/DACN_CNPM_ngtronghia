@@ -17,6 +17,8 @@ namespace elearning_b1.Controllers
 
         public async Task<IActionResult> Index(string searchQuery)
         {
+            ViewData["CurrentController"] = "Skills";
+            ViewData["CurrentAction"] = "Reading";
             var readingSkills = from r in _context.ReadingSkills
                                 select r;
 

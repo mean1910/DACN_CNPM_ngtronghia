@@ -50,22 +50,35 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a asp-controller="Home" asp-action="Index" class="nav-item nav-link active">Home</a>
-                <a asp-controller="Vocabularies" asp-action="Index" class="nav-item nav-link">Vocabulary</a>
-                <a asp-controller="Grammars" asp-action="Index" class="nav-item nav-link">Grammar</a>
+                <a asp-controller="Home" asp-action="Index" class="nav-item nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" ? "active" : "")">Home</a>
+                <a asp-controller="Vocabularies" asp-action="Index" class="nav-item nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Vocabularies" ? "active" : "")">Vocabulary</a>
+                <a asp-controller="Grammars" asp-action="Index" class="nav-item nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Grammars" ? "active" : "")">Grammar</a>
+
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Skills</a>
+                    <a href="#" class="nav-link dropdown-toggle @((ViewData["CurrentController"] == "Skills") ? "active" : "")" data-bs-toggle="dropdown">
+                        <span>Skills</span> <!-- "Skills" chỉ đơn thuần là văn bản -->
+                    </a>
+
                     <div class="dropdown-menu fade-down m-0">
-                        <a asp-controller="Reading" asp-action="Index" class="dropdown-item">Reading</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
+                        <a asp-controller="Listening" asp-action="Index" class="dropdown-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Listening" ? "active" : "")">Listening</a>
+                        <a asp-controller="Speaking02" asp-action="Index" class="dropdown-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Speaking02" ? "active" : "")">Speaking</a>
+                        <a asp-controller="Reading" asp-action="Index" class="dropdown-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Reading" ? "active" : "")">Reading</a>
+                        <a asp-controller="Writing" asp-action="Index" class="dropdown-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Writing" ? "active" : "")">Writing</a>
                     </div>
                 </div>
+
+
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
                 <partial name="_LoginPartial" />
             </div>
         </div>
     </nav>
+
+
+    <!-- Your other HTML content -->
+    
+
+
     <!-- Navbar End -->
     <!-- Carousel Start -->
 @*     <div class="container-fluid p-0 mb-5">

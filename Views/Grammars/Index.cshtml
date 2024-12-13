@@ -1,46 +1,118 @@
-﻿@using Azure.Core
-@model IEnumerable<elearning_b1.Models.Grammar>
+﻿@model IEnumerable<elearning_b1.Models.Grammar>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Bài Học Ngữ Pháp";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="container mt-5">
-    <h1 class="text-center">Grammar Lessons</h1>
 
-    <!-- Form tìm kiếm -->
-    <form method="get" asp-action="Index" class="form-inline my-4">
-        <input type="text" name="query" class="form-control mr-2" placeholder="Search by title"
-               value="@Context.Request.Query["query"]" />
-        <button type="submit" class="btn btn-primary">Search</button>
-        <a asp-action="Index" class="btn btn-secondary ml-2">Clear</a>
+<div class="container mt-5">
+    <!-- Tiêu đề -->
+    <div class="text-center mb-4">
+        <h2 >BỎ TÚI NGỮ PHÁP CHUẨN, TỰ TIN NÓI TIẾNG ANH <3</h2>
+        <p class="text-muted">Ngữ pháp khó? Không hề! Học cùng mình, bạn sẽ thấy nó dễ hiểu và cực kỳ thú vị!</p>
+    </div>
+
+    <!-- Thanh tìm kiếm -->
+    <form method="get" asp-action="Index" class="row justify-content-center mb-5">
+        <div class="col-md-8">
+            <div class="input-group">
+                <input type="text" class="form-control" name="query" placeholder="Tìm kiếm bài học..."
+                       value="@Context.Request.Query["query"]">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                </div>
+            </div>
+        </div>
     </form>
 
-    <!-- Hiển thị danh sách bài học -->
-    <table class="table table-striped table-hover mt-4">
-        <thead class="thead-dark">
-            <tr>
-                <th>#</th>
-                <th>Title</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
+    <!-- Danh sách bài học dạng card -->
+    <div class="row">
+        @if (Model.Any())
+        {
+            @foreach (var lesson in Model)
             {
-                <tr>
-                    <td>@item.Id</td>
-                    <td>@item.Title</td>
-                    <td>
-                        <a asp-action="View" asp-route-id="@item.Id" class="btn btn-info">View</a>
-                    </td>
-                </tr>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">@lesson.Title</h5>
+                            <p class="card-text text-muted">
+                                Hãy xem bài học để biết thêm chi tiết và nâng cao ngữ pháp của bạn.
+                            </p>
+                            <div class="mt-auto">
+                                <a asp-action="View" asp-route-id="@lesson.Id" class="btn btn-outline-primary btn-block">
+                                    Xem bài học
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             }
-        </tbody>
-    </table>
-
-    @if (!Model.Any())
-    {
-        <p class="text-center text-danger">No lessons found.</p>
-    }
+        }
+        else
+        {
+            <div class="col-12">
+                <p class="text-center text-danger">Không tìm thấy bài học nào. Vui lòng thử lại.</p>
+            </div>
+        }
+    </div>
 </div>
+
+
+
+<style>
+    /* CSS chung */
+   
+
+    .card {
+        border: none;
+        border-radius: 10px;
+        background: #ffffff;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+        color: #555;
+    }
+
+    /* Search bar */
+    .input-group {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 50px;
+    }
+
+        .input-group input {
+            border: none;
+            border-radius: 50px 0 0 50px;
+            padding: 10px 20px;
+        }
+
+        .input-group .btn {
+            border-radius: 0 50px 50px 0;
+            padding: 10px 20px;
+        }
+
+   
+    .responsive-card {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+        .responsive-card .card {
+            margin-bottom: 1rem;
+        }
+
+</style>

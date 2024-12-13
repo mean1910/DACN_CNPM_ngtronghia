@@ -48,7 +48,7 @@ namespace elearning_b1.Areas.Admin.Controllers
         // GET: Admin/ListeningQuestions/Create
         public IActionResult Create()
         {
-            ViewData["ListeningId"] = new SelectList(_context.Listenings, "Id", "Id");
+            ViewData["ListeningId"] = new SelectList(_context.Listenings, "Id", "Title");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace elearning_b1.Areas.Admin.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ListeningId"] = new SelectList(_context.Listenings, "Id", "Id", listeningQuestion.ListeningId);
+            ViewData["ListeningId"] = new SelectList(_context.Listenings, "Id", "Title", listeningQuestion.ListeningId);
             return View(listeningQuestion);
         }
 
@@ -82,7 +82,7 @@ namespace elearning_b1.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["ListeningId"] = new SelectList(_context.Listenings, "Id", "Id", listeningQuestion.ListeningId);
+            ViewData["ListeningId"] = new SelectList(_context.Listenings, "Id", "Title", listeningQuestion.ListeningId);
             return View(listeningQuestion);
         }
 
@@ -118,7 +118,7 @@ namespace elearning_b1.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ListeningId"] = new SelectList(_context.Listenings, "Id", "Id", listeningQuestion.ListeningId);
+            ViewData["ListeningId"] = new SelectList(_context.Listenings, "Id", "Title", listeningQuestion.ListeningId);
             return View(listeningQuestion);
         }
 

@@ -1,22 +1,89 @@
-﻿@model IEnumerable<elearning_b1.Models.Topic>
-
+﻿
+@model IEnumerable<dynamic>
 @{
     ViewData["Title"] = "Danh sách chủ đề";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<style>
-    /* Tạo bố cục đẹp cho thẻ (card) */
-.card {
-    border: none;
-    border-radius: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+@{
+    var topics = ViewBag.Topics as IEnumerable<dynamic>;
+    var currentPage = ViewBag.CurrentPage as int?;
+    var totalPages = ViewBag.TotalPages as int?;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+<div class="container mt-4">
+    <div class="text-center mb-5">
+        <h2>MỞ RỘNG VỐN TỪ, TỰ TIN GIAO TIẾP MỖI NGÀY!</h2>
+        <p class="text-muted">Mỗi từ vựng là một câu chuyện, một cơ hội để bạn hiểu sâu hơn và giao tiếp tốt hơn. Sẵn sàng khám phá chưa?</p>
+    </div>
+
+    
+
+    <!-- Lưới hiển thị danh sách chủ đề -->
+    <div class="row">
+        @foreach (var item in topics)
+        {
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <img src="@item.Topic.ImageUrl" class="card-img-top" alt="@item.Topic.TopicName" style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">@item.Topic.TopicName</h5>
+                        <p class="text-muted">@item.VocabularyCount từ vựng</p>
+                        <a href="@Url.Action("VocabularyList", "Vocabularies", new { topicId = item.Topic.TopicID })" class="btn btn-primary">
+                            Xem từ vựng
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Phân trang -->
+    <div class="text-center mt-4">
+        <nav>
+            <ul class="pagination justify-content-center">
+                @if (currentPage > 1)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { page = currentPage - 1 })">Trước</a>
+                    </li>
+                }
+
+                @for (var i = 1; i <= totalPages; i++)
+                {
+                    <li class="page-item @(i == currentPage ? "active" : "")">
+                        <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
+                    </li>
+                }
+
+                @if (currentPage < totalPages)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { page = currentPage + 1 })">Sau</a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+
+<style>
+    /* Tạo bố cục đẹp cho thẻ (card) */
+    .card {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden; /* Ẩn phần hình ảnh ra ngoài */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
 
 .card-title {
     font-size: 1.4rem;
@@ -55,32 +122,4 @@ p {
 
 </style>
 
-<div class="container mt-4">
-    <!-- Phần tiêu đề -->
-    <div class="text-center mb-5">
-        <h1>Khám phá các chủ đề từ vựng</h1>
-        <p class="text-muted">Lựa chọn chủ đề bạn muốn học và bắt đầu ngay hôm nay!</p>
-    </div>
 
-    <!-- Lưới hiển thị danh sách chủ đề -->
-    <div class="row">
-        @foreach (var topic in Model)
-        {
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card shadow-sm">
-                    <!-- Hình ảnh đại diện -->
-@*                     <img src="~/images/topics/@topic.ImageFile" class="card-img-top" alt="@topic.TopicName" style="height: 200px; object-fit: cover;">
- *@
-                    <!-- Nội dung -->
-                    <div class="card-body text-center">
-                        <h5 class="card-title">@topic.TopicName</h5>
-                        <p class="text-muted">@* @topic.VocabularyCount  *@3 từ vựng</p>
-                        <a href="@Url.Action("VocabularyList", "Vocabularies", new { topicId = topic.TopicID })" class="btn btn-primary">
-                            Xem từ vựng
-                        </a>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
-</div>

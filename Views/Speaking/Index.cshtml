@@ -1,0 +1,163 @@
+﻿
+@{
+    ViewData["Title"] = "Practice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>@ViewData["Title"]</h1>
+
+<!-- Form nhập văn bản và chuyển thành âm thanh -->
+<form id="textToSpeechForm">
+    <div class="form-group">
+        <label for="inputText">Enter Text to Speak:</label>
+        <input type="text" class="form-control" id="inputText" placeholder="Enter English text" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Convert to Speech</button>
+</form>
+
+<!-- Thêm phần thu âm -->
+<h2>Record Your Speech:</h2>
+<button id="startRecording" class="btn btn-success">Start Recording</button>
+<button id="stopRecording" class="btn btn-danger" disabled>Stop Recording</button>
+<audio id="audioPlayback" controls></audio>
+
+<!-- ResponsiveVoice Script -->
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=KrzuTgDy"></script>
+<script>
+    document.getElementById("textToSpeechForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        var text = document.getElementById("inputText").value;
+
+        if (text) {
+            responsiveVoice.speak(text, "US English Male");
+        } else {
+            alert("Please enter some text!");
+        }
+    });
+
+    let mediaRecorder;
+    let audioChunks = [];
+
+    document.getElementById("startRecording").addEventListener("click", async function () {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        mediaRecorder = new MediaRecorder(stream);
+
+        mediaRecorder.ondataavailable = function (event) {
+            audioChunks.push(event.data);
+        };
+
+        mediaRecorder.onstop = function () {
+            const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+            const audioUrl = URL.createObjectURL(audioBlob);
+            document.getElementById("audioPlayback").src = audioUrl;
+
+            // Lấy văn bản người dùng nhập
+            var userInputText = document.getElementById("inputText").value;
+
+            // Gửi âm thanh và văn bản người dùng nhập tới server
+            uploadAudioToServer(audioBlob, userInputText);
+        };
+
+        mediaRecorder.start();
+        document.getElementById("stopRecording").disabled = false;
+        document.getElementById("startRecording").disabled = true;
+    });
+
+    document.getElementById("stopRecording").addEventListener("click", function () {
+        mediaRecorder.stop();
+        document.getElementById("startRecording").disabled = false;
+        document.getElementById("stopRecording").disabled = true;
+    });
+
+    function uploadAudioToServer(audioBlob, userInputText) {
+        const formData = new FormData();
+        formData.append("audio", audioBlob, "recorded_audio.wav");
+        formData.append("userInputText", userInputText);
+
+        fetch("/Speaking/AnalyzeAudio", {
+            method: "POST",
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Audio analysis complete! Transcript: " + data.transcript + "\nComparison Result: " + data.comparisonResult);
+                } else {
+                    alert("Error: " + data.message);
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Error while processing audio.");
+            });
+    }
+</script>
+
+ @* <script>
+        // Xử lý phần Text-to-Speech (chuyển văn bản thành âm thanh)
+        document.getElementById("textToSpeechForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var text = document.getElementById("inputText").value;
+
+            if (text) {
+                responsiveVoice.speak(text, "US English Male");
+            } else {
+                alert("Please enter some text!");
+            }
+        });
+
+        // Phần thu âm giọng nói
+        let mediaRecorder;
+        let audioChunks = [];
+
+        // Bắt đầu thu âm
+        document.getElementById("startRecording").addEventListener("click", async function () {
+            // Kiểm tra quyền truy cập micro
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            mediaRecorder = new MediaRecorder(stream);
+
+            mediaRecorder.ondataavailable = function (event) {
+                audioChunks.push(event.data);
+            };
+
+            mediaRecorder.onstop = function () {
+                const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                const audioUrl = URL.createObjectURL(audioBlob);
+                document.getElementById("audioPlayback").src = audioUrl;
+
+                // Gửi âm thanh tới server hoặc API để nhận diện và đánh giá
+                uploadAudioToServer(audioBlob);
+            };
+
+            mediaRecorder.start();
+            document.getElementById("stopRecording").disabled = false;
+            document.getElementById("startRecording").disabled = true;
+        });
+
+        // Dừng thu âm
+        document.getElementById("stopRecording").addEventListener("click", function () {
+            mediaRecorder.stop();
+            document.getElementById("startRecording").disabled = false;
+            document.getElementById("stopRecording").disabled = true;
+        });
+
+        // Gửi audio lên server (hoặc Assembly AI) để nhận diện và đánh giá
+        function uploadAudioToServer(audioBlob) {
+            const formData = new FormData();
+            formData.append("audio", audioBlob, "recorded_audio.wav");
+
+            fetch("/Speaking/AnalyzeAudio", {
+                method: "POST",
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Hiển thị kết quả từ Assembly AI (hoặc API nhận diện giọng nói khác)
+                    console.log(data);
+                    alert("Audio analysis complete! Check the console for results.");
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("Error while processing audio.");
+                });
+        }
+    </script> *@

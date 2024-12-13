@@ -4,15 +4,25 @@
     ViewData["Title"] = "Edit";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
-<h2>Edit</h2>
+<h1>Edit Listening</h1>
 
-<form asp-action="Edit" enctype="multipart/form-data" method="post">
-    <input type="hidden" asp-for="Id" />
-
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label asp-for="Title" class="control-label"></label>
         <input asp-for="Title" class="form-control" />
         <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="newAudioFile">New Audio File (Optional)</label>
+        <input type="file" id="newAudioFile" name="newAudioFile" class="form-control" />
+        <span asp-validation-for="AudioUrl" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="newImageFile">New Image File (Optional)</label>
+        <input type="file" id="newImageFile" name="newImageFile" class="form-control" />
+        <span asp-validation-for="ImgUrl" class="text-danger"></span>
     </div>
 
     <div class="form-group">
@@ -21,15 +31,8 @@
         <span asp-validation-for="Transcript" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
-        <label>Replace Audio File</label>
-        <input type="file" name="newAudioFile" class="form-control" />
-        <small class="text-muted">Leave empty to keep the current file.</small>
-    </div>
-
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Save Changes</button>
-    </div>
+    <button type="submit" class="btn btn-primary">Save Changes</button>
 </form>
+
 
 <a asp-action="Index" class="btn btn-secondary">Back to List</a>

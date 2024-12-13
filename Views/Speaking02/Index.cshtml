@@ -1,0 +1,118 @@
+﻿@model IEnumerable<dynamic>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var topics = ViewBag.Topics as IEnumerable<dynamic>;
+    var currentPage = ViewBag.CurrentPage as int?;
+    var totalPages = ViewBag.TotalPages as int?;
+}
+<div class="container mt-4">
+    <div class="text-center mb-5">
+        <h2>CỨ NÓI ĐI! SAI MỘT CHÚT CŨNG KHÔNG SAO, QUAN TRỌNG LÀ DÁM THỬ!</h2>
+        <p>Nói tiếng Anh không cần phải hoàn hảo ngay từ đầu. Hãy bắt đầu với sự tự tin và chúng mình sẽ giúp bạn tiến bộ!</p>
+    </div>
+
+    <!-- Lưới hiển thị danh sách chủ đề -->
+    <div class="row">
+        @foreach (var item in topics)
+        {
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <img src="@item.Topic.ImageUrl" class="card-img-top" alt="@item.Topic.TopicName" style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">@item.Topic.TopicName</h5>
+                        <a href="@Url.Action("TopicDetails", "Speaking02", new { topicId = item.Topic.TopicID })" class="btn btn-primary">
+                            Luyện nói ngay với chủ đề này!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Phân trang -->
+    <div class="text-center mt-4">
+        <nav>
+            <ul class="pagination justify-content-center">
+                @if (currentPage > 1)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { page = currentPage - 1 })">Trước</a>
+                    </li>
+                }
+
+                @for (var i = 1; i <= totalPages; i++)
+                {
+                    <li class="page-item @(i == currentPage ? "active" : "")">
+                        <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
+                    </li>
+                }
+
+                @if (currentPage < totalPages)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { page = currentPage + 1 })">Sau</a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+
+<style>
+        /* Tạo bố cục đẹp cho thẻ (card) */
+    .card {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden; /* Ẩn phần hình ảnh ra ngoài */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .btn {
+        border-radius: 20px;
+        padding: 10px 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #666;
+    }
+
+    /* Responsive Grid */
+    /*  m e d i a (max-width: 768px) {
+        .card img {
+            height: 150px;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+    } */
+
+</style>
+

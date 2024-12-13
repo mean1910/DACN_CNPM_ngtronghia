@@ -1,0 +1,184 @@
+﻿@using elearning_b1.ViewModels
+@model GrammarCheckViewModel
+
+<div class="container">
+    <div class="header">
+        <h2>Kiểm Tra Ngữ Pháp</h2>
+    </div>
+
+    <div class="content">
+        <div class="form-card">
+            <h3 class="form-title">Nhập văn bản cần kiểm tra</h3>
+            <form method="post" action="/GrammarCheck/CheckGrammar" class="grammar-check-form">
+                <textarea id="textInput" name="text" rows="8" class="textarea-input" placeholder="Nhập đoạn văn của bạn vào đây...">@Model?.OriginalText</textarea><br />
+                <button type="submit" class="submit-btn">Kiểm tra ngữ pháp</button>
+            </form>
+        </div>
+
+        <div class="result-card">
+            @if (!string.IsNullOrEmpty(Model?.Message))
+            {
+                <div class="message-box">@Model.Message</div>
+            }
+
+            @if (Model?.GrammarErrors != null && Model.GrammarErrors.Count > 0)
+            {
+                <h3 class="errors-title">Các Lỗi Ngữ Pháp:</h3>
+                <ul class="error-list">
+                    @foreach (var error in Model.GrammarErrors)
+                    {
+                        <li class="error-item">
+                            <div class="error-message">
+                                <strong>@error.Message</strong>
+                                <p class="error-short-message">@error.ShortMessage</p>
+                            </div>
+                            <div class="error-details">
+                                <b>Lỗi ngữ cảnh:</b> @error.ErrorContext<br />
+                                <b>Câu bị lỗi:</b> @error.ErrorSentence<br />
+                                <b>Gợi ý thay thế:</b> @error.SuggestedReplacements
+                            </div>
+                            @if (!string.IsNullOrEmpty(error.Url))
+                            {
+                                <a href="@error.Url" target="_blank" class="more-info-link">Tìm hiểu thêm</a>
+                            }
+                        </li>
+                    }
+                </ul>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Tổng thể container */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2vw;
+    }
+
+    /* Header */
+    .header {
+        text-align: center;
+        margin-bottom: 2vw;
+    }
+
+    .header h2 {
+        font-size: 3vw;
+        color: #4CAF50;
+    }
+
+    /* Phần nội dung */
+    .content {
+        display: flex;
+        justify-content: space-between;
+        gap: 2vw;
+    }
+
+    /* Phần form kiểm tra ngữ pháp */
+    .form-card {
+        flex: 1;
+        background-color: #fff;
+        padding: 2vw;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-title {
+        font-size: 2vw;
+        margin-bottom: 1vw;
+    }
+
+    .grammar-check-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textarea-input {
+        width: 100%;
+        height: 12vw;
+        padding: 1vw;
+        margin-bottom: 1vw;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1.5vw;
+        resize: vertical;
+    }
+
+    .submit-btn {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 1vw;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.8vw;
+        transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+        background-color: #45a049;
+    }
+
+    /* Phần kết quả */
+    .result-card {
+        flex: 2;
+        background-color: #f9f9f9;
+        padding: 2vw;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .message-box {
+        padding: 1vw;
+        background-color: #e0f7fa;
+        border-left: 5px solid #4CAF50;
+        margin-bottom: 2vw;
+    }
+
+    .errors-title {
+        font-size: 2.5vw;
+        color: #D32F2F;
+        margin-bottom: 1vw;
+    }
+
+    .error-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .error-item {
+        background-color: #fff;
+        padding: 1.5vw;
+        margin-bottom: 1.5vw;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .error-message {
+        font-size: 1.8vw;
+        font-weight: bold;
+    }
+
+    .error-short-message {
+        font-style: italic;
+        color: #999;
+    }
+
+    .error-details {
+        font-size: 1.5vw;
+        margin-top: 1vw;
+    }
+
+    .more-info-link {
+        display: inline-block;
+        margin-top: 1vw;
+        color: #4CAF50;
+        text-decoration: none;
+        font-size: 1.5vw;
+    }
+
+    .more-info-link:hover {
+        text-decoration: underline;
+    }
+</style>

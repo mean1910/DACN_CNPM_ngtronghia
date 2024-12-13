@@ -4433,6 +4433,10 @@
       "PackagePath": "staticwebassets\\home\\img\\course-3.jpg"
     },
     {
+      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\home\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\home\\img\\favicon.png"
+    },
+    {
       "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\home\\img\\team-1.jpg",
       "PackagePath": "staticwebassets\\home\\img\\team-1.jpg"
     },
@@ -5109,28 +5113,52 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\03eae3af-184b-4074-9ceb-20ffea940c86.docx",
-      "PackagePath": "staticwebassets\\uploads\\03eae3af-184b-4074-9ceb-20ffea940c86.docx"
+      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\176c8fa0-1e7d-4c02-a3f5-c03f32daff20.png",
+      "PackagePath": "staticwebassets\\uploads\\176c8fa0-1e7d-4c02-a3f5-c03f32daff20.png"
     },
     {
-      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\03eae3af-184b-4074-9ceb-20ffea940c86.pdf",
-      "PackagePath": "staticwebassets\\uploads\\03eae3af-184b-4074-9ceb-20ffea940c86.pdf"
+      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\5556b81e-faa0-4afc-8430-433aea6654ee.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5556b81e-faa0-4afc-8430-433aea6654ee.jpg"
     },
     {
-      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\4fcc5b64-4312-4d4d-8177-58a8416bc795.docx",
-      "PackagePath": "staticwebassets\\uploads\\4fcc5b64-4312-4d4d-8177-58a8416bc795.docx"
+      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\58c7eb38-459b-4c35-8597-3ec10dfa0fb0.png",
+      "PackagePath": "staticwebassets\\uploads\\58c7eb38-459b-4c35-8597-3ec10dfa0fb0.png"
     },
     {
-      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\4fcc5b64-4312-4d4d-8177-58a8416bc795.pdf",
-      "PackagePath": "staticwebassets\\uploads\\4fcc5b64-4312-4d4d-8177-58a8416bc795.pdf"
+      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\5c3cf128-016b-47ab-b904-a2355f296d85.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5c3cf128-016b-47ab-b904-a2355f296d85.jpg"
     },
     {
-      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\66fd7609-b431-4f7c-90a7-428baa795b07.docx",
-      "PackagePath": "staticwebassets\\uploads\\66fd7609-b431-4f7c-90a7-428baa795b07.docx"
+      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\7015b4a9-6eb2-4675-b977-d02a7ad80b61.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\7015b4a9-6eb2-4675-b977-d02a7ad80b61.jpeg"
     },
     {
-      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\66fd7609-b431-4f7c-90a7-428baa795b07.pdf",
-      "PackagePath": "staticwebassets\\uploads\\66fd7609-b431-4f7c-90a7-428baa795b07.pdf"
+      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\82b6a266-dece-485e-960b-bc9eeb92e7a0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\82b6a266-dece-485e-960b-bc9eeb92e7a0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\93b5392c-3333-44c8-a849-293c8ace8ff0.png",
+      "PackagePath": "staticwebassets\\uploads\\93b5392c-3333-44c8-a849-293c8ace8ff0.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\a6625434-75f5-4f2c-82fa-9cf059ba9d89.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a6625434-75f5-4f2c-82fa-9cf059ba9d89.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\c193f75c-5543-4d5b-8884-b7dd5a298ba8.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c193f75c-5543-4d5b-8884-b7dd5a298ba8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\e33af6ff-5de7-4498-809e-d3fb9eb57a5b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e33af6ff-5de7-4498-809e-d3fb9eb57a5b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\ed512f1f-a8a0-4c23-b69b-28f5fe3749b1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ed512f1f-a8a0-4c23-b69b-28f5fe3749b1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\DACN\\DACN_CNPM_ngtronghia\\wwwroot\\uploads\\f64de49a-b31d-43d7-a6b8-8f26e72bfd5a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f64de49a-b31d-43d7-a6b8-8f26e72bfd5a.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.elearning-b1.props",

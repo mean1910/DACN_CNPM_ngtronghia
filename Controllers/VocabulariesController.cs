@@ -1,24 +1,55 @@
 ﻿using elearning_b1.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace elearning_b1.Controllers
 {
     public class VocabulariesController : Controller
     {
         private readonly ApplicationDbContext _context;
-
-        public VocabulariesController(ApplicationDbContext context)
+        private readonly IHttpClientFactory _httpClientFactory;
+        public VocabulariesController(ApplicationDbContext context, IHttpClientFactory httpClientFactory)
         {
             _context = context;
+            _httpClientFactory = httpClientFactory;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            // Lấy danh sách tất cả các topic
-            var topics = _context.Topics.ToList();
-            return View(topics); // Gửi danh sách topics về View
+            // Đặt số lượng item trên mỗi trang
+            int pageSize = 3;
+
+            // Lấy tất cả các chủ đề và đếm số lượng từ vựng cho mỗi chủ đề
+            var topics = await _context.Topics
+                .Include(t => t.Vocabularies) // Đảm bảo lấy luôn danh sách từ vựng của mỗi chủ đề
+                .ToListAsync();
+
+            // Truyền vào view với số lượng từ vựng cho mỗi chủ đề
+            var topicWithVocabularyCount = topics.Select(t => new
+            {
+                Topic = t,
+                VocabularyCount = t.Vocabularies.Count // Đếm số lượng từ vựng của chủ đề
+            }).ToList();
+
+            // Lấy số lượng trang tổng cộng
+            var totalPages = (int)Math.Ceiling((double)topicWithVocabularyCount.Count / pageSize);
+
+            // Lấy các phần tử của trang hiện tại
+            var pagedItems = topicWithVocabularyCount
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            // Truyền vào View
+            ViewBag.Topics = pagedItems;
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = totalPages;
+
+            return View();
         }
+
+
         public IActionResult Flashcards(int topicId)
         {
 
@@ -114,6 +145,8 @@ namespace elearning_b1.Controllers
 
             return View("Result", topic); // Trả về kết quả
         }
+
+       
 
 
     }

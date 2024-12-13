@@ -1,0 +1,37 @@
+﻿@model List<Writing>
+
+<div class="container mt-4">
+    <h2 class="mb-4">VIẾT ĐỂ HIỂU – CHIA SẺ SUY NGHĨ, MỞ RỘNG TƯ DUY!</h2>
+    <p>Viết là cơ hội để bạn thể hiện suy nghĩ cá nhân, nhưng cũng là lúc học hỏi từ những góc nhìn khác. Cùng khám phá cách viết để phát triển tư duy và làm phong phú thêm ý tưởng của mình!</p>
+    @if (Model.Any())
+    {
+        <div class="row">
+            @foreach (var writing in Model)
+            {
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                @writing.Title
+                            </h5>
+                            <p class="card-text">
+                                @writing.Prompt
+                            </p>
+                            <a asp-action="WriteSubmission"
+                               asp-route-writingId="@writing.Id"
+                               class="btn btn-primary">
+                                Bắt Đầu Viết
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            Hiện chưa có chủ đề viết nào.
+        </div>
+    }
+</div>

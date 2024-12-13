@@ -13,10 +13,10 @@ namespace elearning_b1.Models
         public string TopicName { get; set; }
         public string Description { get; set; }
 
-        // Danh sách từ vựng của chủ đề này
-        public List<Vocabulary>? Vocabularies { get; set; }
+        public string? ImageUrl { get; set; } // URL của ảnh đã upload lên Google Drive
 
-        // Danh sách câu hỏi ngữ pháp trong chủ đề này (VocabQuestions)
+        public List<Vocabulary>? Vocabularies { get; set; }
         public virtual ICollection<VocabQuestion>? Questions { get; set; }
     }
+
 }

@@ -1,0 +1,86 @@
+﻿@using elearning_b1.ViewModels
+@model WriteSubmissionViewModel
+
+<div class="container mt-4">
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["ErrorMessage"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+
+    <!-- Hiển thị lỗi ngữ pháp nếu có -->
+    @if (Model?.GrammarErrors != null && Model.GrammarErrors.Count > 0)
+    {
+        <div class="alert alert-danger mt-3">
+            <h4>Các Lỗi Ngữ Pháp:</h4>
+            <ul class="error-list">
+                @foreach (var error in Model.GrammarErrors)
+                {
+                    <li class="error-item">
+                        <div class="error-message">
+                            <strong>@error.Message</strong>
+                            <p class="error-short-message">@error.ShortMessage</p>
+                        </div>
+                        <div class="error-details">
+                            <b>Lỗi ngữ cảnh:</b> @error.ErrorContext<br />
+                            <b>Câu bị lỗi:</b> @error.ErrorSentence<br />
+                            <b>Gợi ý thay thế:</b> @error.SuggestedReplacements
+                        </div>
+                        @if (!string.IsNullOrEmpty(error.Url))
+                        {
+                            <a href="@error.Url" target="_blank" class="more-info-link">Tìm hiểu thêm</a>
+                        }
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+
+    <div class="card">
+        <div class="card-header">
+            <h2>@Model.WritingTitle</h2>
+        </div>
+        <div class="card-body">
+            <div class="alert alert-info mb-3">
+                <strong>Chủ Đề:</strong> @Model.WritingPrompt
+            </div>
+
+            <form method="post">
+                <input type="hidden" asp-for="WritingId" />
+                <input type="hidden" asp-for="WritingTitle" />
+                <input type="hidden" asp-for="WritingPrompt" />
+                <input type="hidden" asp-for="WritingSuggestions" />
+
+                <div class="form-group">
+                    <label for="UserAnswer">Bài Viết Của Bạn:</label>
+                    <textarea asp-for="UserAnswer"
+                              class="form-control"
+                              rows="10"
+                              placeholder="Viết bài của bạn tại đây...">@Model.UserAnswer</textarea>
+                    <span asp-validation-for="UserAnswer" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <!-- Nút kiểm tra ngữ pháp -->
+                    <button type="submit" class="btn btn-primary" formaction="@Url.Action("CheckGrammar", "Writing")">Kiểm tra ngữ pháp</button>
+                    <!-- Nút lưu bài viết -->
+                    <button type="submit" class="btn btn-success" formaction="@Url.Action("SaveSubmission", "Writing")">Lưu Bài Viết</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

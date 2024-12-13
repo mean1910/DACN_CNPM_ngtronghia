@@ -24,7 +24,17 @@
             $('.sticky-top').css('top', '-100px');
         }
     });
-    
+    $(document).ready(function () {
+        // Khi click vào bất kỳ mục nào trong dropdown
+        $('.dropdown-item').click(function () {
+            // Xóa lớp active khỏi tất cả các mục
+            $('.nav-link').removeClass('active');
+
+            // Thêm lớp active vào "Skills" khi một item trong dropdown được chọn
+            $(this).closest('.dropdown').find('.nav-link').addClass('active');
+        });
+    });
+
     
     // Dropdown on mouse hover
     const $dropdown = $(".dropdown");

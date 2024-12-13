@@ -14,13 +14,13 @@ namespace elearning_b1.Services
         }
         public GoogleDriveService(IConfiguration configuration)
         {
-            var credential = GoogleCredential.FromFile("C:/Users/Admin/OneDrive/Máy tính/DACN/service_account_key.json") // Đường dẫn tới file JSON
-                .CreateScoped(DriveService.ScopeConstants.Drive);
+            var credential = GoogleCredential.FromFile("D:/service_account.json") // Đường dẫn tới file JSON
+                .CreateScoped(DriveService.ScopeConstants.Drive); 
 
             _driveService = new DriveService(new BaseClientService.Initializer()
             {
                 HttpClientInitializer = credential,
-                ApplicationName = "E-Learning Platform"
+                ApplicationName = "b1elearning"
             });
         }
         public async Task<string> UploadFileAsync(IFormFile file)
@@ -45,8 +45,11 @@ namespace elearning_b1.Services
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception("Error uploading file: " + ex.Message);
+                    // In thêm thông tin lỗi để dễ dàng debug
+                    Console.WriteLine("Error uploading file: " + ex.Message);
+                    throw new Exception("Error uploading file: " + ex.Message, ex);
                 }
+
             }
 
             var fileId = request.ResponseBody?.Id;

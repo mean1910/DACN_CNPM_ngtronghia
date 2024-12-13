@@ -13,6 +13,7 @@
             <th>Id</th>
             <th>Title</th>
             <th>Audio Preview</th>
+            <th>Img</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -26,6 +27,12 @@
                     @if (!string.IsNullOrEmpty(item.AudioUrl))
                     {
                         <a href="https://drive.google.com/file/d/@item.AudioUrl/preview" target="_blank">Preview</a>
+                    }
+                </td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ImgUrl))
+                    {
+                        <img src="@item.ImgUrl" alt="Image" width="100" />
                     }
                 </td>
                 <td>

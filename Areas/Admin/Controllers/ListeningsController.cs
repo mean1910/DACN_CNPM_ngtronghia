@@ -59,25 +59,46 @@ namespace elearning_b1.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title")] Listening listening, IFormFile audioFile)
+        public async Task<IActionResult> Create([Bind("Id,Title")] Listening listening, IFormFile audioFile, IFormFile imageFile)
         {
             if (ModelState.IsValid)
             {
+                // 1. Xử lý upload audio file lên Google Drive và lấy fileId
                 if (audioFile != null && audioFile.Length > 0)
                 {
-                    // 1. Upload file lên Google Drive và lấy fileId
                     var fileId = await _googleDriveService.UploadFileAsync(audioFile);
-
-                    // 2. Lấy transcript từ Assembly AI
                     string fileDownloadUrl = $"https://drive.google.com/uc?id={fileId}&export=download";
-                    var transcript = await _assemblyAIService.GetTranscriptAsync(fileDownloadUrl);
+                    var transcript = await _assemblyAIService.GetFormattedTranscriptAsync(fileDownloadUrl);
 
-                    // 3. Gán fileId và transcript cho đối tượng Listening
-                    listening.AudioUrl = fileId; // Chỉ lưu fileId
+                    listening.AudioUrl = fileId; // Lưu fileId của audio
                     listening.Transcript = transcript; // Lưu transcript
                 }
 
-                // 4. Lưu đối tượng Listening vào cơ sở dữ liệu
+                // 2. Xử lý upload ảnh vào thư mục wwwroot/uploads
+                if (imageFile != null && imageFile.Length > 0)
+                {
+                    // Đường dẫn để lưu ảnh
+                    var uploadFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+
+                    // Kiểm tra nếu thư mục chưa tồn tại thì tạo mới
+                    if (!Directory.Exists(uploadFolder))
+                    {
+                        Directory.CreateDirectory(uploadFolder);
+                    }
+
+                    // Lưu file vào thư mục uploads
+                    var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName); // Tạo tên file duy nhất
+                    var filePath = Path.Combine(uploadFolder, fileName);
+
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await imageFile.CopyToAsync(fileStream); // Copy ảnh vào thư mục
+                    }
+
+                    listening.ImgUrl = "/uploads/" + fileName; // Lưu đường dẫn ảnh vào cơ sở dữ liệu
+                }
+
+                // 3. Lưu đối tượng Listening vào cơ sở dữ liệu
                 _context.Add(listening);
                 await _context.SaveChangesAsync();
 
@@ -85,6 +106,7 @@ namespace elearning_b1.Areas.Admin.Controllers
             }
             return View(listening);
         }
+
 
         // GET: Admin/Listenings/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -105,7 +127,7 @@ namespace elearning_b1.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Transcript")] Listening listening, IFormFile? newAudioFile)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Transcript")] Listening listening, IFormFile? newAudioFile, IFormFile? newImageFile)
         {
             if (id != listening.Id)
             {
@@ -116,6 +138,7 @@ namespace elearning_b1.Areas.Admin.Controllers
             {
                 try
                 {
+                    // Lấy đối tượng Listening hiện tại từ cơ sở dữ liệu
                     var existingListening = await _context.Listenings.FindAsync(id);
                     if (existingListening == null)
                     {
@@ -124,24 +147,62 @@ namespace elearning_b1.Areas.Admin.Controllers
 
                     // Cập nhật thông tin cơ bản
                     existingListening.Title = listening.Title;
-                    existingListening.Transcript = listening.Transcript;
 
-                    // Nếu có file âm thanh mới, thực hiện upload và cập nhật
+                    // Nếu có tệp audio mới, upload tệp, xóa tệp cũ và lấy transcript mới
                     if (newAudioFile != null && newAudioFile.Length > 0)
                     {
-                        // Xóa file cũ khỏi Google Drive
+                        // Xóa tệp cũ trên Google Drive (nếu có)
                         if (!string.IsNullOrEmpty(existingListening.AudioUrl))
                         {
                             await _googleDriveService.DeleteFileAsync(existingListening.AudioUrl);
                         }
 
-                        // Upload file mới và lấy fileId
+                        // Upload tệp mới lên Google Drive
                         var newAudioFileId = await _googleDriveService.UploadFileAsync(newAudioFile);
+                        existingListening.AudioUrl = newAudioFileId; // Gán fileId mới
 
-                        // Gán lại thông tin fileId mới
-                        existingListening.AudioUrl = newAudioFileId;
+                        // Tạo URL tải file mới từ Google Drive
+                        string fileDownloadUrl = $"https://drive.google.com/uc?id={newAudioFileId}&export=download";
+
+                        // Lấy transcript mới từ AssemblyAI
+                        var newTranscript = await _assemblyAIService.GetFormattedTranscriptAsync(fileDownloadUrl);
+                        existingListening.Transcript = newTranscript; // Gán transcript mới
                     }
 
+                    // Nếu có tệp ảnh mới, upload ảnh và lưu đường dẫn ảnh vào cơ sở dữ liệu
+                    if (newImageFile != null && newImageFile.Length > 0)
+                    {
+                        // Xóa ảnh cũ nếu có
+                        if (!string.IsNullOrEmpty(existingListening.ImgUrl))
+                        {
+                            var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", existingListening.ImgUrl.TrimStart('/'));
+                            if (System.IO.File.Exists(oldImagePath))
+                            {
+                                System.IO.File.Delete(oldImagePath);
+                            }
+                        }
+
+                        // Lưu ảnh mới vào thư mục uploads
+                        var uploadFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+
+                        // Kiểm tra nếu thư mục chưa tồn tại thì tạo mới
+                        if (!Directory.Exists(uploadFolder))
+                        {
+                            Directory.CreateDirectory(uploadFolder);
+                        }
+
+                        var fileName = Guid.NewGuid().ToString() + Path.GetExtension(newImageFile.FileName); // Tạo tên file duy nhất
+                        var filePath = Path.Combine(uploadFolder, fileName);
+
+                        using (var fileStream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await newImageFile.CopyToAsync(fileStream); // Copy ảnh vào thư mục
+                        }
+
+                        existingListening.ImgUrl = "/uploads/" + fileName; // Lưu đường dẫn ảnh vào cơ sở dữ liệu
+                    }
+
+                    // Cập nhật lại cơ sở dữ liệu
                     _context.Update(existingListening);
                     await _context.SaveChangesAsync();
                 }
@@ -156,6 +217,7 @@ namespace elearning_b1.Areas.Admin.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
 

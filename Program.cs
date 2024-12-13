@@ -1,3 +1,4 @@
+using Autofac.Core;
 using elearning_b1.Models;
 using elearning_b1.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -26,13 +27,19 @@ builder.Services.Configure<FormOptions>(options =>
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 builder.Services.AddScoped<GoogleDriveService>();
+builder.Services.AddSingleton<GoogleDriveService>();
+
 
 builder.Services.AddScoped<AssemblyAIService>(serviceProvider =>
 {
     var apiKey = builder.Configuration["AssemblyAI:ApiKey"];
     return new AssemblyAIService(apiKey);
 });
+
+builder.Services.AddHttpClient<LanguageToolService>();
+
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -70,10 +77,23 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 builder.Services.AddHttpClient();
 
+builder.Services.AddHttpClient<LanguageToolService>();
+
+
 builder.Services.AddRazorPages();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+
+builder.Services.AddHttpClient<GeminiService>(client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration["GeminiAPI:BaseUrl"]);
+    client.DefaultRequestHeaders.Add("Authorization", $"Bearer {builder.Configuration["GeminiAPI:ApiKey"]}");
+});
+
+builder.Services.AddTransient<GeminiService>();
 
 
 

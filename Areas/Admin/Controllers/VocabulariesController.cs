@@ -45,29 +45,11 @@ namespace elearning_b1.Areas.Admin.Controllers
             return View(vocabulary);
         }
 
-        private async Task<string> SaveAudioFileAsync(IFormFile audioFile)
-        {
-            if (audioFile == null || audioFile.Length == 0)
-            {
-                return null;
-            }
-            var uploadsFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/audio");
-            if (!Directory.Exists(uploadsFolderPath))
-            {
-                Directory.CreateDirectory(uploadsFolderPath);
-            }
-            var filePath = Path.Combine(uploadsFolderPath, audioFile.FileName);
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await audioFile.CopyToAsync(stream);
-            }
-            return "/audio/" + audioFile.FileName;
-        }
-
         // GET: Admin/Vocabularies/Create
         public IActionResult Create()
         {
-            ViewData["TopicID"] = new SelectList(_context.Topics, "TopicID", "TopicID");
+            ViewBag.PartOfSpeechList = new SelectList(Enum.GetValues(typeof(PartOfSpeech)));
+            ViewData["TopicID"] = new SelectList(_context.Topics, "TopicID", "TopicName");
             return View();
         }
 
@@ -76,19 +58,16 @@ namespace elearning_b1.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("VocabularyID,Word,Meaning,Pronunciation,ExampleSentence,AudioFile,PartOfSpeech,TopicID")] Vocabulary vocabulary, IFormFile audioFile)
+        public async Task<IActionResult> Create([Bind("VocabularyID,Word,Meaning,Pronunciation,ExampleSentence,PartOfSpeech,TopicID")] Vocabulary vocabulary)
         {
             if (ModelState.IsValid)
             {
-                if (audioFile != null && audioFile.Length > 0)
-                {
-                    vocabulary.AudioFile = await SaveAudioFileAsync(audioFile);
-                }
                 _context.Add(vocabulary);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TopicID"] = new SelectList(_context.Topics, "TopicID", "TopicID", vocabulary.TopicID);
+            ViewBag.PartOfSpeechList = new SelectList(Enum.GetValues(typeof(PartOfSpeech)), vocabulary.PartOfSpeech);
+            ViewData["TopicID"] = new SelectList(_context.Topics, "TopicID", "TopicName", vocabulary.TopicID);
             return View(vocabulary);
         }
 
@@ -105,7 +84,8 @@ namespace elearning_b1.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["TopicID"] = new SelectList(_context.Topics, "TopicID", "TopicID", vocabulary.TopicID);
+            ViewBag.PartOfSpeechList = new SelectList(Enum.GetValues(typeof(PartOfSpeech)), vocabulary.PartOfSpeech);
+            ViewData["TopicID"] = new SelectList(_context.Topics, "TopicID", "TopicName", vocabulary.TopicID);
             return View(vocabulary);
         }
 
@@ -114,7 +94,7 @@ namespace elearning_b1.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("VocabularyID,Word,Meaning,Pronunciation,ExampleSentence,AudioFile,PartOfSpeech,TopicID")] Vocabulary vocabulary, IFormFile audioFile)
+        public async Task<IActionResult> Edit(int id, [Bind("VocabularyID,Word,Meaning,Pronunciation,ExampleSentence,PartOfSpeech,TopicID")] Vocabulary vocabulary)
         {
             if (id != vocabulary.VocabularyID)
             {
@@ -125,10 +105,6 @@ namespace elearning_b1.Areas.Admin.Controllers
             {
                 try
                 {
-                    if (audioFile != null && audioFile.Length > 0)
-                    {
-                        vocabulary.AudioFile = await SaveAudioFileAsync(audioFile);
-                    }
                     _context.Update(vocabulary);
                     await _context.SaveChangesAsync();
                 }

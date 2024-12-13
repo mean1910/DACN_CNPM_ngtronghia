@@ -13,7 +13,6 @@ namespace elearning_b1.Models
         public string Meaning { get; set; }
         public string Pronunciation { get; set; }
         public string ExampleSentence { get; set; }
-        public string? AudioFile { get; set; }
         public PartOfSpeech? PartOfSpeech { get; set; }
 
         [ForeignKey("Topic")]
