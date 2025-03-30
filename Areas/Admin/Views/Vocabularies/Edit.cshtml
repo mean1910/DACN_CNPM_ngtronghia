@@ -4,54 +4,54 @@
     ViewData["Title"] = "Edit";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
+<h1>Edit Vocabulary</h1>
 
-<h1>Edit</h1>
+<h4>Topic: @ViewData["TopicName"]</h4>
 
-<h4>Vocabulary</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="VocabularyID" />
-            <div class="form-group">
-                <label asp-for="Word" class="control-label"></label>
-                <input asp-for="Word" class="form-control" />
-                <span asp-validation-for="Word" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Meaning" class="control-label"></label>
-                <input asp-for="Meaning" class="form-control" />
-                <span asp-validation-for="Meaning" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Pronunciation" class="control-label"></label>
-                <input asp-for="Pronunciation" class="form-control" />
-                <span asp-validation-for="Pronunciation" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ExampleSentence" class="control-label"></label>
-                <input asp-for="ExampleSentence" class="form-control" />
-                <span asp-validation-for="ExampleSentence" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PartOfSpeech" class="control-label"></label>
-                @Html.DropDownListFor(model => model.PartOfSpeech, (SelectList)ViewBag.PartOfSpeechList, "Chọn loại từ", new { @class = "form-control" })
-                <span asp-validation-for="PartOfSpeech" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TopicID" class="control-label"></label>
-                <select asp-for="TopicID" class="form-control" asp-items="ViewBag.TopicID"></select>
-                <span asp-validation-for="TopicID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+<form asp-action="Edit">
+    <div class="form-group">
+        <label asp-for="Word" class="control-label"></label>
+        <input asp-for="Word" class="form-control" />
+        <span asp-validation-for="Word" class="text-danger"></span>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div class="form-group">
+        <label asp-for="Meaning" class="control-label"></label>
+        <input asp-for="Meaning" class="form-control" />
+        <span asp-validation-for="Meaning" class="text-danger"></span>
+    </div>
 
+    <div class="form-group">
+        <label asp-for="Pronunciation" class="control-label"></label>
+        <input asp-for="Pronunciation" class="form-control" />
+        <span asp-validation-for="Pronunciation" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ExampleSentence" class="control-label"></label>
+        <textarea asp-for="ExampleSentence" class="form-control"></textarea>
+        <span asp-validation-for="ExampleSentence" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PartOfSpeech" class="control-label"></label>
+        <select asp-for="PartOfSpeech" class="form-control" asp-items="@(ViewData["PartOfSpeech"] as SelectList)">
+            <option value="">-- Select Part of Speech --</option>
+        </select>
+        <span asp-validation-for="PartOfSpeech" class="text-danger"></span>
+    </div>
+
+
+    <input type="hidden" asp-for="TopicID" />
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <a asp-action="Index" asp-route-topicId="@ViewData["TopicID"]" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Modernize Free</title>
+    <title>Admin Dashboard</title>
     <link rel="shortcut icon" type="image/png" href="~/admin/images/logos/favicon.png" />
     <link rel="stylesheet" href="~/admin/css/styles.min.css" />
 
@@ -19,8 +19,8 @@
             <!-- Sidebar scroll-->
             <div>
                 <div class="brand-logo d-flex align-items-center justify-content-between">
-                    <a href="./index.html" class="text-nowrap logo-img">
-                        <img src="~/admin/images/logos/dark-logo.svg" width="180" alt="" />
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="text-nowrap logo-img">
+                        <img src="~/admin/images/logos/logo-hutech-1.png" width="180" alt="" />
                     </a>
                     <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                         <i class="ti ti-x fs-8"></i>
@@ -34,11 +34,19 @@
                             <span class="hide-menu">Home</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./index.html" aria-expanded="false">
+                            <a class="sidebar-link" asp-area="Admin" asp-controller="UserStatistics" asp-action="Index" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-layout-dashboard"></i>
                                 </span>
                                 <span class="hide-menu">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" asp-area="Admin" asp-controller="AccountManagement" asp-action="Index" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <span class="hide-menu">Account</span>
                             </a>
                         </li>
                         <li class="nav-small-cap">
@@ -48,44 +56,52 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link" asp-area="Admin" asp-controller="Topics" asp-action="Index" aria-expanded="false">
                                 <span>
-                                    <i class="ti ti-article"></i>
+                                    <i class="ti ti-book-2"></i>
                                 </span>
                                 <span class="hide-menu">Topic</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" asp-area="Admin" asp-controller="Vocabularies" asp-action="Index" aria-expanded="false">
+                            <a class="sidebar-link" asp-area="Admin" asp-controller="Grammars" asp-action="Index" aria-expanded="false">
                                 <span>
-                                    <i class="ti ti-alert-circle"></i>
+                                    <i class="ti ti-text-spellcheck"></i>
                                 </span>
-                                <span class="hide-menu">Vocabulary</span>
+                                <span class="hide-menu">Grammar</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./ui-card.html" aria-expanded="false">
+                            <a class="sidebar-link" asp-area="Admin" asp-controller="Listenings" asp-action="Index" aria-expanded="false">
                                 <span>
-                                    <i class="ti ti-cards"></i>
+                                    <i class="ti ti-ear"></i>
                                 </span>
-                                <span class="hide-menu">Card</span>
+                                <span class="hide-menu">Listening</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./ui-forms.html" aria-expanded="false">
+                            <a class="sidebar-link" asp-area="Admin" asp-controller="Speakings" asp-action="Index" aria-expanded="false">
                                 <span>
-                                    <i class="ti ti-file-description"></i>
+                                    <i class="ti ti-speakerphone"></i>
                                 </span>
-                                <span class="hide-menu">Forms</span>
+                                <span class="hide-menu">Speaking</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./ui-typography.html" aria-expanded="false">
+                            <a class="sidebar-link" asp-area="Admin" asp-controller="ReadingSkills" asp-action="Index" aria-expanded="false">
                                 <span>
-                                    <i class="ti ti-typography"></i>
+                                    <i class="ti ti-books"></i>
                                 </span>
-                                <span class="hide-menu">Typography</span>
+                                <span class="hide-menu">Reading</span>
                             </a>
                         </li>
-                        <li class="nav-small-cap">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" asp-area="Admin" asp-controller="Writings" asp-action="Index" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-writing"></i>
+                                </span>
+                                <span class="hide-menu">Writing</span>
+                            </a>
+                        </li>
+                        @* <li class="nav-small-cap">
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                             <span class="hide-menu">AUTH</span>
                         </li>
@@ -124,9 +140,9 @@
                                 </span>
                                 <span class="hide-menu">Sample Page</span>
                             </a>
-                        </li>
+                        </li> *@
                     </ul>
-                    <div class="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
+                    @* <div class="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
                         <div class="d-flex">
                             <div class="unlimited-access-title me-3">
                                 <h6 class="fw-semibold fs-4 mb-6 text-dark w-85">Upgrade to pro</h6>
@@ -136,7 +152,7 @@
                                 <img src="~/admin/images/backgrounds/rocket.png" alt="" class="img-fluid">
                             </div>
                         </div>
-                    </div>
+                    </div> *@
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>

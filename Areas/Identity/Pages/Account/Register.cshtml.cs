@@ -152,7 +152,8 @@ namespace elearning_b1.Areas.Identity.Pages.Account
                 {
                     UserName = userName,
                     Email = Input.Email,
-                    FullName = Input.FullName
+                    FullName = Input.FullName,
+                    DateCreated = DateTime.UtcNow
                 };
 
                 //var user = CreateUser();

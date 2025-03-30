@@ -1,0 +1,23 @@
+﻿@model elearning_b1.Models.VocabQuestion
+
+@{
+    ViewData["Title"] = "Create Vocab Question";
+}
+
+<h1>Create New Question for Topic: @ViewBag.TopicName</h1>
+
+<form asp-action="Create">
+    <input type="hidden" asp-for="TopicId" value="@ViewBag.TopicId" />
+    <div class="form-group">
+        <label for="TopicID">Topic</label>
+        <input type="text" class="form-control" id="TopicID" value="@ViewData["TopicName"]" readonly />
+        <input type="hidden" name="TopicID" value="@ViewData["TopicID"]" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Text" class="control-label"></label>
+        <input asp-for="Text" class="form-control" />
+        <span asp-validation-for="Text" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-controller="Vocabularies" asp-action="Index" asp-route-topicId="@ViewBag.TopicId" class="btn btn-secondary">Back to List</a>
+</form>

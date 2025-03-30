@@ -3,8 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\reading\\exercise.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\reading\\exercise.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\reading\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\reading\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\accountmanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\accountmanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\controllers\\accountmanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\controllers\\accountmanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\userstatistics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\userstatistics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\controllers\\userstatisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\controllers\\userstatisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\models\\sd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:models\\sd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\writings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\writings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\speakings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\speakings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dacn\\dacn_cnpm_ngtronghia\\areas\\admin\\views\\grammars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{551A04E6-F3DB-48FC-82E8-94FF21732C46}|elearning-b1.csproj|solutionrelative:areas\\admin\\views\\grammars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,16 +90,211 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Exercise.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\Exercise.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reading\\Exercise.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\Exercise.cshtml",
+              "RelativeToolTip": "Views\\Reading\\Exercise.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-28T06:47:35.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reading\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Reading\\Index.cshtml",
+              "RelativeToolTip": "Views\\Reading\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-28T06:47:23.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwDgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-27T16:04:08.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-10T08:51:52.997Z",
+              "WhenOpened": "2024-12-27T16:01:41.665Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T08:22:00.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-21T08:20:03.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-21T08:10:10.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAD8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T06:39:27.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AccountManagementController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\AccountManagementController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AccountManagementController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\AccountManagementController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\AccountManagementController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAswF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T06:36:30.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\AccountManagement\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AccountManagement\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\AccountManagement\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\AccountManagement\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-21T06:37:36.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\UserStatistics\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\UserStatistics\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\UserStatistics\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\UserStatistics\\Index.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAuwI0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-21T07:14:38.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserStatisticsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\UserStatisticsController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\UserStatisticsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Controllers\\UserStatisticsController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\UserStatisticsController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAADwv0EAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T07:13:47.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SD.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\SD.cs",
+              "RelativeDocumentMoniker": "Models\\SD.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\SD.cs",
+              "RelativeToolTip": "Models\\SD.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T06:34:54.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T06:34:28.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Writings\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Writings\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Writings\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Writings\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-19T14:28:06.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Speakings\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Speakings\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Speakings\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Speakings\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAUwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-19T14:25:48.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Grammars\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Grammars\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACN\\DACN_CNPM_ngtronghia\\Areas\\Admin\\Views\\Grammars\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Grammars\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-19T14:23:56.3Z"
             }
           ]
         }

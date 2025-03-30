@@ -1,8 +1,141 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+﻿@{
+    ViewData["Title"] = "Thống kê người dùng";
 }
 
-<h1>Index</h1>
+<div class="container mt-5">
+    <!-- Row for user statistics -->
+    <div class="row mb-5">
+        <!-- Card for user statistics -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="card-title">Tổng số người dùng</h5>
+                </div>
+                <div class="card-body">
+                    <h3 class="text-center" id="totalUsers">@ViewBag.TotalUsers</h3>
+                </div>
+            </div>
+        </div>
 
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h5 class="card-title">Người dùng mới tháng này</h5>
+                </div>
+                <div class="card-body">
+                    <h3 class="text-center" id="newUsersMonth">@ViewBag.UsersInCurrentMonth</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-warning text-dark">
+                    <h5 class="card-title">Người dùng mới tuần này</h5>
+                </div>
+                <div class="card-body">
+                    <h3 class="text-center" id="newUsersWeek">@ViewBag.UsersInCurrentWeek</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row for the chart -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h5 class="card-title">Biểu đồ người dùng mới</h5>
+                </div>
+                <div class="card-body" style="position: relative;">
+                    <canvas id="userChart" style="height: 500px;"></canvas> <!-- Tăng chiều cao của biểu đồ -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button to switch between week and month view -->
+    <div class="text-center mt-4">
+        <button class="btn btn-outline-primary mx-2" id="showByWeek">Theo tuần</button>
+        <button class="btn btn-outline-secondary mx-2" id="showByMonth">Theo tháng</button>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var usersByWeek = @Html.Raw(ViewBag.UsersByWeek); // Dữ liệu người dùng theo tuần
+        var usersByMonth = @Html.Raw(ViewBag.UsersByMonth); // Dữ liệu người dùng theo tháng
+        var currentData = usersByWeek; // Mặc định chọn theo tuần
+
+        var labels = currentData.map(item => item.Week); // Nhãn của trục X
+        var data = currentData.map(item => item.Count); // Dữ liệu của trục Y
+
+        // Tạo biểu đồ đường
+        var ctx = document.getElementById('userChart').getContext('2d');
+        var userChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Người dùng mới',
+                    data: data,
+                    borderColor: 'rgb(75, 192, 192)', // Màu đường
+                    fill: false, // Không tô màu dưới đường
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true, // Đảm bảo biểu đồ sẽ thay đổi theo kích thước màn hình
+                maintainAspectRatio: false, // Đảm bảo chiều cao của biểu đồ không quá lớn
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Tuần/Tháng'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Số lượng'
+                        },
+                        ticks: {
+                            callback: function (value) {
+                                return value.toFixed(0); // Hiển thị số nguyên
+                            }
+                        }
+                    }
+                },
+                onClick: function (e) {
+                    var points = userChart.getElementsAtEventForMode(e, 'nearest', { intersect: true }, true);
+                    if (points.length) {
+                        var firstPoint = points[0];
+                        var label = userChart.data.labels[firstPoint.index];
+                        var value = userChart.data.datasets[firstPoint.datasetIndex].data[firstPoint.index];
+                        alert(`Thông tin: ${label}, Số người dùng: ${value}`);
+                    }
+                }
+            }
+        });
+
+        // Thêm sự kiện khi người dùng chọn tuần hoặc tháng
+        document.getElementById("showByWeek").addEventListener("click", function () {
+            currentData = usersByWeek;
+            labels = currentData.map(item => item.Week);
+            data = currentData.map(item => item.Count);
+            userChart.data.labels = labels;
+            userChart.data.datasets[0].data = data;
+            userChart.update();
+        });
+
+        document.getElementById("showByMonth").addEventListener("click", function () {
+            currentData = usersByMonth;
+            labels = currentData.map(item => item.Date);
+            data = currentData.map(item => item.Count);
+            userChart.data.labels = labels;
+            userChart.data.datasets[0].data = data;
+            userChart.update();
+        });
+    </script>
+}

@@ -167,6 +167,9 @@ namespace elearning_b1.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("DateOfBirth")
                         .HasColumnType("datetime2");
 
@@ -427,6 +430,9 @@ namespace elearning_b1.Migrations
 
                     b.Property<string>("Content")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")

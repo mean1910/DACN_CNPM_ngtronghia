@@ -9,25 +9,27 @@
 
 <h4>ReadingSkill</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Content" class="control-label"></label>
-                <input asp-for="Content" class="form-control" />
-                <span asp-validation-for="Content" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Tạo Bài Đọc</h2>
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="Title" class="form-label">Tiêu đề</label>
+            <input type="text" id="Title" name="Title" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Content" class="form-label">Nội dung</label>
+            <textarea id="Content" name="Content" class="form-control" rows="10" required></textarea>
+            <small class="text-muted">* Sử dụng ngắt dòng (Enter) để phân đoạn.</small>
+        </div>
+
+        <div class="mb-3">
+            <label for="Image" class="form-label">Hình ảnh</label>
+            <input type="file" id="Image" name="Image" class="form-control" accept="image/*" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Tạo bài đọc</button>
+    </form>
 </div>
 
 <div>

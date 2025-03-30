@@ -36,6 +36,12 @@ namespace elearning_b1.Areas.Admin.Controllers
             }
         }
 
+        public IActionResult Details(int id)
+        {
+            // Chuyển hướng đến VocabulariesController Index action
+            return RedirectToAction("Index", "Vocabularies", new { topicId = id });
+        }
+
         // GET: Admin/Topics/Create
         public IActionResult Create()
         {

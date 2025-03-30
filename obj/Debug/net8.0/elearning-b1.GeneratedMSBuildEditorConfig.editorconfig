@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Admin\OneDrive\Máy tính\DACN\DACN_CNPM_ngtronghia
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/AccountManagement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudE1hbmFnZW1lbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/GrammarOptions/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR3JhbW1hck9wdGlvbnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -262,6 +266,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVG9waWNzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/UserManagement/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlck1hbmFnZW1lbnRcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/UserManagement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlck1hbmFnZW1lbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/UserManagement/NewUsersStats.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlck1hbmFnZW1lbnRcTmV3VXNlcnNTdGF0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/UserStatistics/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclN0YXRpc3RpY3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/UserWritingSubmissions/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcldyaXRpbmdTdWJtaXNzaW9uc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -280,6 +300,46 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/UserWritingSubmissions/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcldyaXRpbmdTdWJtaXNzaW9uc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabOptions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJPcHRpb25zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabOptions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJPcHRpb25zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabOptions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJPcHRpb25zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabOptions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJPcHRpb25zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabOptions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJPcHRpb25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabQuestions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJRdWVzdGlvbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabQuestions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJRdWVzdGlvbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabQuestions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJRdWVzdGlvbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabQuestions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJRdWVzdGlvbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/VocabQuestions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm9jYWJRdWVzdGlvbnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Areas/Admin/Views/Vocabularies/Create.cshtml]
@@ -526,6 +586,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Views/Home/_About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfQWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Views/Home/_Carousel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfQ2Fyb3VzZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Views/Home/_Service.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfU2VydmljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Views/Listening/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGVuaW5nXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -556,6 +628,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Views/Shared/_Categories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXRlZ29yaWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Admin/OneDrive/Máy tính/DACN/DACN_CNPM_ngtronghia/Views/Shared/_LoginPartial.cshtml]

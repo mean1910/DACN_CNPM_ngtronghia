@@ -1,0 +1,32 @@
+﻿@model elearning_b1.Models.ApplicationUser
+
+@{
+    ViewData["Title"] = "User Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <label>Full Name:</label> @Model.FullName
+</div>
+<div>
+    <label>Email:</label> @Model.Email
+</div>
+<div>
+    <label>Date Created:</label> @Model.DateCreated.ToString("yyyy-MM-dd")
+</div>
+<div>
+    <label>Date of Birth:</label> @Model.DateOfBirth?.ToString("yyyy-MM-dd") ?? "N/A"
+</div>
+<div>
+    <label>Profile Image:</label>
+    @if (Model.ImageUrl != null)
+    {
+        <img src="@Model.ImageUrl" alt="Profile Image" style="width:100px;height:100px;" />
+    }
+    else
+    {
+        <p>No image available</p>
+    }
+</div>

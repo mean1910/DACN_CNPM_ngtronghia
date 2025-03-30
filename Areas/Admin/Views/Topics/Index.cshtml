@@ -1,38 +1,51 @@
-﻿@model IEnumerable<elearning_b1.Models.Topic>
+﻿@model List<elearning_b1.Models.Topic>
 
-@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
-}
-
-<h1>Topics</h1>
-<a asp-action="Create" class="btn btn-primary">Create New Topic</a>
+<h2>Danh sách chủ đề</h2>
 
 <table class="table">
     <thead>
         <tr>
-            <th>Topic Name</th>
-            <th>Description</th>
-            <th>Image</th>
-            <th>Actions</th>
+            <th>#</th>
+            <th>Tên chủ đề</th>
+            <th>Mô tả</th>
+            <th>Hình ảnh</th>
+            <th>Hành động</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @if (Model != null && Model.Any())
+        {
+            foreach (var topic in Model)
+            {
+                <tr>
+                    <td>@topic.TopicID</td>
+                    <td>@topic.TopicName</td>
+                    <td>@topic.Description</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(topic.ImageUrl))
+                        {
+                            <img src="@topic.ImageUrl" alt="Hình ảnh chủ đề" style="width: 100px;" />
+                        }
+                        else
+                        {
+                            <span>Không có hình ảnh</span>
+                        }
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Details", "Topics", new { id = topic.TopicID })" class="btn btn-primary">Xem chi tiết</a>
+                        <a asp-area="Admin" asp-controller="VocabQuestions" asp-action="Index" asp-route-topicId="@topic.TopicID" class="btn btn-primary">
+                            Quản lý câu hỏi
+                        </a>
+                        <a href="@Url.Action("Edit", "Topics", new { id = topic.TopicID })" class="btn btn-warning">Sửa</a>
+                        <a href="@Url.Action("Delete", "Topics", new { id = topic.TopicID })" class="btn btn-danger">Xóa</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
         {
             <tr>
-                <td>@item.TopicName</td>
-                <td>@item.Description</td>
-                <td>
-                    @if (!string.IsNullOrEmpty(item.ImageUrl))
-                    {
-                        <img src="@item.ImageUrl" alt="@item.TopicName" style="max-width: 100px; height: auto;" />
-                    }
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.TopicID" class="btn btn-warning">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@item.TopicID" class="btn btn-danger">Delete</a>
-                </td>
+                <td colspan="5" class="text-center">Không có chủ đề nào.</td>
             </tr>
         }
     </tbody>

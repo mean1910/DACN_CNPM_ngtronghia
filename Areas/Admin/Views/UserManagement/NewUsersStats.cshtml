@@ -1,0 +1,40 @@
+﻿@model IEnumerable<elearning_b1.Models.ApplicationUser>
+
+@{
+    ViewData["Title"] = "New Users Statistics";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="get">
+    <label>Start Date:</label>
+    <input type="date" name="startDate" value="@ViewData["StartDate"]" />
+    <label>End Date:</label>
+    <input type="date" name="endDate" value="@ViewData["EndDate"]" />
+    <button type="submit">Get Stats</button>
+</form>
+
+<h3>Number of new users: @ViewData["NewUserCount"]</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Date Created</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.FullName</td>
+                <td>@user.Email</td>
+                <td>@user.DateCreated.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </tbody>
+</table>

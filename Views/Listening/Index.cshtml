@@ -22,11 +22,11 @@
         @foreach (var item in listenings)
         {
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card shadow-sm">
+                <div class="card shadow-sm h-100">
                     <img src="@item.ImgUrl" class="card-img-top" alt="@item.Title" style="height: 200px; object-fit: cover;">
-                    <div class="card-body text-center">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">@item.Title</h5>
-                        <a href="@Url.Action("Details", new { id = item.Id })" class="btn btn-primary">
+                        <a href="@Url.Action("Details", new { id = item.Id })" class="btn btn-primary mt-auto">
                             Xem chi tiết
                         </a>
                     </div>
@@ -65,53 +65,41 @@
 </div>
 
 <style>
-    /* Tạo bố cục đẹp cho thẻ (card) */
+    /* Đảm bảo rằng tất cả thẻ card có cùng chiều cao */
     .card {
-        border: none;
         border-radius: 15px;
-        overflow: hidden; /* Ẩn phần hình ảnh ra ngoài */
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
 
+    /* Tạo hiệu ứng hover cho thẻ */
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-
+    /* Cải thiện các tiêu đề */
     .card-title {
         font-size: 1.4rem;
         font-weight: bold;
     }
 
+    /* Cải thiện bố cục của card */
     .card-body {
         padding: 1.5rem;
+        flex-grow: 1; /* Làm cho phần thân card chiếm hết không gian còn lại */
     }
 
+    /* Nút "Xem chi tiết" nằm ở dưới cùng */
     .btn {
         border-radius: 20px;
         padding: 10px 20px;
     }
 
-    h1 {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #333;
-    }
-
-    p {
-        font-size: 1rem;
-        color: #666;
-    }
-
-    /* Responsive Grid */
-    media (max-width: 768px) {
-        .card img {
-            height: 150px;
-        }
-        h1 {
-            font-size: 2rem;
-        }
+    .pagination {
+        display: inline-flex;
+        justify-content: center;
     }
 </style>

@@ -1,0 +1,19 @@
+﻿@model elearning_b1.Models.VocabQuestion
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<h1>Delete Question for Topic: @ViewBag.TopicId</h1>
+
+<div>
+    <p>Are you sure you want to delete this question?</p>
+    <p><strong>@Model.Text</strong></p>
+</div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="TopicId" value="@ViewBag.TopicId" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" asp-route-topicId="@ViewBag.TopicId" class="btn btn-secondary">Back to List</a>
+</form>

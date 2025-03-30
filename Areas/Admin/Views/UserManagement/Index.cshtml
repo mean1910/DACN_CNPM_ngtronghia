@@ -1,0 +1,76 @@
+﻿@model IEnumerable<elearning_b1.Models.UserWithRoles>
+
+@{
+    ViewData["Title"] = "User Management";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<!-- Thêm FontAwesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="get">
+    <input type="text" name="searchString" placeholder="Search by username or full name" value="@ViewData["searchString"]" />
+    <button type="submit">Search</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>User Name</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Roles</th>
+            <th>Lock Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var userWithRoles in Model)
+        {
+            <tr>
+                <td>@userWithRoles.User.Id</td>
+                <td>@userWithRoles.User.UserName</td>
+                <td>@userWithRoles.User.FullName</td>
+                <td>@userWithRoles.User.Email</td>
+                <td>
+                    @foreach (var role in userWithRoles.Roles)
+                    {
+                        <span>@role</span>
+                        <br />
+                    }
+                </td>
+                <td>
+                    @if (userWithRoles.IsLocked)
+                    {
+                        <i class="fas fa-lock" style="color: red;" title="Account Locked"></i>
+                    }
+                    else
+                    {
+                        <i class="fas fa-unlock" style="color: green;" title="Account Active"></i>
+                    }
+                </td>
+                <td>
+                    @if (userWithRoles.IsLocked)
+                    {
+                        <form method="post" action="@Url.Action("UnlockAccount", "UserManagement", new { userId = userWithRoles.User.Id })" style="display:inline;">
+                            <button type="submit" class="btn btn-warning" title="Unlock Account">
+                                <i class="fas fa-unlock"></i>
+                            </button>
+                        </form>
+                    }
+                    else
+                    {
+                        <form method="post" action="@Url.Action("LockAccount", "UserManagement", new { userId = userWithRoles.User.Id })" style="display:inline;">
+                            <button type="submit" class="btn btn-danger" title="Lock Account">
+                                <i class="fas fa-lock"></i>
+                            </button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

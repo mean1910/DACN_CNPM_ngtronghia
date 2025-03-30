@@ -1,66 +1,40 @@
 ﻿@model IEnumerable<elearning_b1.Models.Vocabulary>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Vocabulary List";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    var topicId = ViewData["TopicID"];
 }
 
-<h1>Index</h1>
+<h1>@ViewData["Title"]</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a href="@Url.Action("Create", "Vocabularies", new { area = "Admin", topicId = topicId })" class="btn btn-primary">Create New Vocabulary</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Word)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Meaning)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Pronunciation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ExampleSentence)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PartOfSpeech)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Topic)
-            </th>
-            <th></th>
+            <th>Word</th>
+            <th>Meaning</th>
+            <th>Pronunciation</th>
+            <th>Part of Speech</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Word)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Meaning)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pronunciation)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ExampleSentence)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PartOfSpeech)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Topic.TopicID)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.VocabularyID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.VocabularyID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.VocabularyID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var vocabulary in Model)
+        {
+            <tr>
+                <td>@vocabulary.Word</td>
+                <td>@vocabulary.Meaning</td>
+                <td>@vocabulary.Pronunciation</td>
+                <td>@vocabulary.PartOfSpeech</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Vocabularies", new { area = "Admin", id = vocabulary.VocabularyID, topicId = topicId })" class="btn btn-warning">Edit</a>
+                    <a href="@Url.Action("Delete", "Vocabularies", new { area = "Admin", id = vocabulary.VocabularyID, topicId = topicId })" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

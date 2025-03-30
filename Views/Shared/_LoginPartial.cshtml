@@ -5,34 +5,63 @@
 <ul class="navbar-nav ms-auto">
     @if (SignInManager.IsSignedIn(User))
     {
+        var user = await UserManager.GetUserAsync(User); // Lấy đối tượng người dùng hiện tại
+        var roles = await UserManager.GetRolesAsync(user); // Lấy các vai trò của người dùng
+
         <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle d-flex align-items-center">
-                <i class="fa fa-user-circle me-2" style="font-size: 20px;"></i>
-                <span>Hello, @UserManager.GetUserName(User)!</span>
+            <a href="#" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+                <!-- Hiển thị avatar tròn -->
+                <img src="@user.ImageUrl" alt="Avatar" class="rounded-circle profile-img me-2" />
+                <span>@user.FullName</span>
             </a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index">
-                    <i class="fa fa-cogs me-2"></i> Manage Account
-                </a>
-                <div class="dropdown-divider"></div>
-                <form id="logoutForm" class="px-3" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                    <button type="submit" class="btn btn-link text-dark w-100 text-start">
-                        <i class="fa fa-sign-out-alt me-2"></i> Logout
-                    </button>
-                </form>
-            </div>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index">
+                        <i class="fa fa-cogs me-2"></i> Manage Account
+                    </a>
+                </li>
+                <li>
+                    <div class="dropdown-divider"></div>
+                </li>
+                @if (roles.Contains(SD.Role_Admin))
+                {
+                    <li>
+                        <a class="dropdown-item" asp-area="Admin" asp-controller="Home" asp-action="Index">
+                            <i class="fa fa-tachometer-alt me-2"></i> Admin Dashboard
+                        </a>
+                    </li>
+                }
+                else if (roles.Contains(SD.Role_User))
+                {
+                    <li>
+                        <a class="dropdown-item" href="@Url.Action("Index", "Home")">
+                            <i class="fa fa-tachometer-alt me-2"></i> User Dashboard
+                        </a>
+                    </li>
+                }
+                <li>
+                    <div class="dropdown-divider"></div>
+                </li>
+                <li>
+                    <form id="logoutForm" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button type="submit" class="btn btn-link text-dark w-100 text-start">
+                            <i class="fa fa-sign-out-alt me-2"></i> Logout
+                        </button>
+                    </form>
+                </li>
+            </ul>
         </li>
     }
     else
     {
         <li class="nav-item">
-            <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">
                 <i class="fa fa-user-plus me-2" style="font-size: 18px;"></i>
                 <span>Register</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">
                 <i class="fa fa-sign-in-alt me-2" style="font-size: 18px;"></i>
                 <span>Login</span>
             </a>
@@ -40,3 +69,12 @@
     }
 </ul>
 
+<style>
+    .profile-img {
+        width: 32px; /* Kích thước nhỏ */
+        height: 32px;
+        object-fit: cover; /* Đảm bảo không méo ảnh */
+        border-radius: 50%; /* Làm ảnh tròn */
+        border: 1px solid #ddd; /* Viền nhẹ */
+    }
+</style>

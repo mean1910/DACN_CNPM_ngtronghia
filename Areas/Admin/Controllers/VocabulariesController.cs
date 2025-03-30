@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -20,16 +18,25 @@ namespace elearning_b1.Areas.Admin.Controllers
         }
 
         // GET: Admin/Vocabularies
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? topicId)
         {
-            var applicationDbContext = _context.Vocabularies.Include(v => v.Topic);
-            return View(await applicationDbContext.ToListAsync());
+            if (topicId == null)
+            {
+                return NotFound();
+            }
+
+            ViewData["TopicID"] = topicId;
+            var vocabularies = _context.Vocabularies
+                .Where(v => v.TopicID == topicId)
+                .Include(v => v.Topic);
+
+            return View(await vocabularies.ToListAsync());
         }
 
         // GET: Admin/Vocabularies/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int? id, int? topicId)
         {
-            if (id == null)
+            if (id == null || topicId == null)
             {
                 return NotFound();
             }
@@ -37,25 +44,26 @@ namespace elearning_b1.Areas.Admin.Controllers
             var vocabulary = await _context.Vocabularies
                 .Include(v => v.Topic)
                 .FirstOrDefaultAsync(m => m.VocabularyID == id);
+
             if (vocabulary == null)
             {
                 return NotFound();
             }
 
+            ViewData["TopicID"] = topicId;
             return View(vocabulary);
         }
 
         // GET: Admin/Vocabularies/Create
-        public IActionResult Create()
+        public IActionResult Create(int topicId)
         {
-            ViewBag.PartOfSpeechList = new SelectList(Enum.GetValues(typeof(PartOfSpeech)));
-            ViewData["TopicID"] = new SelectList(_context.Topics, "TopicID", "TopicName");
+            ViewData["PartOfSpeech"] = new SelectList(Enum.GetValues(typeof(PartOfSpeech)).Cast<PartOfSpeech>());
+            ViewData["TopicID"] = topicId;
+            ViewData["TopicName"] = _context.Topics.FirstOrDefault(t => t.TopicID == topicId)?.TopicName;
             return View();
         }
 
         // POST: Admin/Vocabularies/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("VocabularyID,Word,Meaning,Pronunciation,ExampleSentence,PartOfSpeech,TopicID")] Vocabulary vocabulary)
@@ -64,10 +72,9 @@ namespace elearning_b1.Areas.Admin.Controllers
             {
                 _context.Add(vocabulary);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index), new { topicId = vocabulary.TopicID });
             }
-            ViewBag.PartOfSpeechList = new SelectList(Enum.GetValues(typeof(PartOfSpeech)), vocabulary.PartOfSpeech);
-            ViewData["TopicID"] = new SelectList(_context.Topics, "TopicID", "TopicName", vocabulary.TopicID);
+
             return View(vocabulary);
         }
 
@@ -84,14 +91,20 @@ namespace elearning_b1.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewBag.PartOfSpeechList = new SelectList(Enum.GetValues(typeof(PartOfSpeech)), vocabulary.PartOfSpeech);
-            ViewData["TopicID"] = new SelectList(_context.Topics, "TopicID", "TopicName", vocabulary.TopicID);
+
+            // Tạo SelectList từ enum PartOfSpeech và đặt giá trị đã chọn
+            ViewData["PartOfSpeech"] = new SelectList(Enum.GetValues(typeof(PartOfSpeech))
+                                                        .Cast<PartOfSpeech>(),
+                                                        vocabulary.PartOfSpeech);
+            ViewData["TopicID"] = vocabulary.TopicID;
+            ViewData["TopicName"] = _context.Topics.FirstOrDefault(t => t.TopicID == vocabulary.TopicID)?.TopicName;
+
             return View(vocabulary);
         }
 
+
         // POST: Admin/Vocabularies/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Admin/Vocabularies/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("VocabularyID,Word,Meaning,Pronunciation,ExampleSentence,PartOfSpeech,TopicID")] Vocabulary vocabulary)
@@ -119,14 +132,23 @@ namespace elearning_b1.Areas.Admin.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                // Chuyển hướng về Index sau khi lưu thay đổi
+                return RedirectToAction(nameof(Index), new { topicId = vocabulary.TopicID });
             }
-            ViewData["TopicID"] = new SelectList(_context.Topics, "TopicID", "TopicID", vocabulary.TopicID);
+
+            // Truyền lại SelectList nếu có lỗi
+            ViewData["PartOfSpeech"] = new SelectList(Enum.GetValues(typeof(PartOfSpeech))
+                                                        .Cast<PartOfSpeech>(), vocabulary.PartOfSpeech);
+            ViewData["TopicID"] = vocabulary.TopicID;
+            ViewData["TopicName"] = _context.Topics.FirstOrDefault(t => t.TopicID == vocabulary.TopicID)?.TopicName;
+
             return View(vocabulary);
         }
 
+
+
         // GET: Admin/Vocabularies/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int? id, int topicId)
         {
             if (id == null)
             {
@@ -136,18 +158,20 @@ namespace elearning_b1.Areas.Admin.Controllers
             var vocabulary = await _context.Vocabularies
                 .Include(v => v.Topic)
                 .FirstOrDefaultAsync(m => m.VocabularyID == id);
+
             if (vocabulary == null)
             {
                 return NotFound();
             }
 
+            ViewData["TopicID"] = topicId;
             return View(vocabulary);
         }
 
         // POST: Admin/Vocabularies/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id, int topicId)
         {
             var vocabulary = await _context.Vocabularies.FindAsync(id);
             if (vocabulary != null)
@@ -156,7 +180,7 @@ namespace elearning_b1.Areas.Admin.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index), new { topicId = topicId });
         }
 
         private bool VocabularyExists(int id)

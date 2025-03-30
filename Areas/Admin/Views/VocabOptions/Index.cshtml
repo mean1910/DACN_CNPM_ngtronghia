@@ -1,0 +1,42 @@
+﻿@model IEnumerable<elearning_b1.Models.VocabOption>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    var questionId = ViewData["QuestionId"];
+}
+<h1>Vocab Options</h1>
+
+<a href="@Url.Action("Create", "VocabOptions", new { questionId = questionId })" class="btn btn-primary">Create New Option</a>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Option Text</th>
+            <th>Is Correct</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var option in Model)
+        {
+            <tr class="@(option.IsCorrect ? "table-success" : "")">
+                <td>@option.Text</td>
+                <td>@(option.IsCorrect ? "Yes" : "No")</td>
+                <td>
+                    <a href="@Url.Action("Edit", "VocabOptions", new { id = option.Id })" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="@Url.Action("Delete", "VocabOptions", new { id = option.Id })" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<!-- Liên kết quay lại trang câu hỏi -->
+<a asp-controller="VocabQuestions" asp-action="Index" asp-route-topicId="@ViewData["TopicId"]" class="btn btn-secondary">Back to Question</a>
+
+<style>
+    .table-success {
+        background-color: #d4edda; /* Màu nền xanh cho lựa chọn đúng */
+    }
+
+</style>

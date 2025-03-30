@@ -1,86 +1,127 @@
 ﻿@using elearning_b1.ViewModels
 @model WriteSubmissionViewModel
 
-<div class="container mt-4">
-    @if (TempData["SuccessMessage"] != null)
-    {
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            @TempData["SuccessMessage"]
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    }
+<div class="container-fluid mt-4">
+    <div class="row">
+        <!-- Cột hiển thị thông báo lỗi (ban đầu ẩn đi) -->
+        <div class="col-md-4" id="error-column" style="display:none; transition: all 0.5s;">
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    @TempData["SuccessMessage"]
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            }
 
-    @if (TempData["ErrorMessage"] != null)
-    {
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            @TempData["ErrorMessage"]
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    }
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @TempData["ErrorMessage"]
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            }
 
-    <!-- Hiển thị lỗi ngữ pháp nếu có -->
-    @if (Model?.GrammarErrors != null && Model.GrammarErrors.Count > 0)
-    {
-        <div class="alert alert-danger mt-3">
-            <h4>Các Lỗi Ngữ Pháp:</h4>
-            <ul class="error-list">
-                @foreach (var error in Model.GrammarErrors)
-                {
-                    <li class="error-item">
-                        <div class="error-message">
-                            <strong>@error.Message</strong>
-                            <p class="error-short-message">@error.ShortMessage</p>
-                        </div>
-                        <div class="error-details">
-                            <b>Lỗi ngữ cảnh:</b> @error.ErrorContext<br />
-                            <b>Câu bị lỗi:</b> @error.ErrorSentence<br />
-                            <b>Gợi ý thay thế:</b> @error.SuggestedReplacements
-                        </div>
-                        @if (!string.IsNullOrEmpty(error.Url))
+            @if (Model?.GrammarErrors != null && Model.GrammarErrors.Count > 0)
+            {
+                <div class="alert alert-danger mt-3">
+                    <h4>Các Lỗi Ngữ Pháp:</h4>
+                    <ul class="error-list" style="list-style-type: decimal;">
+                        @foreach (var error in Model.GrammarErrors)
                         {
-                            <a href="@error.Url" target="_blank" class="more-info-link">Tìm hiểu thêm</a>
+                            <li class="error-item">
+                                <div class="error-message">
+                                    <strong>@error.Message</strong>
+                                    <p class="error-short-message">@error.ShortMessage</p>
+                                </div>
+                                <div class="error-details">
+                                    <b>Lỗi ngữ cảnh:</b> @error.ErrorContext<br />
+                                    <b>Câu bị lỗi:</b> @error.ErrorSentence<br />
+                                    <b>Gợi ý thay thế:</b> @error.SuggestedReplacements
+                                </div>
+                                @if (!string.IsNullOrEmpty(error.Url))
+                                {
+                                    <a href="@error.Url" target="_blank" class="more-info-link">Tìm hiểu thêm</a>
+                                }
+                            </li>
                         }
-                    </li>
-                }
-            </ul>
+                    </ul>
+                </div>
+            }
         </div>
-    }
 
-    <div class="card">
-        <div class="card-header">
-            <h2>@Model.WritingTitle</h2>
-        </div>
-        <div class="card-body">
-            <div class="alert alert-info mb-3">
-                <strong>Chủ Đề:</strong> @Model.WritingPrompt
+        <!-- Cột hiển thị form -->
+        <div class="col-md-12" id="form-column">
+            <div class="card shadow-lg rounded">
+                <div class="card-header bg-primary text-white">
+                    <h2>@Model.WritingTitle</h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info mb-3">
+                        <strong>Chủ Đề:</strong> @Model.WritingPrompt
+                    </div>
+
+                    <!-- Gợi Ý: Ẩn đi và chỉ hiển thị khi nhấn nút -->
+                    <div class="alert alert-info mb-3" id="suggestion-container" style="display: none; transition: all 0.3s;">
+                        <strong>Gợi Ý:</strong> @Html.Raw(Model.WritingSuggestions)
+                    </div>
+
+                    <!-- Nút hiển thị gợi ý với hiệu ứng -->
+                    <button type="button" class="btn btn-info" id="show-suggestion-btn">Hiển Thị Gợi Ý</button>
+
+                    <form method="post">
+                        <input type="hidden" asp-for="WritingId" />
+                        <input type="hidden" asp-for="WritingTitle" />
+                        <input type="hidden" asp-for="WritingPrompt" />
+                        <input type="hidden" asp-for="WritingSuggestions" />
+
+                        <div class="form-group mt-4">
+                            <label for="UserAnswer" class="font-weight-bold">Bài Viết Của Bạn:</label>
+                            <textarea asp-for="UserAnswer"
+                                      class="form-control"
+                                      rows="10"
+                                      placeholder="Viết bài của bạn tại đây..."
+                                      style="border-radius: 10px; font-size: 16px; padding: 12px;"></textarea>
+                            <span asp-validation-for="UserAnswer" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg" formaction="@Url.Action("CheckGrammar", "Writing")" style="width: 48%; border-radius: 8px; transition: all 0.3s;">Kiểm tra ngữ pháp</button>
+                            <button type="submit" class="btn btn-success btn-lg" formaction="@Url.Action("SaveSubmission", "Writing")" style="width: 48%; border-radius: 8px; transition: all 0.3s;">Lưu Bài Viết</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-            <form method="post">
-                <input type="hidden" asp-for="WritingId" />
-                <input type="hidden" asp-for="WritingTitle" />
-                <input type="hidden" asp-for="WritingPrompt" />
-                <input type="hidden" asp-for="WritingSuggestions" />
-
-                <div class="form-group">
-                    <label for="UserAnswer">Bài Viết Của Bạn:</label>
-                    <textarea asp-for="UserAnswer"
-                              class="form-control"
-                              rows="10"
-                              placeholder="Viết bài của bạn tại đây...">@Model.UserAnswer</textarea>
-                    <span asp-validation-for="UserAnswer" class="text-danger"></span>
-                </div>
-
-                <div class="form-group">
-                    <!-- Nút kiểm tra ngữ pháp -->
-                    <button type="submit" class="btn btn-primary" formaction="@Url.Action("CheckGrammar", "Writing")">Kiểm tra ngữ pháp</button>
-                    <!-- Nút lưu bài viết -->
-                    <button type="submit" class="btn btn-success" formaction="@Url.Action("SaveSubmission", "Writing")">Lưu Bài Viết</button>
-                </div>
-            </form>
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        // Khi nhấn vào nút "Hiển Thị Gợi Ý"
+        document.getElementById("show-suggestion-btn").addEventListener("click", function () {
+            var suggestionContainer = document.getElementById("suggestion-container");
+            // Toggle trạng thái hiển thị của phần gợi ý
+            if (suggestionContainer.style.display === "none") {
+                suggestionContainer.style.display = "block";
+                this.textContent = "Ẩn Gợi Ý"; // Thay đổi text của nút
+            } else {
+                suggestionContainer.style.display = "none";
+                this.textContent = "Hiển Thị Gợi Ý"; // Thay đổi text của nút
+            }
+        });
+
+        // Kiểm tra có lỗi ngữ pháp không để hiển thị phần lỗi và điều chỉnh bố cục
+        @if (Model?.GrammarErrors != null && Model.GrammarErrors.Count > 0)
+        {
+            <text>
+                document.getElementById("error-column").style.display = "block"; // Hiển thị phần lỗi
+                document.getElementById("form-column").classList.remove("col-md-12"); // Giảm kích thước của form
+                document.getElementById("form-column").classList.add("col-md-8"); // Đặt lại cột form
+            </text>
+        }
+    </script>
+}

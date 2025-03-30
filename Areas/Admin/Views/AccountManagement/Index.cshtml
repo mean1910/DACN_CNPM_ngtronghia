@@ -1,0 +1,99 @@
+﻿@model IEnumerable<elearning_b1.Models.ApplicationUser>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Họ và Tên</th>
+            <th>Ngày tạo</th>
+            <th>Trạng thái</th>
+            <th>Quyền hiện tại</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Email</td>
+                <td>@user.FullName</td>
+                <td>@user.DateCreated.ToString("yyyy-MM-dd")</td>
+                <td>
+                    @if (user.LockoutEnd != null && user.LockoutEnd > DateTime.Now)
+                    {
+                        <span class="badge bg-danger">Bị khóa</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success">Hoạt động</span>
+                    }
+                </td>
+                <td>
+                    @if (ViewBag.UserRoles.ContainsKey(user.Id))
+                    {
+                        @string.Join(", ", ViewBag.UserRoles[user.Id])
+                    }
+                    else
+                    {
+                        <span class="text-muted">Chưa có quyền</span>
+                    }
+                </td>
+                <td>
+                    <div class="btn-group">
+                        @if (user.LockoutEnd == null || user.LockoutEnd <= DateTime.Now)
+                        {
+                            <form asp-action="LockAccount" method="post" class="d-inline">
+                                <input type="hidden" name="userId" value="@user.Id" />
+                                <input type="hidden" name="lockoutEnd" value="@DateTime.Now.AddYears(100)" />
+                                <button type="submit" class="btn btn-warning btn-sm">Khóa</button>
+                            </form>
+                        }
+                        @if (user.LockoutEnd != null && user.LockoutEnd > DateTime.Now)
+                        {
+                            <form asp-action="UnlockAccount" method="post" class="d-inline">
+                                <input type="hidden" name="userId" value="@user.Id" />
+                                <button type="submit" class="btn btn-success btn-sm">Mở khóa</button>
+                            </form>
+                        }
+                        <form asp-action="AssignRole" method="post" class="d-inline">
+                            <input type="hidden" name="userId" value="@user.Id" />
+                            <div class="input-group input-group-sm">
+                                <select name="role" class="form-select form-select-sm">
+                                    <option value="User" selected>Người dùng</option>
+                                    <option value="Admin">Quản trị</option>
+                                </select>
+                                <button type="submit" class="btn btn-primary btn-sm">Cấp quyền</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-center align-items-center my-4">
+    @if (ViewBag.CurrentPage > 1)
+    {
+        <a href="@Url.Action("Index", new { page = ViewBag.CurrentPage - 1 })" class="btn btn-secondary btn-sm mx-1">Previous</a>
+    }
+
+    <span class="mx-2">Page @ViewBag.CurrentPage of @ViewBag.TotalPages</span>
+
+    @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+    {
+        <a href="@Url.Action("Index", new { page = ViewBag.CurrentPage + 1 })" class="btn btn-secondary btn-sm mx-1">Next</a>
+    }
+</div>
+
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}

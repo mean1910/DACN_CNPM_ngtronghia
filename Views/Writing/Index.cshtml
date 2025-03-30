@@ -1,27 +1,28 @@
 ﻿@model List<Writing>
 
-<div class="container mt-4">
-    <h2 class="mb-4">VIẾT ĐỂ HIỂU – CHIA SẺ SUY NGHĨ, MỞ RỘNG TƯ DUY!</h2>
-    <p>Viết là cơ hội để bạn thể hiện suy nghĩ cá nhân, nhưng cũng là lúc học hỏi từ những góc nhìn khác. Cùng khám phá cách viết để phát triển tư duy và làm phong phú thêm ý tưởng của mình!</p>
+<div class="container mt-5">
+    <h2 class="mb-4 text-center font-weight-bold">VIẾT ĐỂ HIỂU – CHIA SẺ SUY NGHĨ, MỞ RỘNG TƯ DUY!</h2>
+    <p class="text-center text-muted mb-5">Viết là cơ hội để bạn thể hiện suy nghĩ cá nhân, nhưng cũng là lúc học hỏi từ những góc nhìn khác. Cùng khám phá cách viết để phát triển tư duy và làm phong phú thêm ý tưởng của mình!</p>
+
     @if (Model.Any())
     {
         <div class="row">
             @foreach (var writing in Model)
             {
-                <div class="col-md-4 mb-3">
-                    <div class="card">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-lg border-0 rounded-lg">
                         <div class="card-body">
-                            <h5 class="card-title">
-                                @writing.Title
-                            </h5>
+                            <h5 class="card-title font-weight-bold">@writing.Title</h5>
                             <p class="card-text">
                                 @writing.Prompt
                             </p>
-                            <a asp-action="WriteSubmission"
-                               asp-route-writingId="@writing.Id"
-                               class="btn btn-primary">
-                                Bắt Đầu Viết
-                            </a>
+                            <div class="text-center">
+                                <a asp-action="WriteSubmission"
+                                   asp-route-writingId="@writing.Id"
+                                   class="btn btn-primary btn-block">
+                                    Bắt Đầu Viết
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -35,3 +36,85 @@
         </div>
     }
 </div>
+
+<style>
+    /* Cải thiện phần tiêu đề */
+    h2 {
+        font-size: 2rem;
+        color: #343a40;
+        font-weight: bold;
+    }
+
+    /* Cải thiện phần mô tả */
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #6c757d;
+    }
+
+    /* Cải thiện các thẻ card */
+    .card {
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        height: 100%; /* Đảm bảo chiều cao các thẻ đều nhau */
+    }
+
+        /* Hiệu ứng hover */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+    .card-body {
+        flex: 1; /* Giúp các thẻ đều nhau về chiều cao */
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Đảm bảo nút ở cuối */
+        height: 100%; /* Đảm bảo card-body chiếm toàn bộ chiều cao */
+    }
+
+    /* Cải thiện kiểu dáng của nút */
+    .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 25px;
+        transition: background-color 0.3s ease;
+        margin-top: auto; /* Đẩy nút xuống dưới cùng */
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    /* Giữa nội dung nút */
+    .text-center {
+        margin-top: 20px;
+    }
+
+    /* Giới hạn chiều cao và hiển thị dấu ba chấm khi dài */
+    .card-text {
+        font-size: 0.95rem;
+        color: #555;
+        overflow: hidden; /* Ẩn phần thừa */
+        text-overflow: ellipsis; /* Thêm dấu ba chấm */
+        display: -webkit-box; /* Sử dụng box layout để giới hạn dòng */
+        -webkit-line-clamp: 3; /* Giới hạn tối đa 3 dòng */
+        -webkit-box-orient: vertical; /* Căn dọc nội dung */
+        line-height: 1.5; /* Tăng độ cao dòng để dễ đọc */
+    }
+
+    /* Thêm khoảng cách giữa các thẻ */
+    .col-md-4 {
+        margin-bottom: 20px;
+    }
+
+</style>

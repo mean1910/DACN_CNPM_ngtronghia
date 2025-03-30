@@ -1,11 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using elearning_b1.Models;
+using Microsoft.AspNetCore.Hosting;
 
 namespace elearning_b1.Areas.Admin.Controllers
 {
@@ -13,10 +14,12 @@ namespace elearning_b1.Areas.Admin.Controllers
     public class ReadingSkillsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IWebHostEnvironment _hostingEnvironment;
 
-        public ReadingSkillsController(ApplicationDbContext context)
+        public ReadingSkillsController(ApplicationDbContext context, IWebHostEnvironment hostingEnvironment)
         {
             _context = context;
+            _hostingEnvironment = hostingEnvironment;
         }
 
         // GET: Admin/ReadingSkills
@@ -50,14 +53,29 @@ namespace elearning_b1.Areas.Admin.Controllers
         }
 
         // POST: Admin/ReadingSkills/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Content")] ReadingSkill readingSkill)
+        public async Task<IActionResult> Create([Bind("Id,Title,Content")] ReadingSkill readingSkill, IFormFile Image)
         {
             if (ModelState.IsValid)
             {
+                // Xử lý file ảnh tải lên
+                if (Image != null && Image.Length > 0)
+                {
+                    var uploadPath = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
+                    var fileName = Path.GetFileName(Image.FileName);
+                    var filePath = Path.Combine(uploadPath, fileName);
+
+                    // Lưu file ảnh vào thư mục uploads
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await Image.CopyToAsync(fileStream);
+                    }
+
+                    // Cập nhật đường dẫn ảnh
+                    readingSkill.ImageUrl = "/uploads/" + fileName;
+                }
+
                 _context.Add(readingSkill);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -82,11 +100,9 @@ namespace elearning_b1.Areas.Admin.Controllers
         }
 
         // POST: Admin/ReadingSkills/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Content")] ReadingSkill readingSkill)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Content,ImageUrl")] ReadingSkill readingSkill, IFormFile Image)
         {
             if (id != readingSkill.Id)
             {
@@ -97,6 +113,33 @@ namespace elearning_b1.Areas.Admin.Controllers
             {
                 try
                 {
+                    // Xử lý file ảnh mới nếu có
+                    if (Image != null && Image.Length > 0)
+                    {
+                        var uploadPath = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
+                        var fileName = Path.GetFileName(Image.FileName);
+                        var filePath = Path.Combine(uploadPath, fileName);
+
+                        // Nếu đã có ảnh cũ, xóa file ảnh cũ
+                        if (!string.IsNullOrEmpty(readingSkill.ImageUrl))
+                        {
+                            var oldImagePath = Path.Combine(_hostingEnvironment.WebRootPath, readingSkill.ImageUrl.TrimStart('/'));
+                            if (System.IO.File.Exists(oldImagePath))
+                            {
+                                System.IO.File.Delete(oldImagePath);
+                            }
+                        }
+
+                        // Lưu file ảnh mới vào thư mục uploads
+                        using (var fileStream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await Image.CopyToAsync(fileStream);
+                        }
+
+                        // Cập nhật đường dẫn ảnh mới
+                        readingSkill.ImageUrl = "/uploads/" + fileName;
+                    }
+
                     _context.Update(readingSkill);
                     await _context.SaveChangesAsync();
                 }

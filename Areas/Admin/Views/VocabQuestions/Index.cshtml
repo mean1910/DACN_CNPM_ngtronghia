@@ -1,0 +1,36 @@
+﻿@model IEnumerable<elearning_b1.Models.VocabQuestion>
+
+@{
+    ViewData["Title"] = "Danh sách câu hỏi";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    
+}
+
+<h1>Questions for Topic: @ViewBag.TopicName</h1>
+
+<a asp-action="Create" asp-route-topicId="@ViewBag.TopicId" class="btn btn-primary">Create New</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Text</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Text</td>
+            <td>
+                <a asp-controller="VocabOptions" asp-action="Index" asp-route-questionId="@item.Id" class="btn btn-primary">View Options</a>
+                <a asp-action="Edit" asp-route-id="@item.Id" asp-route-topicId="@ViewBag.TopicId" class="btn btn-warning">Edit</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" asp-route-topicId="@ViewBag.TopicId" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+<!-- Liên kết quay lại trang chủ đề -->
+<a asp-controller="Topics" asp-action="Index" class="btn btn-secondary">Back to Topic</a>
+

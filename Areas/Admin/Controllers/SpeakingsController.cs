@@ -48,7 +48,7 @@ namespace elearning_b1.Areas.Admin.Controllers
         // GET: Admin/Speakings/Create
         public IActionResult Create()
         {
-            ViewData["TopicId"] = new SelectList(_context.Topics, "TopicID", "TopicID");
+            ViewData["TopicId"] = new SelectList(_context.Topics, "TopicID", "TopicName");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace elearning_b1.Areas.Admin.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TopicId"] = new SelectList(_context.Topics, "TopicID", "TopicID", speaking.TopicId);
+            ViewData["TopicId"] = new SelectList(_context.Topics, "TopicID", "TopicName", speaking.TopicId);
             return View(speaking);
         }
 
@@ -82,7 +82,7 @@ namespace elearning_b1.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["TopicId"] = new SelectList(_context.Topics, "TopicID", "TopicID", speaking.TopicId);
+            ViewData["TopicId"] = new SelectList(_context.Topics, "TopicID", "TopicName", speaking.TopicId);
             return View(speaking);
         }
 
@@ -118,7 +118,7 @@ namespace elearning_b1.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TopicId"] = new SelectList(_context.Topics, "TopicID", "TopicID", speaking.TopicId);
+            ViewData["TopicId"] = new SelectList(_context.Topics, "TopicID", "TopicName", speaking.TopicId);
             return View(speaking);
         }
 

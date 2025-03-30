@@ -7,25 +7,22 @@
 
 <h1>Details</h1>
 
-<div>
-    <h4>ReadingSkill</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Content)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Content)
-        </dd>
-    </dl>
-</div>
-<div>
+<div class="container mt-4">
+    <h2 class="text-center mb-4">@Model.Title</h2>
+
+    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+    {
+        <div class="text-center mb-3">
+            <img src="@Model.ImageUrl" alt="Image" class="img-fluid" />
+        </div>
+    }
+
+    <div>
+        @foreach (var paragraph in Model.Content.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries))
+        {
+            <p>@paragraph</p>
+        }
+    </div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="btn btn-secondary mt-3">Quay lại</a>
 </div>

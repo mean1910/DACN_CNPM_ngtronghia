@@ -9,13 +9,24 @@
     <h1 class="text-primary mb-3 text-center">@Model.Title</h1>
     <hr />
 
-    <!-- Hiển thị nội dung bài đọc -->
-    <div class="mb-4">
-        <div id="reading-content" class="border rounded p-4" style="background-color: #f9f9f9; line-height: 1.8;">
-            @Html.Raw(Model.Content)
+    <div class="row">
+        
+        <div class="col-12" id="reading-column">
+            <div id="reading-content" class="border rounded p-4" style="background-color: #f9f9f9; line-height: 1.8;">
+                @Html.Raw(Model.Content)
+            </div>
+        </div>
+
+        
+        <div class="col-12" id="dictionary-container" style="display: none; position: absolute; background-color: #fff; padding: 10px; border: 2px solid #007bff; border-radius: 8px; z-index: 1000; max-width: 300px;">
+            <span id="close-popup" style="cursor: pointer; color: #007bff; font-size: 18px;">&times;</span>
+            <div>
+                <h5 id="dictionary-word" style="font-size: 1.1rem; font-weight: 600; color: #007bff;"></h5>
+                <p id="dictionary-definition" class="text-muted" style="font-size: 1rem; line-height: 1.4; color: #333;"></p>
+            </div>
         </div>
     </div>
-
+    <hr />
     <!-- Hiển thị các câu hỏi và lựa chọn -->
     <form method="post" action="@Url.Action("Submit", new { id = Model.Id })">
         @foreach (var question in Model.Questions)
@@ -53,112 +64,118 @@
     </form>
 </div>
 
-<!-- Popup từ điển -->
-<div id="dictionary-popup"
-     class="card shadow-lg p-2"
-     style="display: none; position: fixed; background: white; border: 2px solid #007bff; border-radius: 8px; z-index: 1000; padding: 10px; max-width: 300px; opacity: 0;">
-    <h5 class="card-title" id="dictionary-word" style="font-size: 1.2rem; font-weight: 600; color: #007bff;"></h5>
-    <p id="dictionary-definition" class="text-muted" style="font-size: 1rem; line-height: 1.4; color: #333;"></p>
-</div>
 
 <style>
-    /* Cửa sổ popup với thiết kế tinh tế */
-    #dictionary-popup {
-        transition: opacity 0.3s ease-out, transform 0.3s ease-out; /* Hiệu ứng chuyển động mượt mà */
-        transform: translateY(30px); /* Popup di chuyển từ dưới lên */
-        max-width: 250px; /* Kích thước tối đa của popup */
-    }
+#reading-content {
+     white-space: pre-line; /* Loại bỏ thụt đầu dòng */
+     cursor: text;
+ }
 
-    #dictionary-word {
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: #007bff; /* Màu xanh dương cho từ cần dịch */
-        margin-bottom: 5px;
-        text-align: center;
-    }
+#reading-column {
+    position: relative;
+}
 
-    #dictionary-definition {
-        font-size: 1rem;
-        color: #333;
-        line-height: 1.4;
-        text-align: center;
-    }
+#dictionary-container {
+    display: none;  /* Ẩn phần dịch khi không có từ nào được chọn */
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    z-index: 1000;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
 
-    /* Đảm bảo nội dung popup được căn chỉnh hợp lý */
-    #dictionary-popup p {
-        padding: 5px;
-        background-color: #f5f5f5;
-        border-radius: 6px;
-    }
+    #dictionary-container {
+    display: none;  /* Ẩn phần dịch khi không có từ nào được chọn */
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    z-index: 1000;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    /* Style cho reading-content */
-    #reading-content {
-        white-space: pre-wrap;
-        cursor: text;
-    }
+#dictionary-word {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #007bff;
+}
+
+#dictionary-definition {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+#close-popup {
+    cursor: pointer;
+    color: #007bff;
+    font-size: 18px;
+    text-align: right;
+    display: block;
+}
 </style>
 
-@section Scripts {
-    <script>
-        document.addEventListener('mouseup', async function () {
-            const selection = window.getSelection();
-            const selectedText = selection.toString().trim();
+<script>
+    document.addEventListener('mouseup', async function () {
+    const selection = window.getSelection();
+    const selectedText = selection.toString().trim();
 
-            if (selectedText) {
-                const rect = selection.getRangeAt(0).getBoundingClientRect();
-                const popup = document.getElementById('dictionary-popup');
+    if (selectedText) {
+        const rect = selection.getRangeAt(0).getBoundingClientRect();
+        const container = document.getElementById('dictionary-container');
+        const readingColumn = document.getElementById('reading-column');
 
-                // Tính toán vị trí hiển thị popup
-                let top = rect.bottom + window.scrollY + 10;
-                let left = Math.min(rect.left + window.scrollX, window.innerWidth - popup.offsetWidth - 20);
+        // Hiển thị phần container dịch
+        container.style.display = 'block';
 
-                // Điều chỉnh vị trí nếu popup vượt quá phần dưới của màn hình
-                if (top + popup.offsetHeight > window.innerHeight + window.scrollY) {
-                    top = rect.top + window.scrollY - popup.offsetHeight - 10;
-                }
+        // Vị trí popup
+        let top = rect.bottom + window.scrollY + 10;  // Đặt popup dưới văn bản đã chọn
+        let left = Math.min(rect.left + window.scrollX, window.innerWidth - container.offsetWidth - 20);  // Căn trái
 
-                // Cập nhật vị trí và hiển thị popup
-                popup.style.top = `${top}px`;
-                popup.style.left = `${left}px`;
-                popup.style.display = 'block';
-
-                // Hiệu ứng popup xuất hiện từ dưới lên
-                setTimeout(function () {
-                    popup.style.opacity = 1;
-                    popup.style.transform = 'translateY(0)';
-                }, 10); // Để cho hiệu ứng chuyển động được bắt đầu ngay sau khi popup xuất hiện
-
-                try {
-                    // Gửi yêu cầu đến MyMemory API để dịch từ
-                    const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(selectedText)}&langpair=en|vi`, {
-                        method: "GET"
-                    });
-
-                    const data = await res.json();
-
-                    // Kiểm tra xem có trả về dữ liệu hay không
-                    if (data.responseData && data.responseData.translatedText) {
-                        document.getElementById('dictionary-definition').textContent = data.responseData.translatedText;
-                    } else {
-                        document.getElementById('dictionary-definition').textContent = "Không tìm thấy nghĩa của từ này.";
-                    }
-                } catch (error) {
-                    console.error('Error:', error);
-                    document.getElementById('dictionary-definition').textContent = "Đã xảy ra lỗi khi kết nối đến dịch vụ dịch.";
-                }
-            }
-        });
-
-        // Đóng popup khi nhấp ra ngoài
-        document.addEventListener('click', function (event) {
-            const popup = document.getElementById('dictionary-popup');
-            if (!popup.contains(event.target) && event.target !== document.getElementById('reading-content')) {
-                closePopup();
-            }
-        });
-
-        function closePopup() {
-            document.getElementById('dictionary-popup').style.display = 'none';
+        // Điều chỉnh vị trí nếu popup vượt quá phần dưới của màn hình
+        if (top + container.offsetHeight > window.innerHeight + window.scrollY) {
+            top = rect.top + window.scrollY - container.offsetHeight - 10;  // Đặt popup ở trên văn bản nếu không đủ không gian phía dưới
         }
-    </script>
-}
+
+        container.style.top = `${top}px`;
+        container.style.left = `${left}px`;
+
+        try {
+            // Gửi yêu cầu đến MyMemory API để dịch từ
+            const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(selectedText)}&langpair=en|vi`, {
+                method: "GET"
+            });
+
+            const data = await res.json();
+
+            // Kiểm tra xem có trả về dữ liệu hay không
+            if (data.responseData && data.responseData.translatedText) {
+                document.getElementById('dictionary-definition').textContent = data.responseData.translatedText;
+                document.getElementById('dictionary-word').textContent = selectedText;
+            } else {
+                document.getElementById('dictionary-definition').textContent = "Không tìm thấy nghĩa của từ này.";
+                document.getElementById('dictionary-word').textContent = selectedText;
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            document.getElementById('dictionary-definition').textContent = "Đã xảy ra lỗi khi kết nối đến dịch vụ dịch.";
+            document.getElementById('dictionary-word').textContent = selectedText;
+        }
+    } else {
+        // Ẩn phần dịch khi không có từ nào được chọn
+        document.getElementById('dictionary-container').style.display = 'none';
+    }
+});
+
+// Đóng popup khi nhấn vào dấu 'x'
+document.getElementById('close-popup')?.addEventListener('click', function () {
+    document.getElementById('dictionary-container').style.display = 'none';
+});
+
+</script>

@@ -9,30 +9,32 @@
 
 <h4>Writing</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Prompt" class="control-label"></label>
-                <input asp-for="Prompt" class="form-control" />
-                <span asp-validation-for="Prompt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Suggestions" class="control-label"></label>
-                <input asp-for="Suggestions" class="form-control" />
-                <span asp-validation-for="Suggestions" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Prompt" class="control-label"></label>
+                    <input asp-for="Prompt" class="form-control" />
+                    <span asp-validation-for="Prompt" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Suggestions" class="control-label"></label>
+                    <textarea id="Suggestions" name="Suggestions" class="form-control" rows="10">@Model.Suggestions</textarea>
+                    <span asp-validation-for="Suggestions" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
@@ -40,3 +42,18 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
+<script src="https://cdn.ckeditor.com/4.21.0/full/ckeditor.js"></script>
+
+<script>
+    // Sử dụng CKEditor để thay thế textarea
+    CKEDITOR.replace('Suggestions', {
+        width: '100%',
+        height: 400
+    });
+</script>
+
+<style>
+    .form-control {
+        width: 100%;
+    }
+</style>

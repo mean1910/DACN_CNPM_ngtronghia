@@ -1,57 +1,120 @@
-﻿
-@model IEnumerable<elearning_b1.Models.ReadingSkill>
+﻿@model IEnumerable<elearning_b1.Models.ReadingSkill>
 
 @{
     ViewData["Title"] = "Danh sách bài đọc";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="container mt-4">
-    <form method="get" class="mb-4">
-        <div class="input-group">
-            <input type="text" name="searchQuery" class="form-control" placeholder="Tìm kiếm bài đọc..." value="@ViewContext.HttpContext.Request.Query["searchQuery"]"/>
-            <button type="submit" class="btn btn-primary">Tìm</button>
+
+<div class="container mt-5">
+    <!-- Tiêu đề -->
+    <div class="text-center mb-4">
+        <h2>BẮT ĐẦU TỪ NHỮNG DÒNG CHỮ, TIẾNG ANH THẬT GẦN GŨI!</h2>
+        <p class="text-muted">Mỗi đoạn văn, mỗi từ vựng đều mang trong mình một câu chuyện. Hãy lắng nghe chúng và cảm nhận sự tiến bộ của chính bạn!</p>
+    </div>
+
+    <!-- Thanh tìm kiếm -->
+    <form method="get" class="row justify-content-center mb-5">
+        <div class="col-md-8">
+            <div class="input-group">
+                <input type="text" name="searchQuery" class="form-control" placeholder="Tìm kiếm bài đọc..." value="@ViewContext.HttpContext.Request.Query["searchQuery"]" />
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                </div>
+            </div>
         </div>
     </form>
-    <!-- Danh sách bài đọc -->
+
+    <!-- Danh sách bài đọc dạng card -->
     <div class="row">
-        <div class="container mt-4">
-            <h2 class="text-center mb-4">BẮT ĐẦU TỪ NHỮNG DÒNG CHỮ, TIẾNG ANH THẬT GẦN GŨI!</h2>
-            <p class ="text-center mb-4">Mỗi đoạn văn, mỗi từ vựng đều mang trong mình một câu chuyện. Hãy lắng nghe chúng và cảm nhận sự tiến bộ của chính bạn!</p>
-            <div class="row">
-                @foreach (var item in Model)
-                {
-                    <div class="col-md-4 mb-3">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title">@item.Title</h5>
-                                <p class="card-text text-truncate" style="max-height: 60px; overflow: hidden;">
-                                    @Html.Raw(item.Content)
-                                </p>
-                                <a href="@Url.Action("Exercise", "Reading", new { id = item.Id })" class="btn btn-primary btn-sm">Xem chi tiết</a>
+        @if (Model.Any())
+        {
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="@(string.IsNullOrEmpty(item.ImageUrl) ? "/images/default.jpg" : item.ImageUrl)" class="card-img-top" alt="@item.Title">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">@item.Title</h5>
+                            <p class="card-text">
+                                @Html.Raw(item.Content)
+                            </p>
+                            <div class="mt-auto">
+                                <a href="@Url.Action("Exercise", "Reading", new { id = item.Id })" class="btn btn-outline-primary btn-block">
+                                    Xem chi tiết
+                                </a>
                             </div>
                         </div>
                     </div>
-                }
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-12">
+                <p class="text-center text-danger">Không tìm thấy bài đọc nào. Vui lòng thử lại.</p>
             </div>
-        </div>
+        }
     </div>
 </div>
 
 <style>
-    .card-title {
-        color: #007bff;
-        font-weight: bold;
-    }
-
-    .card:hover {
-        transform: scale(1.05);
-        transition: 0.3s ease-in-out;
-    }
-
-    .text-truncate {
-        white-space: nowrap;
-        text-overflow: ellipsis;
+    /* Card */
+    .card {
+        border: none;
+        border-radius: 20px;
+        background: #ffffff;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         overflow: hidden;
     }
 
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+    /* Card Title */
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #333;
+        overflow: hidden;
+        white-space: nowrap; /* Ngăn nội dung xuống dòng */
+        text-overflow: ellipsis; /* Thêm dấu ba chấm khi nội dung quá dài */
+    }
+
+    /* Card Text */
+    .card-text {
+        font-size: 0.95rem;
+        color: #555;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Thêm dấu ba chấm */
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Hiển thị tối đa 3 dòng */
+        -webkit-box-orient: vertical;
+    }
+
+    /* Buttons */
+    .btn {
+        border-radius: 30px;
+    }
+
+    /* Search Bar */
+    .input-group {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 50px;
+    }
+
+        .input-group input {
+            border: none;
+            border-radius: 50px 0 0 50px;
+            padding: 10px 20px;
+        }
+
+        .input-group .btn {
+            border-radius: 0 50px 50px 0;
+            padding: 10px 20px;
+        }
 </style>
+
+

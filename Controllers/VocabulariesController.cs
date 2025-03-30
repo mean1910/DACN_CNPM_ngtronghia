@@ -73,6 +73,8 @@ namespace elearning_b1.Controllers
 
         public async Task<IActionResult> VocabularyList(int topicId)
         {
+            var topic = _context.Topics.FirstOrDefault(t => t.TopicID == topicId); 
+            ViewBag.TopicName = topic?.TopicName?? "Chủ đề chưa được xác định";
             // Lấy danh sách từ vựng cho chủ đề với topicId
             var vocabList = await _context.Vocabularies
                 .Where(v => v.TopicID == topicId)
